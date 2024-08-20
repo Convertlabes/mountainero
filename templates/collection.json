@@ -1,0 +1,123 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 24,
+        "columns_desktop": 3,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "enable_filtering": false,
+        "filter_type": "drawer",
+        "enable_sorting": false,
+        "columns_mobile": "1",
+        "padding_top": 8,
+        "padding_bottom": 52
+      }
+    },
+    "b2d7565c-4cf3-4547-9a04-2db3870e9c07": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "black-week-bundles",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "dc013a66-1d86-4477-8afa-91bcff3fa0f6": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18421946253580__dc013a66-1d86-4477-8afa-91bcff3fa0f6-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hol dir dein Bundle!",
+            "heading_size": "h1"
+          }
+        },
+        "template--18421946253580__dc013a66-1d86-4477-8afa-91bcff3fa0f6-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Mit bis zu -25% OFF<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--18421946253580__dc013a66-1d86-4477-8afa-91bcff3fa0f6-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Alle Bundles",
+            "button_link": "shopify:\/\/collections\/bundles"
+          }
+        }
+      },
+      "block_order": [
+        "template--18421946253580__dc013a66-1d86-4477-8afa-91bcff3fa0f6-heading-1",
+        "template--18421946253580__dc013a66-1d86-4477-8afa-91bcff3fa0f6-text-1",
+        "template--18421946253580__dc013a66-1d86-4477-8afa-91bcff3fa0f6-button-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/EvergreenBundles.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1710169478aa8abde3": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1710169510753f82cc": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "b2d7565c-4cf3-4547-9a04-2db3870e9c07",
+    "dc013a66-1d86-4477-8afa-91bcff3fa0f6",
+    "1710169478aa8abde3",
+    "1710169510753f82cc"
+  ]
+}

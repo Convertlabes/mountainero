@@ -1,0 +1,183 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "c1119300-55ff-4342-b01e-36330985c0f2": {
+      "type": "rich-text",
+      "blocks": {
+        "9b43099a-ed08-42ac-aa1e-d5da72264788": {
+          "type": "text",
+          "settings": {
+            "text": "<h3><strong>Retouren<\/strong><\/h3><p>1. Zur Anmeldung der Retoure benötigst du deine <strong>Bestellnummer<\/strong> aus der Bestellbestätigungs-Email (z.B. #12345) sowie <strong>deine Email Adresse. <\/strong><\/p><p>2. <strong>Lediglich Artikel im Originalzustand werden zurückgenommen <\/strong>(inkl. Labelanhänger). Achte bitte darauf, dass die Ware innen wie außen sauber ist.<\/p><p>3. <strong>Bitte verpacke die Artikel ordentlich<\/strong>, drucke das Versandetikett aus und bringe das Paket zum nächsten DHL Paketshop.<\/p><p>Der Betrag wird dir <strong>nach Ankunft<\/strong> des Paketes <strong>innerhalb sieben Tagen zurückerstattet. <\/strong><\/p>"
+          }
+        },
+        "template--17939730268428__c1119300-55ff-4342-b01e-36330985c0f2-168310054300f0c04d-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Zum Retoure Portal",
+            "button_link": "https:\/\/mountainero.returnsportal.online\/",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "b11619bf-2414-4101-a931-7022e1334c3d": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Hinweis<\/strong><\/p><p>Leider können wir keine kostenlose Retoure anbieten. Wir hoffen, dass du die Info nicht erst jetzt bekommst. Wir haben die Info direkt in den Produkttext gepackt und natürlich auf die Seite „Versanddetails\", auf die Seite \"Rücksendungen\" sowie in die FAQ's.<\/p><p><\/p>"
+          }
+        },
+        "3fd81a82-3dde-4f46-bd7b-b241c28568cf": {
+          "type": "text",
+          "settings": {
+            "text": "<p><\/p><p>Für die Retoure berechnen wir einen Unkostenbeitrag von 4 € (Deutschland) und 8€ (Österreich). Hiermit werden entstehende CO₂ ausgeglichen. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "9b43099a-ed08-42ac-aa1e-d5da72264788",
+        "template--17939730268428__c1119300-55ff-4342-b01e-36330985c0f2-168310054300f0c04d-2",
+        "b11619bf-2414-4101-a931-7022e1334c3d",
+        "3fd81a82-3dde-4f46-bd7b-b241c28568cf"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "90d826e5-291f-430b-b5e1-3d32311ce720": {
+      "type": "rich-text",
+      "blocks": {
+        "template--17939730268428__90d826e5-291f-430b-b5e1-3d32311ce720-16832053078af7202b-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "<p>Talk about your brand<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "template--17939730268428__90d826e5-291f-430b-b5e1-3d32311ce720-16832053078af7202b-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "template--17939730268428__90d826e5-291f-430b-b5e1-3d32311ce720-16832053078af7202b-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "98728426-60b2-4b23-b961-55e2bbf0f5d4": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Warum ist die Retoure nicht kostenlos? <\/strong><\/p><p>Bei der Abwicklung von Retouren entstehen hohe Kosten, durchaus mehr als die von uns in Rechnung gestellten Unkosten. Eine vollständig kostenfreie Retoure geht außerdem zulasten des Verkaufspreises sowie dem bewussten Umgang mit Onlinebestellungen und dessen CO₂ Ausstoßes. Dies wollen wir vermeiden. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--17939730268428__90d826e5-291f-430b-b5e1-3d32311ce720-16832053078af7202b-0",
+        "template--17939730268428__90d826e5-291f-430b-b5e1-3d32311ce720-16832053078af7202b-1",
+        "template--17939730268428__90d826e5-291f-430b-b5e1-3d32311ce720-16832053078af7202b-2",
+        "98728426-60b2-4b23-b961-55e2bbf0f5d4"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "429b2710-cb4c-4377-a99b-d9be037fde55": {
+      "type": "image-banner",
+      "blocks": {
+        "template--16204036243724__429b2710-cb4c-4377-a99b-d9be037fde55-1668779918c7fa5a1d-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "template--16204036243724__429b2710-cb4c-4377-a99b-d9be037fde55-1668779918c7fa5a1d-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "button_label_3": "button label",
+            "button_link_3": "",
+            "button_style_secondary_3": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16204036243724__429b2710-cb4c-4377-a99b-d9be037fde55-1668779918c7fa5a1d-1",
+        "template--16204036243724__429b2710-cb4c-4377-a99b-d9be037fde55-1668779918c7fa5a1d-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/SALE.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "167889631965c43e16": {
+      "type": "apps",
+      "blocks": {
+        "33ec326d-09d3-4ccb-ab1d-ec06806748af": {
+          "type": "shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": ""
+          }
+        }
+      },
+      "block_order": [
+        "33ec326d-09d3-4ccb-ab1d-ec06806748af"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "c1119300-55ff-4342-b01e-36330985c0f2",
+    "90d826e5-291f-430b-b5e1-3d32311ce720",
+    "429b2710-cb4c-4377-a99b-d9be037fde55",
+    "167889631965c43e16"
+  ]
+}

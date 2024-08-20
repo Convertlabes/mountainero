@@ -1,0 +1,140 @@
+{
+  "sections": {
+    "d78c9d21-d6fc-4bc5-a145-35f2afe3d5f6": {
+      "type": "rich-text",
+      "blocks": {
+        "template--17859874357516__d78c9d21-d6fc-4bc5-a145-35f2afe3d5f6-1678974158414250b8-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Shop the Look!<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "template--17859874357516__d78c9d21-d6fc-4bc5-a145-35f2afe3d5f6-1678974158414250b8-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>und spare 15 %<\/p>"
+          }
+        },
+        "template--17859874357516__d78c9d21-d6fc-4bc5-a145-35f2afe3d5f6-1678974158414250b8-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--17859874357516__d78c9d21-d6fc-4bc5-a145-35f2afe3d5f6-1678974158414250b8-0",
+        "template--17859874357516__d78c9d21-d6fc-4bc5-a145-35f2afe3d5f6-1678974158414250b8-1",
+        "template--17859874357516__d78c9d21-d6fc-4bc5-a145-35f2afe3d5f6-1678974158414250b8-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "16789739221fe501ae": {
+      "type": "apps",
+      "blocks": {
+        "1e9c80c6-3ed1-415b-a8ae-f8c1e6cb7a87": {
+          "type": "shopify:\/\/apps\/bundler-product-bundles\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "5e7j"
+          }
+        }
+      },
+      "block_order": [
+        "1e9c80c6-3ed1-415b-a8ae-f8c1e6cb7a87"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "167889631965c43e16": {
+      "type": "apps",
+      "blocks": {
+        "33ec326d-09d3-4ccb-ab1d-ec06806748af": {
+          "type": "shopify:\/\/apps\/bundler-product-bundles\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": ""
+          }
+        }
+      },
+      "block_order": [
+        "33ec326d-09d3-4ccb-ab1d-ec06806748af"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "e5994636-dacd-48c6-b9a2-e448a77f3ae3": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--17859874357516__e5994636-dacd-48c6-b9a2-e448a77f3ae3-1678973826976ac62e-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Wandern-Leggings-Wanderleggings-Damen-leggins-Yoga-Wanderhose-Mountainero-25_54e99309-421a-419b-ab8e-091401c28637.jpg",
+            "title": "Elisa's Lieblings-Outfit",
+            "text": "<p>Mach es dir einfach - hol dir die perfekte Kombi und <strong>spare 15%<\/strong> auf Leggings & Oberteil<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17859874357516__e5994636-dacd-48c6-b9a2-e448a77f3ae3-1678973826976ac62e-0"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "e2c29de9-aa01-499d-9c68-472c12f149e8": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n      #uniquebutton {\nmargin: 0;\n  position: relative;\n  top: 50%;\n  left: 50%;\n  -ms-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\ntext-decoration: none;\nbackground-color: #ffffff;\ncolor: #121212;\npadding: 15px 8px;\nborder: 1px solid #121212;\nfont-size: 12px;\n}\n    <\/style>\n<button id=\"uniquebutton\" onclick=\"history.go(-1)\" >zurück zur Leggings<\/button>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "d78c9d21-d6fc-4bc5-a145-35f2afe3d5f6",
+    "16789739221fe501ae",
+    "main",
+    "167889631965c43e16",
+    "e5994636-dacd-48c6-b9a2-e448a77f3ae3",
+    "e2c29de9-aa01-499d-9c68-472c12f149e8"
+  ]
+}

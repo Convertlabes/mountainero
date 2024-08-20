@@ -1,0 +1,13 @@
+.teeinblue-enabled .product__info-wrapper .price.price--large,
+.teeinblue-enabled .product__info-wrapper variant-radios,
+.teeinblue-enabled .product__info-wrapper .product-form__quantity {
+  display: none !important;
+}
+
+.teeinblue-enabled .product__tax  {
+  display: none !important;
+}
+
+.teeinblue-enabled .tee-product-price {
+  margin-bottom: 0;
+}

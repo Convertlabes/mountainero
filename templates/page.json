@@ -1,0 +1,115 @@
+{
+  "sections": {
+    "429b2710-cb4c-4377-a99b-d9be037fde55": {
+      "type": "image-banner",
+      "disabled": true,
+      "blocks": {
+        "template--16204036243724__429b2710-cb4c-4377-a99b-d9be037fde55-1668779918c7fa5a1d-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "template--16204036243724__429b2710-cb4c-4377-a99b-d9be037fde55-1668779918c7fa5a1d-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "button_label_3": "button label",
+            "button_link_3": "",
+            "button_style_secondary_3": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16204036243724__429b2710-cb4c-4377-a99b-d9be037fde55-1668779918c7fa5a1d-1",
+        "template--16204036243724__429b2710-cb4c-4377-a99b-d9be037fde55-1668779918c7fa5a1d-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/SALE.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "167889631965c43e16": {
+      "type": "apps",
+      "disabled": true,
+      "blocks": {
+        "33ec326d-09d3-4ccb-ab1d-ec06806748af": {
+          "type": "shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "40hh"
+          }
+        },
+        "19596b84-3260-4cd7-b8e4-0c7fea1f1b3c": {
+          "type": "shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "40hi"
+          }
+        },
+        "d1f36ef0-3cfa-48d8-a90a-fabebd18fce4": {
+          "type": "shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "3zn9"
+          }
+        },
+        "536c10b0-d070-4afb-afb9-3b0b125280e8": {
+          "type": "shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "40hd"
+          }
+        },
+        "4f15326c-c312-4b92-a27c-e6c68b0101cc": {
+          "type": "shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "40he"
+          }
+        },
+        "c4814c51-53fb-4924-a3a8-166358970324": {
+          "type": "shopify:\/\/apps\/bundler\/blocks\/custom-bundle\/7a6ae1b8-3b16-449b-8429-8bb89a62c664",
+          "settings": {
+            "shortcode": "40hf"
+          }
+        }
+      },
+      "block_order": [
+        "33ec326d-09d3-4ccb-ab1d-ec06806748af",
+        "19596b84-3260-4cd7-b8e4-0c7fea1f1b3c",
+        "d1f36ef0-3cfa-48d8-a90a-fabebd18fce4",
+        "536c10b0-d070-4afb-afb9-3b0b125280e8",
+        "4f15326c-c312-4b92-a27c-e6c68b0101cc",
+        "c4814c51-53fb-4924-a3a8-166358970324"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "429b2710-cb4c-4377-a99b-d9be037fde55",
+    "main",
+    "167889631965c43e16"
+  ]
+}
