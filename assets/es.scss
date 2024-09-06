@@ -47,3 +47,15 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  main {
+    margin-top: -83px;
+  }
+}
+
+@media (min-width: 990px) {
+  sticky-header.header-wrapper {
+    padding: 0 24px;
+  }
+}
