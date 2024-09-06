@@ -1,0 +1,89 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --padding-top: {{ section.settings.padding_top }}px;
+    --padding-bottom: {{ section.settings.padding_bottom }}px;
+    --background-color: {{ section.settings.background_color }};
+    --grid-mobile-vertical-spacing: 24px;
+  }
+
+  @media (max-width: 767px) {
+    #shopify-section-{{ section.id }} {
+      --padding-top: {{ section.settings.padding_top | times: 0.5 }}px;
+      --padding-bottom: {{ section.settings.padding_bottom | times: 0.5 }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="page-width">
+  <div class="grid">
+    {% for block in section.blocks %}
+      <div class="grid__item">
+        <div class="image">
+          <img src="{{ block.settings.image | img_url: 'master' }}">
+        </div>
+        <div class="content">
+          <div class="font-p1">{{ block.settings.text }}</div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Icon with Text",
+  "class": "es-icon-with-text",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "range",
+      "min": 0,
+      "max": 500,
+      "step": 5,
+      "unit": "px",
+      "id": "padding_top",
+      "label": "Padding top",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "min": 0,
+      "max": 500,
+      "step": 5,
+      "unit": "px",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "default": 80
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color of Wrapper",
+      "default": "#F3F3F3"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "@ Icon With Text"
+    }
+  ]
+}
+{% endschema %}
