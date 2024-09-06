@@ -699,6 +699,50 @@
         "desktop_padding_bottom": 0,
         "mobile_padding_bottom": 0
       }
+    },
+    "es_icon_with_text_LANgJh": {
+      "type": "es-icon-with-text",
+      "blocks": {
+        "item_weJ4Xx": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SVG.svg",
+            "text": ">10.000 GLÜCKLICHE KUNDEN"
+          }
+        },
+        "item_iqtCpR": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SVG_1.svg",
+            "text": "KOSTENLOSER VERSAND AB 50€"
+          }
+        },
+        "item_4i48Lj": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SVG_2.svg",
+            "text": "30 TAGE RÜCKGABERECHT"
+          }
+        },
+        "item_VQwghb": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SVG_3.svg",
+            "text": "SICHER BEZAHLEN"
+          }
+        }
+      },
+      "block_order": [
+        "item_weJ4Xx",
+        "item_iqtCpR",
+        "item_4i48Lj",
+        "item_VQwghb"
+      ],
+      "settings": {
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "background_color": "#f3f3f3"
+      }
     }
   },
   "order": [
@@ -721,6 +765,7 @@
     "1710403088e64ab201",
     "16643577393d95dbc5",
     "1664357093f3c77127",
-    "ab_hero_banner_WqBtH3"
+    "ab_hero_banner_WqBtH3",
+    "es_icon_with_text_LANgJh"
   ]
 }

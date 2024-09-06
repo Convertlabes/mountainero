@@ -19,7 +19,9 @@
     {% for block in section.blocks %}
       <div class="grid__item">
         <div class="image">
-          <img src="{{ block.settings.image | img_url: 'master' }}">
+          {%- if block.settings.image != blank -%}
+            <img src="{{ block.settings.image | img_url: 'master' }}" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" alt="{{ block.settings.image.alt }}">
+          {%- endif -%}
         </div>
         <div class="content">
           <div class="font-p1">{{ block.settings.text }}</div>
