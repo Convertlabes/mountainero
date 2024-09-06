@@ -1,0 +1,82 @@
+.our-logo-container .heading {
+    font-family: Petrona;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 45.12px;
+    text-align: center;
+}
+
+.our-logo-container .brand-heading {
+    margin-bottom: 48px;
+}
+
+.our-logo-container .brands-lists {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap : 40px;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+
+.our-logo-container .heading {
+    color: black;
+}
+
+.our-logo-container .brands-lists li {
+    line-height: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+@media (max-width : 1024px) {
+    .our-logo-container .brands-lists {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0;
+    }
+}
+
+@media (max-width : 768px) {
+    .our-logo-container .brands-lists {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0;
+        gap :24px;
+    }
+
+    .our-logo-container .brand-heading {
+        margin-bottom: 32px;
+    }
+
+    .our-logo-container .heading {
+        font-family: Petrona;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 33.84px;
+        text-align: center;
+    }
+}
+
+@media (max-width : 560px) {
+    .our-logo-container .brands-lists {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0;
+        gap :24px;
+    }
+
+
+    .our-logo-container .brands-lists .list-item {
+        width: 100%;
+    }
+
+    .our-logo-container .brands-lists .list-item img {
+        max-width: 100%;
+    }
+
+
+}

@@ -1,0 +1,29 @@
+{% assign product_guide_meta = product.metafields.custom.product_guide_tabs %}
+
+{%- if product_guide_meta != blank -%}
+<div class="product-guide-tabs">
+    <div class="tab-container tab-buttons-wrap">
+        {% for tab_button in product_guide_meta.value %}
+        <button class="tab-button {% if forloop.index == 1 %} active {% endif %}" data-tab="{{forloop.index}}">
+            {% if tab_button.tab_button_icon != blank %} 
+            <div class="tab-content_icon">
+                <img src="{{ tab_button.tab_button_icon | img_url: 'master' }}">
+            </div>
+            {% endif %}
+            {{ tab_button.tab_button_label }}
+        </button>
+        {% endfor %}
+        {% comment %} <div class="tab-background"></div> {% endcomment %}
+    </div>
+
+    <div class="tab-content">
+        {% for tab_content in product_guide_meta.value %}
+        <div class="ta-tab-item {% if forloop.index == 1 %} active {% endif %}" data-tab="{{forloop.index}}">
+            <div class="tab-content-wrapper">
+            <div class="tab-content-text">{{ tab_content.tab_content_text | metafield_tag }}</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{%- endif -%}

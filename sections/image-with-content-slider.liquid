@@ -1,0 +1,213 @@
+{%- render 'gs-section-init' -%}
+
+{{ 'image-with-content-slider.css' |  asset_url |  stylesheet_tag }}
+
+<style>
+
+    #shopify-section-{{ section.id }} .image-with-content-slider-heading {
+        color : {{ section.settings.heading_color }};
+    }
+
+</style>
+
+{% comment %} begin page image banner section {% endcomment %} 
+ <section class="image-with-content-slider-container gs-container">
+    <div class="image-with-content-slider-wrapper page-width">
+        <div class="image-with-content-slider-main">
+            <div class="image-with-content-text-wrapper">
+                <div class="image-with-content-slider-heading  h3">{{ section.settings.heading }}</div>
+                <div class="image-with-content-list-slider">
+                    <div class="swiper-wrapper">
+                        {% for item in section.blocks %}
+                            {%- if item.type == "image_list" -%}
+                                <div class="swiper-slide">
+                                    <ul class="image-with-content-icon-list">
+                                        {%- if item.settings.text1 != blank -%}
+                                            <li class="image-with-content-icon-item">
+                                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.5 13.25L10.5 19.25L19.5 5.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                <span>{{ item.settings.text1 }}</span>
+                                            </li>
+                                        {%- endif -%}
+                                        {%- if item.settings.text2 != blank -%}
+                                            <li class="image-with-content-icon-item">
+                                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.5 13.25L10.5 19.25L19.5 5.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                <span>{{ item.settings.text2 }}</span>
+                                            </li>
+                                        {%- endif -%}
+                                        {%- if item.settings.text3 != blank -%}
+                                            <li class="image-with-content-icon-item">
+                                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.5 13.25L10.5 19.25L19.5 5.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                <span>{{ item.settings.text3 }}</span>
+                                            </li>
+                                        {%- endif -%}
+                                        {%- if item.settings.text4 != blank -%}
+                                            <li class="image-with-content-icon-item">
+                                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.5 13.25L10.5 19.25L19.5 5.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                <span>{{ item.settings.text4 }}</span>
+                                            </li>
+                                        {%- endif -%}
+                                    </ul>
+                                </div>
+                            {%- endif -%}
+                        {% endfor %}
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <div class="image-with-content-slider-body">
+            <div class="image-with-content-image-slider gs-swiper-slider">
+                <div class="swiper-wrapper">
+                    {% for block in section.blocks %}
+                        {%- if block.type == "image_list" -%}
+                            <div class="image-with-content-slider-item swiper-slide">
+                                 <img src="{{ block.settings.image |  image_url: width: 1000 }}" width="" height="" alt="">
+                            </div>
+                        {%- endif -%}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
+{% comment %} end page image banner section {% endcomment %}
+
+
+
+<script>
+
+    var new_thumbs_swiper = new Swiper("#shopify-section-{{ section.id }} .image-with-content-list-slider", {
+        slidesPerView: 1,
+        allowTouchMove: true,
+        pagination: {
+            el: '#shopify-section-{{ section.id }} .image-with-content-list-slider .swiper-pagination',
+			clickable: true,
+
+        }
+
+    });
+
+    var new_swiper = new Swiper("#shopify-section-{{ section.id }} .image-with-content-image-slider", {
+        slidesPerView: 1,
+        effect: 'fade',
+        allowTouchMove: true,
+        pagination: {
+            el: '#shopify-section-{{ section.id }} .image-with-content-image-slider .swiper-pagination',
+			clickable: true,
+
+        }
+    });
+
+    new_swiper.controller.control = new_thumbs_swiper;
+    new_thumbs_swiper.controller.control = new_swiper;
+
+</script>
+
+{% schema %}
+  {
+    "name": "Image with content slider",
+    "tag": "section",
+    "class": "image-with-content-slider",
+    "settings": [
+        {
+            "type": "richtext",
+            "id"  :"heading",
+            "label": "Heading"
+        },
+        {
+            "type": "color",
+            "id" : "heading_color",
+            "label": "Heading Color"
+        },
+        {
+            "type": "color",
+            "id" : "background",
+            "label": "Background"
+        },
+        {
+            "type": "range",
+            "id" : "desktop_padding_top",
+            "min": 0,
+            "max": 500,
+            "step" : 5,
+            "default" : 80, 
+            "label": "Padding Top(desktop)"
+        },
+        {
+            "type": "range",
+            "id" : "mobile_padding_top",
+            "min": 0,
+            "max": 500,
+            "step" : 5,
+            "default" : 40,
+            "label": "Padding Top(mobile)"
+        },
+        {
+            "type": "range",
+            "id" : "desktop_padding_bottom",
+            "min": 0,
+            "max": 500,
+            "step" : 5,
+            "default" : 100,
+            "label": "Padding Bottom(desktop)"
+        },
+        {
+            "type": "range",
+            "id" : "mobile_padding_bottom",
+            "min": 0,
+            "max": 500,
+            "step" : 5,
+            "default" : 50,
+            "label": "Padding Bottom(mobile)"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image_list",
+            "name" : "Multi Column",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id" : "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "richtext",
+                    "id" : "text1",
+                    "label": "Text1"
+                },
+                {
+                    "type": "richtext",
+                    "id" : "text2",
+                    "label": "Text2"
+                },
+                {
+                    "type": "richtext",
+                    "id" : "text3",
+                    "label": "Text3"
+                },
+                {
+                    "type": "richtext",
+                    "id" : "text4",
+                    "label": "Text4"
+                }
+            ]
+        }
+    ],
+    "presets": [
+      {
+        "name": "Image with content slider",
+        "settings": {
+        }
+      }
+    ]
+  }
+{% endschema %}

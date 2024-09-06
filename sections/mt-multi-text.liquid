@@ -1,0 +1,152 @@
+{{ 'mt-multi-text.css' |  asset_url |  stylesheet_tag }}
+
+<style>
+
+    .mt-multi-text-with-icon-container {
+        width : 100%;
+        padding : 34px 50px; 
+        background-color: black;
+    }
+
+    
+
+    .mt-multi-text-with-icon-container .mt-multi-text-wrapper {
+        display: flex;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: 800px;
+        margin: auto;
+        gap: 24px;
+    }
+
+    .mt-multi-text-with-icon-container .mt-multi-text-wrapper .mt-multi-text-image img {
+        width : 25px;
+    }
+    
+    .mt-multi-text-with-icon-container .hb-title {
+        color : white;
+        font-family: Antro Vectra;
+        font-size: 24.89px;
+        font-weight: 700;
+        line-height: 40.8px;
+        letter-spacing: 0.5146411657333374px;
+        text-align: center;
+    }
+
+    .mt-multi-text-with-icon-container .hb-text-content {
+        color : white;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 21px;
+        letter-spacing: 0.6000000238418579px;
+        text-align: center;
+
+    }
+
+    .mt-multi-text-with-icon-container .hb-text-content p {
+        margin: 0!important;
+    }
+
+    .rotate-title {
+        transform: translate(0%, 0%) rotate(-15deg);
+        margin-bottom: 12px;
+    }
+
+    @media (max-width : 500px) {
+        .mt-multi-text-with-icon-container {
+            padding :34px 24px;
+        }
+
+        .mt-multi-text-with-icon-container .hb-text-content {
+            font-size: 16px;
+        }
+    }
+
+
+</style>
+
+{% comment %} begin mt-multi-text section {% endcomment %}
+ <section class="mt-multi-text-with-icon-container">
+    <div class="mt-multi-text-wrapper">
+        {% for block in section.blocks %}
+            {%- case block.type -%}
+                {%- when "icon" -%}
+                    <div class="mt-multi-text-image">
+                        <img src="{{ block.settings.icon |  image_url: width: 200  }}" width="" height="" alt="">
+                    </div>
+                {%- when "title" -%}
+                    <div class="hb-title">{{ block.settings.title }}</div>
+                {%- when "text" -%}
+                    <div class="hb-text-content">{{ block.settings.text }}</div>
+                {%- endcase -%}
+        {% endfor %}
+    </div>
+ </section>
+{% comment %} end mt-multi-text section {% endcomment %}
+
+{% schema %}
+  {
+    "name": "MT Multi Text",
+    "tag": "section",
+    "class": "mt-multi-text",
+    "settings": [
+        {
+            "type"  :"color",
+            "id" : "background",
+            "label": "Background"
+        },
+        {
+            "type" : "color",
+            "id": "color",
+            "label" : "Text Color"
+        }
+    ],
+    "blocks": [
+       {
+        "type": "title",
+        "name" : "Title",
+        "settings": [
+            {
+                "type" : "text",
+                "id" : "title",
+                "label" : "Title"
+            }
+        ]
+        },
+        {
+            "type": "text",
+            "name" : "Text",
+            "settings" : [
+                {
+                    "type" : "richtext",
+                    "id" : "text",
+                    "label" : "Text"
+                }
+            ]
+        },
+        {
+            "type": "icon",
+            "name" : "Icon",
+            "settings": [
+                {
+                    "type" : "image_picker",
+                    "id" : "icon",
+                    "label" :"Icon"
+                }
+            ]       
+        }
+    ],
+    "presets": [
+      {
+        "name": "MT Multi Text",
+        "settings": {
+           
+        }
+      }
+    ]
+  }
+{% endschema %}

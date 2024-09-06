@@ -1,0 +1,285 @@
+{{ 'hb-hp-image-with-content.css' | asset_url | stylesheet_tag }}
+
+<style>
+
+  .hb-image-with-content-container {
+    padding-top : {{ section.settings.desktop_padding_top }}px;
+    padding-bottom : {{ section.settings.desktop_padding_bottom }}px;
+  }
+
+  .hb-iamge-with-content-wrapper {
+      display: grid;
+      padding : 24px;
+      border-radius: 5px;
+      grid-template-columns: calc(40% - 24px) calc(60% - 24px);
+      gap:48px;
+  }
+
+  .hb-iamge-with-content-wrapper * {
+    font-family: Poppins;
+  }
+
+  .hb-iamge-with-content-wrapper .hb-image img {
+    max-width: 470px;
+    width : 100%;
+    height: auto;
+    float: right;
+  }
+
+  .hb-iamge-with-content-wrapper .hb-content {
+      /* width : 50%; */
+      display: flex;
+      flex-direction: column;
+      gap : 16px;
+      justify-content: center;
+  }
+
+  .hb-iamge-with-content-wrapper .hb-content .button {
+    width: fit-content;
+  }
+
+  .hb-iamge-with-content-wrapper .hb-content .hb-title {
+    /* font-family: Inter; */
+    font-weight: 300;
+    line-height: 29.05px;
+  }
+
+  .hb-iamge-with-content-wrapper .hb-content .hb-sub_title {
+    /* font-family: Inter; */
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.36px;
+  }
+
+  .hb-iamge-with-content-wrapper .hb-content .hb-button {
+    font-weight: 300;
+  }
+
+  @media (max-width : 999px) {
+    .hb-image-with-content-container {
+      padding-top : {{ section.settings.mobile_padding_top }}px;
+      padding-bottom : {{ section.settings.mobile_padding_bottom }}px;
+    }
+
+
+    .hb-iamge-with-content-wrapper.page-width {
+      padding : 0 48px;
+    }
+
+    .hb-iamge-with-content-wrapper {
+      grid-template-columns: 1fr;
+      gap : 30px;
+    }
+
+    .hb-iamge-with-content-wrapper .hb-image {
+      display: flex;
+      justify-content: center;
+    }
+
+    .hb-iamge-with-content-wrapper .hb-image img {
+      margin-right: 0;
+    }
+
+    .hb-iamge-with-content-wrapper .hb-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hb-iamge-with-content-wrapper .hb-content * {
+      text-align: center;
+    }
+
+  }
+
+  
+  .hb-iamge-with-content-wrapper .hb-content .hb-text {
+    color : {{ section.settings.text_color }};
+  }
+
+  .hb-iamge-with-content-wrapper .hb-content .hb-text p {
+    margin-top: 0;
+  }
+
+  #shopify-section-{{ section.id }} .hb-iamge-with-content-wrapper .hb-content .hb-title {
+    font-size: {{ section.settings.desktop_title_size }}px;
+    line-height: {{ section.settings.desktop_title_size | plus : 10 }}px;
+    color : {{ section.settings.text_color }};
+  } 
+
+  
+  #shopify-section-{{ section.id }} .hb-iamge-with-content-wrapper .hb-content .hb-text {
+    font-size: {{ section.settings.desktop_subtile_size }}px;
+    line-height: {{ section.settings.desktop_subtile_size | plus : 10 }}px;
+    color : {{ section.settings.text_color }};
+  } 
+
+  @media (max-width : 768px) {
+    #shopify-section-{{ section.id }} .hb-iamge-with-content-wrapper .hb-content .hb-title {
+      font-size: {{ section.settings.mobile_title_size }}px;
+      line-height: {{ section.settings.mobile_title_size | plus : 6 }}px;
+    } 
+
+    #shopify-section-{{ section.id }} .hb-iamge-with-content-wrapper .hb-content .hb-text {
+      font-size: {{ section.settings.mobile_subtitle_size }}px;
+      line-height: {{ section.settings.mobile_subtitle_size | plus : 4 }}px;
+    } 
+  }
+
+  @media (max-width : 450px) {
+    .hb-iamge-with-content-wrapper .hb-image {
+        width: 100%;
+    }
+
+    .hb-iamge-with-content-wrapper .hb-image img {
+        width: 100%;
+    }
+  }
+
+  #shopify-section-{{ section.id }} .hb-iamge-with-content-wrapper {
+    background: {{ section.settings.background }};
+  }
+
+
+
+</style>
+
+{% comment %} begin hb homepage image with content code {% endcomment %}
+
+<div class="hb-image-with-content-container">
+  <div class="hb-iamge-with-content-wrapper page-width">
+    <div class="hb-image">
+      <img src="{{ section.settings.image |  image_url: width : 2000  }}" width="" height="" alt="No Image">
+    </div>
+    <div class="hb-content">
+      {%- if section.settings.title != blank -%}
+        <div class="hb-title">{{ section.settings.title }}</div>
+      {%- endif -%}
+      {%- if section.settings.content != blank -%}
+        <div class="hb-text">{{ section.settings.content }}</div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% comment %} end hb homepage image with content code {% endcomment %}
+
+{% schema %}
+  {
+    "name": "MT Image with Content",
+    "tag": "section",
+    "class": "hb-hp-iamge-witth-content",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id" : "image",
+        "label": "Image"
+      },
+      {
+        "type" : "text",
+        "id" : "title",
+        "label" : "Title"
+      },
+      {
+        "type" :"text",
+        "id" : "sub_title",
+        "label": "Sub Title"
+      },
+      {
+        "type" : "richtext",
+        "id" : "content",
+        "label" : "Content"
+      },
+      {
+        "type" : "color",
+        "id" :"background",
+        "label": "Background"
+      },
+      {
+        "type": "color",
+        "id" : "text_color",
+        "default" : "#1d4846",
+        "label": "Text Color"
+      },
+      {
+        "type" : "range",
+        "id" : "desktop_title_size",
+        "min": 15,
+        "max": 60,
+        "step": 1,
+        "default" : 20,
+        "label": "Title Size(desktop)"
+      },
+      {
+        "type" : "range",
+        "id" : "mobile_title_size",
+        "min": 15,
+        "max": 60,
+        "step": 1,
+        "default" : 20,
+        "label": "Title Size(mobile)"
+      },
+      {
+        "type" : "range",
+        "id" : "desktop_subtile_size",
+        "min": 10,
+        "max": 60,
+        "step": 1,
+        "default" : 16,
+        "label": "Text Size(desktop)"
+      },
+      {
+        "type" : "range",
+        "id" : "mobile_subtitle_size",
+        "min": 10,
+        "max": 60,
+        "step": 1,
+        "default" : 16,
+        "label": "Text Size(mobile)"
+      },
+      {
+        "type": "range",
+        "id" : "desktop_padding_top",
+        "min" : 0,
+        "max": 200,
+        "step": 2,
+        "default" : 70,
+        "label": "Padding Top(desktop)"
+      },
+      {
+        "type": "range",
+        "id" : "mobile_padding_top",
+        "min" : 0,
+        "max": 200,
+        "step": 2,
+        "default" : 32,
+        "label": "Padding Top(mobile)"
+      },
+      {
+        "type": "range",
+        "id" : "desktop_padding_bottom",
+        "min" : 0,
+        "max": 200,
+        "step": 2,
+        "default" : 70,
+        "label": "Padding Bottom(desktop)"
+      },
+      {
+        "type": "range",
+        "id" : "mobile_padding_bottom",
+        "min" : 0,
+        "max": 200,
+        "step": 2,
+        "default" : 32,
+        "label": "Padding Bottom(mobile)"
+      }
+    ],
+    "presets": [
+      {
+        "name": "MT Image with Content",
+        "settings": {
+        }
+      }
+    ]
+  }
+{% endschema %}

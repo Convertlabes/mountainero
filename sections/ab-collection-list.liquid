@@ -1,0 +1,367 @@
+{%- liquid
+    assign background = section.settings.background 
+    assign desktop_padding_top = section.settings.desktop_padding_top
+    assign mobile_padding_top = section.settings.mobile_padding_top
+    assign desktop_padding_bottom = section.settings.desktop_padding_bottom
+    assign mobile_padding_bottom = section.settings.mobile_padding_bottom
+    assign enable_full_image = section.settings.enable_full_image
+-%}
+
+<style>
+
+    .ab-collection-list-container .ab-collection-list-wrapper {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .ab-collection-list-container .ab-collection-list-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+
+    .ab-collection-list-container .ab-collection-list-tools {
+        display: flex;
+        gap: 8px;
+    } 
+
+    .ab-collection-list-container .ab-collection-list-tools-item {
+        cursor: pointer;
+    }
+
+    .ab-collection-list-container .ab-collection-list-media {
+        aspect-ratio: 0.75;
+        border-radius: 15px;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .ab-collection-list-container .ab-collection-list-slider {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap : 24px;
+    }
+
+    .ab-collection-list-container .ab-collection-list-item {
+
+    }
+
+    .ab-collection-list-container .ab-collection-list-slider .ab-collection-list-info {
+        padding: 16px 0;
+        position: relative;
+    }
+
+    .ab-collection-list-container .ab-collection-list-slider .ris-go-collection {
+        display: none;
+    }
+
+    .ab-collection-list-container .ab-collection-list-item:hover .ris-go-collection {
+        position: absolute;
+        top: 14px;
+        right: 0;
+        display: block;
+    }
+
+    .ab-collection-list-container .ab-collection-list-info-main {
+        padding-right: 50px;
+    }
+
+    .ab-collection-list-container .ab-collection-list-info-title {
+        padding : 10px 53px;
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 27px;
+        background-color: ;
+        letter-spacing: 0.6000000238418579px;
+        text-align: left;
+        background-color: rgba(10, 10, 10, 0.7);
+        border-radius: 30px;
+    }
+
+    .ab-collection-list-container .ab-collection-list-description {
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    .ab-collection-list-container .ab-collection-list-item {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .ab-collection-list-container .ab-collection-list-item img {
+        transition: all 0.3s;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .ab-collection-list-container .ab-collection-list-item .ris-media::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: var(--colorBase);
+        opacity: 0;
+        pointer-events: none;
+        animation: ani_fade_in 0.5s;
+
+    }
+
+
+    @keyframes ani_fade_in {
+        from { opacity: 1; }
+        to { opacity: 0;}
+    }
+    
+    .ab-collection-list-container .ab-collection-list-item:hover img {
+        scale: 1.2;
+    }
+
+    .ab-collection-list-container .ab-collection-list-item:hover .ab-collection-list-description {
+        opacity: 1;
+    }
+
+
+
+    {%- if section.settings.enable_full_image == true -%}
+        .ab-collection-list-container .ab-collection-list-sub-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 24px;
+        }
+        
+        .ab-collection-list-container .ab-collection-list-sub-content-info {
+            display: flex;
+            margin: auto;
+            align-items: center;
+        }
+
+        .ab-collection-list-container .ab-collection-list-info-title {
+            margin-bottom: 0;
+        }
+    {%- endif -%}
+
+
+    .ab-collection-list-container {
+        padding-top : {{ desktop_padding_top }}px;
+        padding-bottom : {{ desktop_padding_bottom }}px;
+        background-color: {{ background }};
+    }
+
+    #shopify-section-{{ section.id }} .ab-collection-list-container * {
+        color : {{ section.settings.text_color }};
+    }
+
+    @media (max-width : 768px) {
+        .ab-collection-list-container {
+            padding-top : {{ mobile_padding_top }}px;
+            padding-bottom : {{ mobile_padding_bottom }}px;
+        }
+
+        .ab-collection-list-container .ab-collection-list-slider {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap : 12px;
+        }
+
+        .ab-collection-list-container .ab-collection-list-sub-content {
+            padding : 12px;
+        }
+
+        .ab-collection-list-container .ab-collection-list-info-title {
+            font-family: Poppins;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 18px;
+            letter-spacing: 0.3235955238342285px;
+            text-align: center;
+            padding : 6px 16px;
+        }
+    }
+
+</style>
+
+<section class="ab-collection-list-container">
+    <div class="ab-collection-list-wrapper page-width">
+        {%- if section.settings.heading != blank -%}
+            <div class="ab-collection-list-header">
+                <div class="ab-collection-list-captions">
+                    <h1 class="ris-featured-col-heading h3">{{ section.settings.heading }}</h1>
+                </div>
+            </div> 
+        {%- endif -%}
+
+        <div class="ab-collection-list-body">
+            <div class="ab-collection-list-slider">
+                {% comment %} <div class="swiper-wrapper"> {% endcomment %}
+                    {% for block in section.blocks %}
+                        {%- if block.type == "collection_item" -%}
+                            <div class="swiper-slide ab-collection-list-item">
+                                <a href="{{ icon-btn-next }}" class="ab-collection-list-media ris-media {% if  block.settings.collection.featured_image == blank %} ris-empty-media {% endif %}">
+                                    {%- if block.settings.collection.featured_image != blank -%}
+                                        <img src="{{ block.settings.collection.featured_image |  image_url: width: 1000 }}" width="" height="" alt="">
+                                        {%- if enable_full_image == true -%}
+                                            <div class="ab-collection-list-sub-content">
+                                                <div class="ab-collection-list-sub-content-info">
+                                                    <div class="ab-collection-list-info-title p1">
+                                                        {%- if block.settings.collection_title != blank -%}
+                                                            {{ block.settings.collection_title }}
+                                                        {%- else -%}
+                                                            {{ block.settings.collection.title }}
+                                                        {%- endif -%}
+                                                    </div>
+                                                    {%- if block.settings.collection_description != blank -%}
+                                                        <div class="ab-collection-list-description p4">{{ block.settings.collection_description }}</div>
+                                                    {%- endif -%}
+                                                </div>
+                                            </div>
+                                        {%- endif -%}
+                                    {%- else -%}
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="148" height="120" viewBox="0 0 148 120" fill="none">
+                                            <path d="M134.348 0.000630769H13.3043C11.5524 -0.016511 9.81478 0.315889 8.19297 0.978389C6.57116 1.64089 5.09775 2.62018 3.85896 3.85897C2.62018 5.09776 1.64089 6.57116 0.978389 8.19297C0.315889 9.81478 -0.016511 11.5524 0.000630769 13.3043V106.696C-0.016511 108.448 0.315889 110.185 0.978389 111.807C1.64089 113.429 2.62018 114.902 3.85896 116.141C5.09775 117.38 6.57116 118.359 8.19297 119.022C9.81478 119.684 11.5524 120.017 13.3043 119.999H134.348C136.1 120.017 137.838 119.684 139.46 119.022C141.081 118.359 142.555 117.38 143.794 116.141C145.032 114.902 146.012 113.429 146.674 111.807C147.337 110.185 147.669 108.448 147.652 106.696V13.3043C147.669 11.5524 147.337 9.81478 146.674 8.19297C146.012 6.57116 145.032 5.09776 143.794 3.85897C142.555 2.62018 141.081 1.64089 139.46 0.978389C137.838 0.315889 136.1 -0.016511 134.348 0.000630769ZM111.466 21.2864C114.097 21.2864 116.669 22.0667 118.857 23.5285C121.045 24.9903 122.75 27.0681 123.757 29.499C124.764 31.9299 125.027 34.6048 124.514 37.1855C124.001 39.7661 122.734 42.1366 120.873 43.9972C119.013 45.8577 116.642 47.1247 114.061 47.6381C111.481 48.1514 108.806 47.8879 106.375 46.881C103.944 45.8741 101.866 44.1689 100.404 41.9812C98.9426 39.7934 98.1624 37.2213 98.1624 34.5901C98.1452 32.8366 98.4782 31.0974 99.1419 29.4743C99.8056 27.8512 100.787 26.377 102.027 25.1379C103.268 23.8989 104.744 22.92 106.368 22.2586C107.992 21.5973 109.732 21.2668 111.485 21.2864H111.466ZM123.173 103.237H22.3507C20.2221 103.237 18.8918 100.576 20.2221 98.9606L52.1509 60.6462C52.3832 60.3364 52.6845 60.0849 53.0309 59.9117C53.3772 59.7386 53.7592 59.6484 54.1464 59.6484C54.5337 59.6484 54.9156 59.7386 55.2619 59.9117C55.6083 60.0849 55.9096 60.3364 56.1419 60.6462L79.2903 88.5838C79.5226 88.8936 79.8239 89.145 80.1703 89.3182C80.5166 89.4914 80.8986 89.5816 81.2858 89.5816C81.673 89.5816 82.055 89.4914 82.4013 89.3182C82.7477 89.145 83.049 88.8936 83.2813 88.5838L97.9153 71.004C98.1472 70.6942 98.448 70.4428 98.794 70.2696C99.14 70.0964 99.5216 70.0062 99.9085 70.0062C100.295 70.0062 100.677 70.0964 101.023 70.2696C101.369 70.4428 101.67 70.6942 101.902 71.004L125.05 98.6756C126.651 100.538 125.587 103.199 123.192 103.199L123.173 103.237Z" fill="#1E1E1E" fill-opacity="0.1"/>
+                                        </svg>
+                                    {%- endif -%}
+                                </a>
+                                {%- if enable_full_image == false -%}
+                                    <div class="ab-collection-list-info">
+                                        <div class="ab-collection-list-info-main">
+                                            <div class="ab-collection-list-info-title p1">
+                                                {%- if block.settings.collection_title != blank -%}
+                                                    {{ block.settings.collection_title }}
+                                                {%- else -%}
+                                                    {{ block.settings.collection.title }}
+                                                {%- endif -%}
+                                            </div>
+                                            {%- if block.settings.collection_description != blank -%}
+                                                <div class="ab-collection-list-description p4">{{ block.settings.collection_description }}</div>
+                                            {%- endif -%}
+                                        </div>
+                                    </div>
+                                {%- endif -%}
+                            </div>
+                        {%- endif -%}
+                    {% endfor %}
+                {% comment %} </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> {% endcomment %}
+            </div>
+        </div> 
+    </div>
+</section>
+
+<script>
+
+</script>
+
+{% schema %}
+  {
+    "name": "AB Collection List",
+    "tag": "section",
+    "class": "ab-collection-list",
+    "settings": [
+      {
+        "type" : "text",
+        "id" : "heading",
+        "label"  :"Heading"
+      },
+      {
+        "type" : "text",
+        "id" : "text",
+        "label": "Text"
+      },
+      {
+        "type" : "color",
+        "id" : "background",
+        "label": "Background"
+      },
+      {
+        "type" : "color",
+        "id" : "text_color",
+        "default" : "#1E1E1E",
+        "label": "text_color"
+      },
+      {
+        "type" : "checkbox",
+        "id" : "enable_full_image",
+        "default" : false,
+        "label": "Enable full image"
+      },
+      {
+        "type": "range",
+        "id" : "desktop_padding_top",
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "default" : 0,
+        "label": "Padding Top(desktop)"
+      },
+      {
+        "type": "range",
+        "id" : "mobile_padding_top",
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "default" : 0,
+        "label": "Padding Top(mobile)"
+      },
+      {
+        "type": "range",
+        "id" : "desktop_padding_bottom",
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "default" : 0,
+        "label": "Padding Bottom(desktop)"
+      },
+      {
+        "type": "range",
+        "id" : "mobile_padding_bottom",
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "default" : 0,
+        "label": "Padding Bottom(mobile)"
+      }
+    ],
+    "blocks": [
+        {
+            "type": "collection_item",
+            "name" : "Collections",
+            "settings": [
+                {
+                    "type": "collection",
+                    "id": "collection",
+                    "label": "Collection"
+                },
+                {
+                    "type" : "text",
+                    "id"  :"collection_title",
+                    "label": "Collection Title"
+                },
+                {
+                    "type": "text",
+                    "id" : "collection_description",
+                    "label" : "Collection Description"
+                }
+            ]
+        }
+    ],
+    "presets": [
+      {
+        "name": "AB Collection List",
+        "settings": {
+        }
+      }
+    ]
+  }
+{% endschema %}

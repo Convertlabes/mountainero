@@ -1,0 +1,355 @@
+{
+  "sections": {
+    "98483ce0-f156-4cf3-ad6c-61245c5e7fb4": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<style>\n.breadcrumbs{\nmargin-left: 5%;\nfont-size: 12px;\ncolor: #121212;\ntext-decoration: none;\n}\n.breadcrumbsinner{\ncolor: #121212;\n}\n<\/style>\n<div class = breadcrumbs>\n{% if product.tags contains \"leggingsandsets\" %}\n<a class = \"breadcrumbsinner\"\n             href={{ \"https:\/\/www.mountainero.com\" }} target=\"_blank\" rel=\"noopener noreferrer\">Home<\/a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\/collections\" }} target=\"_blank\" rel=\"noopener noreferrer\">Kollektionen<\/a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\/collections\/leggings\" }} target=\"_blank\" rel=\"noopener noreferrer\">Leggings<\/a>\n            {% elsif product.tags contains \"oberteile\" %}\n            <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\" }} target=\"_blank\" rel=\"noopener noreferrer\">Home<\/a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\/collections\" }} target=\"_blank\" rel=\"noopener noreferrer\">Kollektionen<\/a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\/collections\/oberteile\" }} target=\"_blank\" rel=\"noopener noreferrer\">Oberteile<\/a>\n            {% elsif product.tags contains \"shorts\" %}\n            <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\" }} target=\"_blank\" rel=\"noopener noreferrer\">Home<\/a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\/collections\" }} target=\"_blank\" rel=\"noopener noreferrer\">Kollektionen<\/a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\/collections\/shorts\" }} target=\"_blank\" rel=\"noopener noreferrer\">Shorts<\/a>\n            {% else %}}\n            <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\" }} target=\"_blank\" rel=\"noopener noreferrer\">Home<\/a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\/collections\" }} target=\"_blank\" rel=\"noopener noreferrer\">Kollektionen<\/a>\n            {% endif %}\n<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "bb8adb61-2da5-470c-8030-6333e7188f20": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n.buttoncollectiontop {\nposition: relative;\ntransform: translateX(-50%);\ncolor: #121212;\nfont-size: 12px;\nmargin: auto;\n}\n<\/style>\n\n<div class=\"center\">\n{% if product.tags contains \"leggingsandsets\" %}\n            <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/leggings\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion<\/a>\n            {% elsif product.tags contains \"oberteile\" %}\n            <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/oberteile\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion<\/a>\n            {% elsif product.tags contains \"shorts\" %}\n            <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/shorts\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion<\/a>\n            {% else %}\n            <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zu den Kollektionen<\/a>\n            {% endif %}\n<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "loox-rating": {
+          "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-rating\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "contentSize": 16,
+            "pattern": "",
+            "hideText": false,
+            "alignment": "",
+            "textColor": "",
+            "starColor": "",
+            "showAllReviews": false,
+            "looxOpenFloatingWidget": false,
+            "emptyRatingWidget": false
+          }
+        },
+        "2ab0beec-5db1-4355-83d1-6f72262515fc": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{% if product.title contains 'Tofana' %}\n<p style=\"font-size: 13px; color: #121212BF; margin-bottom: -4px; margin-top: 0px;\">Wahl des Materials:<\/p>\n<a href=\"https:\/\/www.mountainero.com\/products\/tofana-black-1?_pos=4&_psq=Tofana&_ss=e&_v=1.0\" style=\"display: inline-block; background-color: black; color: white; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; font-size: 16px;\">\n  Classic\n<\/a>\n<a href=\"https:\/\/www.mountainero.com\/products\/tofana-black-%E2%99%BB%EF%B8%8F?_pos=3&_psq=Tofana&_ss=e&_v=1.0\" style=\"display: inline-block; background-color: #f2f2f2; color: black; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; font-size: 16px;\">\n  Eco\n<\/a>\n{% endif %}\n\n\n{% if product.title contains 'Antelao - Set' %}\n{% if product.tags contains 'eco' %}\n<p style=\"font-size: 13px; color: #121212BF; margin-bottom: -4px; margin-top: 0px;\">Wahl des Materials:<\/p>\n<a href=\"https:\/\/www.mountainero.com\/products\/antelao-set-black-1\" style=\"display: inline-block; background-color: #f2f2f2; color: black; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; font-size: 16px;\">\n  Classic\n<\/a>\n<a  href=\"https:\/\/www.mountainero.com\/products\/antelao-set-black-%E2%99%BB%EF%B8%8F\" style=\"display: inline-block; background-color: black; color: white; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; font-size: 16px;\">\n  Eco\n<\/a>\n{% else %}\n<p style=\"font-size: 13px; color: #121212BF; margin-bottom: -4px; margin-top: 0px;\">Wahl des Materials:<\/p>\n<a style=\"display: inline-block; background-color: black; color: white; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; font-size: 16px;\">\n  Classic\n<\/a>\n<a  href=\"https:\/\/www.mountainero.com\/products\/antelao-set-black-%E2%99%BB%EF%B8%8F\" style=\"display: inline-block; background-color: #f2f2f2; color: black; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; font-size: 16px;\">\n  Eco\n<\/a>\n\n\n{% endif %}\n{% endif %}"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "9f7e84ad-d27a-4b76-8656-3992795c9f91": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.metafields.custom.passform.value }}",
+            "text_style": "body"
+          }
+        },
+        "0cb7cfd8-cd29-436e-90a3-0e9884c2cead": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% assign passform = product.metafields.custom.passform %}\n{% if passform %}\n  <p style=\"color: {% if passform contains 'erwartet' %}green{% else %}orange{% endif %}; font-weight: font-size: 13px;\"> {{ passform }}<\/p>\n{% endif %}"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "61c84594-96a4-4a54-8152-c69986ffcfa8": {
+          "type": "variant_sku",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "d0c65918-6168-4e35-bac6-9c0b7bb0f4be": {
+          "type": "popup",
+          "disabled": true,
+          "settings": {
+            "text": "🍑 Unsere Modelle",
+            "page": "test"
+          }
+        },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Größen",
+            "icon": "ruler",
+            "content": "<p>{{ product.metafields.custom.groessen | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        },
+        "b593e603-0004-4623-b7a1-6fb25368815e": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "FREE GIFT",
+            "icon": "star",
+            "content": "<p>Bitte füge deine Molveno-Halskette kostenfrei hinzu (siehe unten). Du kannst sogar deine gewünschte Farbe – Gold, Silber oder Roségold – auswählen.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible-row-3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Pflegehinweis",
+            "icon": "heart",
+            "content": "<p>Die Mountainero Textilien lassen sich schonend bei 30° ohne Weichspüler waschen und anschliessend hängend trocknen. Nicht in den Wäschetrockner geben.<\/p>",
+            "page": ""
+          }
+        },
+        "5d5a2c2b-439c-488e-8179-e8ff230ebdc1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Versand",
+            "icon": "truck",
+            "content": "<p>Lieferzeit <strong>2-4 Werktage<\/strong> (innerhalb Deutschlands)<\/p><p><strong>Deutschland\/Österreich <\/strong>  2,90 € (<strong>kostenfrei ab 50 €)<\/strong><\/p>",
+            "page": ""
+          }
+        },
+        "e06a9ce9-8069-4db1-ad46-f8808dad766b": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Materialien",
+            "icon": "leaf",
+            "content": "<p>Die Materialien findest du auf den jeweiligen Produktseiten der im Bundle enthaltenen Produkte.<\/p>",
+            "page": ""
+          }
+        },
+        "24af16a0-6d18-4815-827a-91eb4198eee9": {
+          "type": "complementary",
+          "disabled": true,
+          "settings": {
+            "block_heading": "Pairs well with",
+            "make_collapsible_row": false,
+            "icon": "price_tag",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "counter",
+            "image_ratio": "square",
+            "enable_quick_add": false
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "loox-rating",
+        "2ab0beec-5db1-4355-83d1-6f72262515fc",
+        "price",
+        "variant_picker",
+        "9f7e84ad-d27a-4b76-8656-3992795c9f91",
+        "0cb7cfd8-cd29-436e-90a3-0e9884c2cead",
+        "quantity_selector",
+        "61c84594-96a4-4a54-8152-c69986ffcfa8",
+        "buy_buttons",
+        "description",
+        "d0c65918-6168-4e35-bac6-9c0b7bb0f4be",
+        "collapsible-row-2",
+        "b593e603-0004-4623-b7a1-6fb25368815e",
+        "collapsible-row-3",
+        "5d5a2c2b-439c-488e-8179-e8ff230ebdc1",
+        "e06a9ce9-8069-4db1-ad46-f8808dad766b",
+        "24af16a0-6d18-4815-827a-91eb4198eee9"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_position": "left",
+        "gallery_layout": "stacked",
+        "media_size": "large",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "3157d5ca-b246-4356-973a-82bf098b550b": {
+      "type": "featured-product",
+      "blocks": {
+        "template--18075816231180__3157d5ca-b246-4356-973a-82bf098b550b-text-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "",
+            "text_style": "uppercase"
+          }
+        },
+        "template--18075816231180__3157d5ca-b246-4356-973a-82bf098b550b-title-1": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "891d7657-05cd-4ada-9414-a29db9be074a": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<span style=\"text-decoration: line-through;\">44,00€ EUR<\/span>"
+          }
+        },
+        "template--18075816231180__3157d5ca-b246-4356-973a-82bf098b550b-price-1": {
+          "type": "price",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "template--18075816231180__3157d5ca-b246-4356-973a-82bf098b550b-variant_picker-1": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "template--18075816231180__3157d5ca-b246-4356-973a-82bf098b550b-quantity_selector-1": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "template--18075816231180__3157d5ca-b246-4356-973a-82bf098b550b-buy_buttons-1": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18075816231180__3157d5ca-b246-4356-973a-82bf098b550b-text-1",
+        "template--18075816231180__3157d5ca-b246-4356-973a-82bf098b550b-title-1",
+        "891d7657-05cd-4ada-9414-a29db9be074a",
+        "template--18075816231180__3157d5ca-b246-4356-973a-82bf098b550b-price-1",
+        "template--18075816231180__3157d5ca-b246-4356-973a-82bf098b550b-variant_picker-1",
+        "template--18075816231180__3157d5ca-b246-4356-973a-82bf098b550b-quantity_selector-1",
+        "template--18075816231180__3157d5ca-b246-4356-973a-82bf098b550b-buy_buttons-1"
+      ],
+      "settings": {
+        "product": "halskette-molveno",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "media_position": "left",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "65736dd7-4332-4387-af9c-002658b35f66": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n.buttoncollectiontop {\nposition: relative;\ntransform: translateX(-50%);\ncolor: #121212;\nfont-size: 12px;\nmargin: auto;\n}\n<\/style>\n\n<div class=\"center\">\n{% if product.tags contains \"leggingsandsets\" %}\n            <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/leggings\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion<\/a>\n            {% elsif product.tags contains \"oberteile\" %}\n            <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/oberteile\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion<\/a>\n            {% elsif product.tags contains \"shorts\" %}\n            <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/shorts\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion<\/a>\n            {% else %}\n            <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zu den Kollektionen<\/a>\n            {% endif %}\n<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 8,
+        "padding_bottom": 0
+      }
+    },
+    "loox-product-reviews-app-section": {
+      "type": "apps",
+      "blocks": {
+        "loox-product-reviews": {
+          "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-dynamic-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "only_photos": false,
+            "aggregated": false,
+            "limit": 7,
+            "hide_thumbnails": false,
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "loox-product-reviews"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "Die könnten dir auch gefallen...",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 100
+      }
+    },
+    "6598b23a-35e5-42a0-912f-281064e84f2e": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n  @import url('https:\/\/fonts.googleapis.com\/css2?family=Assistant:wght@400;500;600&display=swap');\n\n  .custom-text {\n    \/* Stile für Text *\/\n    font-family: 'Assistant', sans-serif;\n    text-align: center;\n    margin-top: 20px;\n    margin-bottom: 0px;\n    font-size: 26px;\n    color: black;\n  }\n\n  .custom-image {\n    \/* Standard-Bildstil für Mobilgeräte *\/\n    width: 100%;\n    border: 0;\n    display: block; \/* Stellt sicher, dass das Bild als Block-Element gerendert wird *\/\n    margin: 0 auto; \/* Zentriert das Bild horizontal *\/\n  }\n\n  @media (min-width: 768px) {\n    .custom-text {\n      \/* Textstil für Desktop *\/\n      font-size: 40px;\n    }\n    .custom-image {\n      \/* Bildstil für Desktop *\/\n      width: 50%;\n    }\n  }\n<\/style>\n\n<div class=\"custom-text\">Bekannt aus<\/div>\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0332\/0640\/3210\/files\/BEKANNT_AUS_13_x_5_cm.png?v=1700657164\" alt=\"Bildbeschreibung\" class=\"custom-image\">",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "dc7ca08c-734b-4090-bb5a-3260e833194f": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n  @import url('https:\/\/fonts.googleapis.com\/css2?family=Assistant:wght@400;500;600&display=swap');\n\n  .custom-text {\n    \/* Stile für Text *\/\n    font-family: 'Assistant', sans-serif;\n    text-align: center;\n    margin-top: 20px;\n    margin-bottom: 0px;\n    font-size: 20px;\n    color: black;\n  }\n\n  .custom-image {\n    \/* Standard-Bildstil für Mobilgeräte *\/\n    width: 100%;\n    border: 0;\n    display: block; \/* Stellt sicher, dass das Bild als Block-Element gerendert wird *\/\n    margin: 0 auto; \/* Zentriert das Bild horizontal *\/\n  }\n\n  @media (min-width: 768px) {\n    .custom-text {\n      \/* Textstil für Desktop *\/\n      font-size: 30px;\n    }\n    .custom-image {\n      \/* Bildstil für Desktop *\/\n      width: 70%;\n    }\n  }\n<\/style>\n\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0332\/0640\/3210\/files\/Wander-Leggings-Yoga-Leggings-Wanderleggings-Outdoorhose-Mountainero-2.png?v=1679654839\" alt=\"Bildbeschreibung\" class=\"custom-image\">\n<div class=\"custom-text\">Dein Mountainero Team<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 32,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "98483ce0-f156-4cf3-ad6c-61245c5e7fb4",
+    "bb8adb61-2da5-470c-8030-6333e7188f20",
+    "main",
+    "3157d5ca-b246-4356-973a-82bf098b550b",
+    "65736dd7-4332-4387-af9c-002658b35f66",
+    "loox-product-reviews-app-section",
+    "product-recommendations",
+    "6598b23a-35e5-42a0-912f-281064e84f2e",
+    "dc7ca08c-734b-4090-bb5a-3260e833194f"
+  ]
+}

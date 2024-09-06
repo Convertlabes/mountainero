@@ -1,0 +1,266 @@
+{%- render 'gs-section-init' -%}
+
+{{ 'gs-image-hero-banner.css' |  asset_url |  stylesheet_tag }}
+
+{%- assign cls = " gs-not-content-overlap" -%}
+
+<style>
+
+    #shopify-section-{{ section.id }} .ab-image-hero-banner-media {
+        overflow: hidden;
+        position: relative;
+        min-height: {{ section.settings.desktop_image_height }}px;
+    }
+
+    #shopify-section-{{ section.id }} .ab-image-hero-banner-media:after {
+        opacity : {{ section.settings.shadow_width }}%;
+    }
+
+    #shopify-section-{{ section.id }} .ab-image-hero-banner-media img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        line-height: 0;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+
+    {%- if section.settings.enable_shadow == false -%}
+        #shopify-section-{{ section.id }} .ab-image-hero-banner-media:after {
+            display: none;
+        }
+    {%- endif -%}
+
+    #shopify-section-{{ section.id }} .button {
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 27px;
+        letter-spacing: 0.6000000238418579px;
+        text-align: left;
+        padding: 20px 40px;
+        background-color : {{ section.settings.button_background }};
+        color : {{ section.settings.Button_text_color }};
+        border-radius : 50px;
+    }
+
+    #shopify-section-{{ section.id }} .button:before,
+        #shopify-section-{{ section.id }} .button:after {
+            box-shadow: none;
+    }
+
+    @media (max-width : 767px) {
+
+
+        #shopify-section-{{ section.id }} .image-with-text-button-banner .ab-image-hero-banner-main {
+            align-items: center;
+        }
+    
+        #shopify-section-{{ section.id }} .image-with-text-button-banner .ab-image-hero-banner-main-content .gs-heading {
+            max-width: 240px;
+        }
+
+        #shopify-section-{{ section.id }} .image-with-text-button-banner .ab-image-hero-banner-main-content .gs-heading * {
+            font-family: Poppins;
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 36px;
+            letter-spacing: 0.6000000238418579px;
+            text-align: left;
+        }
+
+        #shopify-section-{{ section.id }} .ab-image-hero-banner-media {
+            min-height: {{ section.settings.mobile_image_height }}px;
+        }
+
+        .ab-image-hero-banner-container .ab-image-hero-banner-main-content {
+            padding: 0 24px;
+        }
+
+        #shopify-section-{{ section.id }} .button {
+            padding: 13px 35px;
+            font-family: Poppins;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 27px;
+            letter-spacing: 0.6000000238418579px;
+            text-align: left;
+        }
+        
+        #shopify-section-{{ section.id }} .ab-image-hero-banner-container.gs-not-content-overlap  .ab-image-hero-banner-media {
+            min-height: 300px;
+            max-height: 300px;
+        }
+
+        #shopify-section-{{ section.id }} .ab-image-hero-banner-container.gs-not-content-overlap .ab-image-hero-banner-main * {
+            color : var(--color-blue-dark);
+        }
+
+        #shopify-section-{{ section.id }} .ab-image-hero-banner-container.gs-not-content-overlap .ab-image-hero-banner-main .button {
+            color : var(--color-white);
+        }
+
+        #shopify-section-{{ section.id }} .ab-image-hero-banner-container.gs-not-content-overlap  .ab-image-hero-banner-media {
+        }
+
+    }
+
+   
+
+
+</style>
+
+{% comment %} begin page image banner section {% endcomment %} 
+ <section class="ab-image-hero-banner-container gs-container {{ section.settings.custom_class }} {%- if section.settings.enable_content_overlap != true -%} {{ cls }} {% endif %}">
+    <div class="ab-image-hero-banner-wrapper">
+        <div class="ab-image-hero-banner-media">
+            <img src="{{ section.settings.image |  image_url: width: 2560  }}" width="" height="" alt="No banner">
+        </div>
+        <div class="ab-image-hero-banner-main">
+            <div class="ab-image-hero-banner-main-content page-width">
+                {%- if section.settings.sub_heading != blank -%}
+                    <div class="gs-sub_heading p4 t-uppercase t-b-6">{{ section.settings.sub_heading }}</div>
+                {%- endif -%}
+                {%- if section.settings.heading != blank -%}
+                    <div class="h1 gs-heading">{{ section.settings.heading }}</div>
+                {%- endif -%}
+                {%- if section.settings.button_text != blank -%}
+                    <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_text }}</a>
+                {%- endif -%}
+            </div>
+        </div>
+    </div>
+ </section>
+{% comment %} end page image banner section {% endcomment %}
+
+{% schema %}
+  {
+    "name": "MT Hero Banner",
+    "tag": "section",
+    "class": "ab-image-hero-banner",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Banner media information"
+        },
+        {
+            "type" : "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type" : "number",
+            "id" : "desktop_image_height",
+            "default" : 480,
+            "label": "Image Height(desktop)"
+        },
+        {
+            "type" : "number",
+            "default" : 300,
+            "id" : "mobile_image_height",
+            "label": "Image Height(mobile)"
+        },
+        {
+            "type": "richtext",
+            "id"  :"heading",
+            "label": "Heading"
+        },
+        {
+            "type" : "richtext",
+            "id" : "sub_heading",
+            "label": "Sub Heading"
+        },
+        {
+            "type" : "text",
+            "id" : "button_text",
+            "label": "Button Text"
+        },
+        {
+            "type": "url",
+            "id"  :"button_link",
+            "label": "Button Link"
+        }, 
+        {
+            "type": "checkbox",
+            "id" : "enable_shadow",
+            "default" : true,
+            "label": "Enable Shadow"
+        },
+        {
+            "type" : "checkbox",
+            "id" : "enable_content_overlap",
+            "default" : true,
+            "label" : "Enable Content Overlap"
+        },
+        {
+            "type" : "color",
+            "id"  : "button_background",
+            "label": "Button Background"
+        },
+        {
+            "type" : "color",
+            "id" : "Button_text_color",
+            "label" : "Button Text Color"
+        },
+        {
+            "type": "text",
+            "id" : "custom_class",
+            "label": "Custom Code"
+        },
+        {
+            "type" : "range",
+            "id" : "shadow_width",
+            "min": 0,
+            "max": 100, 
+            "step": 1,
+            "default" : 50,
+            "label": "Shadow opacity"
+        },
+        {
+            "type": "range",
+            "id" : "desktop_padding_top",
+            "min": 0,
+            "max": 500,
+            "step" : 5,
+            "default" : 80,
+            "label": "Padding Top(desktop)"
+        },
+        {
+            "type": "range",
+            "id" : "mobile_padding_top",
+            "min": 0,
+            "max": 500,
+            "step" : 5,
+            "default" : 40,
+            "label": "Padding Top(mobile)"
+        },
+        {
+            "type": "range",
+            "id" : "desktop_padding_bottom",
+            "min": 0,
+            "max": 500,
+            "step" : 5,
+            "default" : 100,
+            "label": "Padding Bottom(desktop)"
+        },
+        {
+            "type": "range",
+            "id" : "mobile_padding_bottom",
+            "min": 0,
+            "max": 500,
+            "step" : 5,
+            "default" : 50,
+            "label": "Padding Bottom(mobile)"
+        }
+    ],
+    "presets": [
+      {
+        "name": "AB hero banner",
+        "settings": {
+        }
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,185 @@
+{%- render 'gs-section-init' -%}
+
+{{ 'mt-collection-banner.css' |  asset_url |  stylesheet_tag }}
+
+{%- assign cls = " gs-not-content-overlap" -%}
+
+<style>
+
+    #shopify-section-{{ section.id }} .gs-image-hero-banner-media {
+        overflow: hidden;
+        position: relative;
+        min-height: {{ section.settings.desktop_image_height }}px;
+    }
+
+    .gs-image-hero-banner-container .gs-image-hero-banner-media {
+        border-bottom-left-radius: 60px;
+        border-bottom-right-radius: 60px;
+    }
+
+    #shopify-section-{{ section.id }} .gs-image-hero-banner-media:after {
+        opacity : {{ section.settings.shadow_width }}%;
+    }
+
+    #shopify-section-{{ section.id }} .gs-image-hero-banner-media img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        line-height: 0;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+
+    {%- if section.settings.enable_shadow == false -%}
+        #shopify-section-{{ section.id }} .gs-image-hero-banner-media:after {
+            display: none;
+        }
+    {%- endif -%}
+
+    @media (max-width : 767px) {
+        #shopify-section-{{ section.id }} .gs-image-hero-banner-media {
+            min-height: {{ section.settings.mobile_image_height }}px;
+        }
+
+        
+        #shopify-section-{{ section.id }} .gs-image-hero-banner-container.gs-not-content-overlap  .gs-image-hero-banner-media {
+            min-height: 300px;
+            max-height: 300px;
+        }
+
+        #shopify-section-{{ section.id }} .gs-image-hero-banner-container.gs-not-content-overlap .gs-image-hero-banner-main * {
+            color : var(--color-blue-dark);
+        }
+
+        #shopify-section-{{ section.id }} .gs-image-hero-banner-container.gs-not-content-overlap .gs-image-hero-banner-main .button {
+            color : var(--color-white);
+        }
+
+        #shopify-section-{{ section.id }} .gs-image-hero-banner-container.gs-not-content-overlap  .gs-image-hero-banner-media {
+        }
+
+
+        .gs-image-hero-banner-container .gs-image-hero-banner-media {
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+
+    }
+
+   
+
+
+</style>
+
+{% comment %} begin page image banner section {% endcomment %} 
+ <section class="gs-image-hero-banner-container gs-container {%- if section.settings.enable_content_overlap != true -%} {{ cls }} {% endif %}">
+    <div class="gs-image-hero-banner-wrapper">
+        <div class="gs-image-hero-banner-media">
+            <img src="{{ section.settings.image |  image_url: width: 2560  }}" width="" height="" alt="No banner">
+        </div>
+        <div class="gs-image-hero-banner-main">
+            <div class="gs-image-hero-banner-main-content page-width">
+                <div class="h1 gs-heading">{{ collection.title }}</div>
+                {%- if section.settings.sub_heading != blank -%}
+                    <div class="gs-sub_heading p4 t-uppercase t-b-6">{{ section.settings.sub_heading }}</div>
+                {%- endif -%}
+            </div>
+        </div>
+    </div>
+ </section>
+{% comment %} end page image banner section {% endcomment %}
+
+{% schema %}
+  {
+    "name": "MT main collection banner",
+    "tag": "section",
+    "class": "gs-image-hero-banner",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Banner media information"
+        },
+        {
+            "type" : "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type" : "number",
+            "id" : "desktop_image_height",
+            "default" : 480,
+            "label": "Image Height(desktop)"
+        },
+        {
+            "type" : "number",
+            "default" : 300,
+            "id" : "mobile_image_height",
+            "label": "Image Height(mobile)"
+        },
+        {
+            "type" : "richtext",
+            "id" : "sub_heading",
+            "label": "Sub Heading"
+        },
+        {
+            "type": "checkbox",
+            "id" : "enable_shadow",
+            "default" : true,
+            "label": "Enable Shadow"
+        },
+        {
+            "type" : "checkbox",
+            "id" : "enable_content_overlap",
+            "default" : true,
+            "label" : "Enable Content Overlap"
+        },
+        {
+            "type" : "range",
+            "id" : "shadow_width",
+            "min": 0,
+            "max": 100, 
+            "step": 1,
+            "default" : 50,
+            "label": "Shadow opacity"
+        },
+        {
+            "type": "range",
+            "id" : "desktop_padding_top",
+            "min": 0,
+            "max": 500,
+            "step" : 5,
+            "default" : 80,
+            "label": "Padding Top(desktop)"
+        },
+        {
+            "type": "range",
+            "id" : "mobile_padding_top",
+            "min": 0,
+            "max": 500,
+            "step" : 5,
+            "default" : 40,
+            "label": "Padding Top(mobile)"
+        },
+        {
+            "type": "range",
+            "id" : "desktop_padding_bottom",
+            "min": 0,
+            "max": 500,
+            "step" : 5,
+            "default" : 100,
+            "label": "Padding Bottom(desktop)"
+        },
+        {
+            "type": "range",
+            "id" : "mobile_padding_bottom",
+            "min": 0,
+            "max": 500,
+            "step" : 5,
+            "default" : 50,
+            "label": "Padding Bottom(mobile)"
+        }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,215 @@
+
+.ab-collection-main-container .ab-card {
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* .ab-collection-main-container .grid {
+    gap : 24px;
+} */
+
+.ab-collection-main-container .ab-card .card-top-info {
+    display: flex;
+    gap : 20px;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.ab-collection-main-container .ab-card .color_swatches > div {
+    line-height: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.ab-collection-main-container .ab-card .rnd-btn {
+    display: inline-flex!important;
+    margin : 0 0 8px 8px!important;
+}
+
+.ab-collection-main-container .card-top-info ~ .card-information {
+    display: flex!important;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.ab-collection-main-container .card-top-info ~ .card-information .price {
+    margin-top: 0;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.62px;
+    text-align: left;
+}
+
+.ab-collection-main-container .ab-card .loox-rating,
+    .ab-collection-main-container .ab-card .loox-rating * {
+    font-family: Poppins;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 18.31px;
+    letter-spacing: 0.49043482542037964px;
+    text-align: left;
+}
+
+.ab-collection-main-container .ab-card .loox-rating {
+    margin-top: 0!important;
+}
+
+.ab-collection-main-container .ab-card .loox-rating .loox-icon {
+    width: 13px;
+    height: 13px;
+}
+
+.ab-collection-main-container .ab-card .card__heading {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 13.81px;
+    letter-spacing: 0.49043482542037964px;
+    text-align: left;
+}
+
+.ab-collection-main-container .ab-card .ab-card-content {
+    background-color: #F7F7F7;
+    padding: 13px;
+}
+
+
+.ab-collection-main-container .ab-card .ab-card-content > .card__information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ab-collection-main-container .ab-card .ab-card-content .card__information {
+    padding: 0!important;
+}
+
+.ab-collection-main-container aside.facets-wrapper menu-drawer {
+    position: relative;
+    width: 100%;
+    top: -100px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ab-collection-main-container aside.facets-wrapper menu-drawer * {
+    font-family: Poppins;
+}
+
+.ab-collection-main-container aside.facets-wrapper menu-drawer:has(details.mobile-facets__disclosure.menu-opening) {
+    z-index: 1000;
+}
+
+.ab-collection-main-container .mobile-facets__heading {
+    font-family: Petrona!important;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 18.2px;
+    letter-spacing: 0.6000000238418579px;
+    text-align: left;
+}
+
+.ab-collection-main-container .mobile-facets__header {
+    border-bottom: none;
+    padding : 30px;
+}
+
+.ab-collection-main-container  .mobile-facets__count {
+    display: none;
+}
+
+.ab-collection-main-container .facets-container {
+    height: 0;
+}
+
+.ab-collection-main-container .mobile-facets__inner {
+    margin : 24px 24px 24px auto;
+    height: calc(100% - 48px);
+    border-radius: 20px;
+}
+
+.ab-collection-main-container .mobile-facets__close.mobile-facets__close--no-js {
+    background: black;
+    border-radius: 50%;
+    top: 40px;
+    right: 40px;
+}
+
+.ab-collection-main-container .mobile-facets__close.mobile-facets__close--no-js svg {
+    width: 12px;
+    height: 12px;
+    color: white;
+    stroke: white;
+}
+
+.ab-collection-main-container .facets-container .product-count {
+    display: none;
+}
+
+.ab-collection-main-container aside.facets-wrapper menu-drawer .mobile-facets__open-wrapper {
+    padding: 0 20px;
+    border-radius: 30px;
+    background-color: white;    
+}
+
+
+.ab-collection-main-container aside.facets-wrapper menu-drawer facet-remove,
+.ab-collection-main-container aside.facets-wrapper menu-drawer facet-remove + button {
+    border-radius: 40px;
+    height: 48px;
+}
+
+.ab-collection-main-container aside.facets-wrapper menu-drawer facet-remove {
+    border: 1px solid black;
+    color : black;
+}
+
+.ab-collection-main-container aside.facets-wrapper menu-drawer facet-remove a {
+    text-decoration: none!important;
+}
+
+.ab-collection-main-container aside.facets-wrapper menu-drawer facet-remove + button {
+    background-color: black;
+    color :white;
+}
+
+.ab-collection-main-container aside.facets-wrapper menu-drawer facet-remove + button::before,
+    .ab-collection-main-container aside.facets-wrapper menu-drawer facet-remove + button::after {
+        display: none;
+}
+
+.ab-card-badge-container {
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end
+}
+
+.ab-card-badge-item {
+    display: flex;
+    gap : 10px;
+    align-items: center;
+    padding: 6px 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.ab-card-badge-item * {
+    font-family: Poppins;
+    font-size: 17.63px;
+    font-weight: 500;
+    line-height: 19.63px;
+    color : black;
+    letter-spacing: 1.636177897453308px;
+    text-align: center;
+}
+
+@media (max-width : 768px) {
+    .ab-collection-main-container aside.facets-wrapper menu-drawer {
+        justify-content: flex-start;
+    }
+}
+

@@ -1,0 +1,25 @@
+{%- liquid
+    assign  desktop_padding_top = section.settings.desktop_padding_top
+    assign  desktop_padding_bottom = section.settings.desktop_padding_bottom
+    assign  mobile_padding_top = section.settings.mobile_padding_top
+    assign  mobile_padding_bottom = section.settings.mobile_padding_bottom
+    assign background = section.settings.background
+-%}
+
+
+<style>
+
+    #shopify-section-{{ section.id }} .gs-container {
+        padding-top: {{ desktop_padding_top }}px;
+        padding-bottom: {{ desktop_padding_bottom }}px;
+        background : {{ background }};
+    }
+
+    @media (max-width : 768px) {
+        #shopify-section-{{ section.id }} .gs-container {
+            padding-top: {{ mobile_padding_top }}px;
+            padding-bottom: {{ mobile_padding_bottom }}px;
+        }
+    }
+
+</style>

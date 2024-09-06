@@ -1,0 +1,184 @@
+.image-with-content-list-slider,
+.image-with-content-image-slider {
+    overflow: hidden;
+}
+
+.image-with-content-slider-wrapper {
+    position: relative;
+}
+
+.image-with-content-slider-container .image-with-content-slider-main {
+    background-color: #8D9677;
+    border-radius: 12px;
+    padding: 32px;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+}
+
+.image-with-content-slider-container .image-with-content-slider-main .image-with-content-icon-item span * {
+    color : white;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28.8px;
+    letter-spacing: 0.6000000238418579px;
+    text-align: left;
+}
+
+.image-with-content-slider-container .image-with-content-text-wrapper {
+    width: calc(50% - 100px);
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+}
+
+
+.image-with-content-slider-container .image-with-content-slider-heading {
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 31.2px;
+    letter-spacing: 0.6000000238418579px;
+    text-align: left;
+    color : white;
+}
+
+
+.image-with-content-slider-heading p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.image-with-content-slider-container .image-with-content-list-slider {
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.image-with-content-slider-container .image-with-content-list-slider .swiper-pagination {
+    text-align: left;
+}
+
+.image-with-content-slider-container .image-with-content-list-slider .swiper-pagination .swiper-pagination-bullet {
+    background-color: white;
+}
+
+.image-with-content-list-slider ul {
+    list-style: none;
+    padding: 0;
+}
+
+.image-with-content-list-slider ul li {
+    display: flex;
+    align-items: center;
+    gap : 10px;
+}
+
+.image-with-content-list-slider ul li p {
+    margin: 0;
+}
+
+
+.image-with-content-slider-container .image-with-content-slider-body {
+    width: calc(100% - 100px);
+    padding-right:50px;
+}
+
+.image-with-content-slider-container .image-with-content-slider-body {
+    width: 50%;
+    position: relative;
+    top: -250px;
+    margin-bottom: -250px;
+    margin-left: auto;
+}
+
+.image-with-content-slider-container .image-with-content-slider-body::after {
+    content : "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: calc(100% - 50px);
+    height: 100%;
+    border-radius: 12px;
+    background-color: white;
+    opacity: 0.6;
+}
+
+
+.image-with-content-slider-container .image-with-content-image-slider .image-with-content-slider-item {
+    aspect-ratio: 1.5;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: white;
+}
+
+.image-with-content-slider-container .image-with-content-image-slider .image-with-content-slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+@media (max-width : 768px) {
+    .image-with-content-slider-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-with-content-slider-container .image-with-content-slider-main {
+        align-items: unset;
+        padding: 24px;
+        padding-bottom: 130px;
+    }
+
+
+    .image-with-content-slider-container .image-with-content-slider-main ul {
+        margin: 0;
+    }
+
+
+    .image-with-content-slider-container .image-with-content-text-wrapper {
+         width: calc(100% - 100px);
+    }
+
+    .image-with-content-slider-container .image-with-content-slider-body {
+        top: -100px;
+        margin-bottom: -100px;
+        padding: 0 50px;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .image-with-content-slider-container .image-with-content-slider-body:after {
+        display: none;
+    }
+
+    .image-with-content-slider-container .image-with-content-text-wrapper {
+        width: 100%;
+    }
+
+    .image-with-content-slider-container .image-with-content-slider-heading {
+        font-family: Poppins;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 31.2px;
+        letter-spacing: 0.6000000238418579px;
+        text-align: left;
+    }
+
+    .image-with-content-slider-container .image-with-content-slider-main .image-with-content-icon-item span * {
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28.8px;
+        letter-spacing: 0.6000000238418579px;
+        text-align: left;
+    }
+}
+
+@media (max-width : 450px) {
+    .image-with-content-slider-container .image-with-content-slider-body {
+        padding: 6px;
+    }
+}

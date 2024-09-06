@@ -1,0 +1,466 @@
+{
+  "sections": {
+    "98483ce0-f156-4cf3-ad6c-61245c5e7fb4": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<style>\n.breadcrumbs{\nmargin-left: 5%;\nfont-size: 12px;\ncolor: #121212;\ntext-decoration: none;\n}\n.breadcrumbsinner{\ncolor: #121212;\n}\n<\/style>\n<div class = breadcrumbs>\n{% if product.tags contains \"leggingsandsets\" %}\n<a class = \"breadcrumbsinner\"\n             href={{ \"https:\/\/www.mountainero.com\" }} target=\"_blank\" rel=\"noopener noreferrer\">Home<\/a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\/collections\" }} target=\"_blank\" rel=\"noopener noreferrer\">Kollektionen<\/a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\/collections\/leggings\" }} target=\"_blank\" rel=\"noopener noreferrer\">Leggings<\/a>\n            {% elsif product.tags contains \"oberteile\" %}\n            <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\" }} target=\"_blank\" rel=\"noopener noreferrer\">Home<\/a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\/collections\" }} target=\"_blank\" rel=\"noopener noreferrer\">Kollektionen<\/a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\/collections\/oberteile\" }} target=\"_blank\" rel=\"noopener noreferrer\">Oberteile<\/a>\n            {% elsif product.tags contains \"shorts\" %}\n            <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\" }} target=\"_blank\" rel=\"noopener noreferrer\">Home<\/a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\/collections\" }} target=\"_blank\" rel=\"noopener noreferrer\">Kollektionen<\/a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\/collections\/shorts\" }} target=\"_blank\" rel=\"noopener noreferrer\">Shorts<\/a>\n            {% else %}}\n            <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\" }} target=\"_blank\" rel=\"noopener noreferrer\">Home<\/a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\/collections\" }} target=\"_blank\" rel=\"noopener noreferrer\">Kollektionen<\/a>\n            {% endif %}\n<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "bb8adb61-2da5-470c-8030-6333e7188f20": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n.buttoncollectiontop {\nposition: relative;\ntransform: translateX(-50%);\ncolor: #121212;\nfont-size: 12px;\nmargin: auto;\n}\n<\/style>\n\n<div class=\"center\">\n{% if product.tags contains \"leggingsandsets\" %}\n            <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/leggings\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion<\/a>\n            {% elsif product.tags contains \"oberteile\" %}\n            <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/oberteile\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion<\/a>\n            {% elsif product.tags contains \"shorts\" %}\n            <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/shorts\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion<\/a>\n            {% else %}\n            <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zu den Kollektionen<\/a>\n            {% endif %}\n<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "loox-rating": {
+          "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-rating\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "contentSize": 16,
+            "pattern": "",
+            "hideText": false,
+            "alignment": "",
+            "layout": "",
+            "textColor": "",
+            "starColor": "",
+            "showAllReviews": false,
+            "looxOpenFloatingWidget": false,
+            "emptyRatingWidget": false
+          }
+        },
+        "43dacb35-839c-41f8-b4dd-0f80160180fd": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{% if product.title contains 'Antelao' %}\n{% if product.tags contains 'eco' %}\n<p style=\"font-size: 13px; color: #121212BF; margin-bottom: -4px; margin-top: 0px;\">Wahl des Materials:<\/p>\n<a href=\"https:\/\/www.mountainero.com\/products\/antelao-leggings-black-1?_pos=5&_sid=9a177d5e1&_ss=r\" style=\"display: inline-block; background-color: #f2f2f2; color: black; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; font-size: 16px;\">\n  Classic\n<\/a>\n<a  style=\"display: inline-block; background-color: black; color: white; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; font-size: 16px;\">\n  Eco\n<\/a>\n{% else %}\n<p style=\"font-size: 13px; color: #121212BF; margin-bottom: -4px; margin-top: 0px;\">Wahl des Materials:<\/p>\n<a  style=\"display: inline-block; background-color: black; color: white; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; font-size: 16px;\">\n  Classic\n<\/a>\n<a  href=\"https:\/\/www.mountainero.com\/products\/antelao-leggings-black-%E2%99%BB%EF%B8%8F\" style=\"display: inline-block; background-color: #f2f2f2; color: black; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; font-size: 16px;\">\n  Eco\n<\/a>\n{% endif %}\n{% endif %}\n<br>"
+          }
+        },
+        "fe28c7aa-2e66-4ce4-a093-8ed7e6449843": {
+          "type": "popup",
+          "disabled": true,
+          "settings": {
+            "text": "Unterschied Classic & Eco",
+            "page": "unterschied-classic-eco"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "c7fc81bc-564d-44fe-bfaa-057c40f9f4cc": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% assign passform = product.metafields.custom.passform %}\n{% if passform %}\n  <!-- Erhöhung der font-size für eine größere Darstellung des Textes -->\n  <p style=\"color: {% if passform contains 'erwartet' %}green{% else %}orange{% endif %}; font-size: 16px; margin-bottom: 2px;\">{{ passform }}<\/p>\n{% endif %}\n{% assign verfuegbarkeit = product.metafields.custom.verf_gbarkeit_ %}\n{% if verfuegbarkeit %}\n  <!-- Beibehaltung der ursprünglichen font-size für den zweiten <p>-Tag -->\n  <p style=\"font-size: 13px; margin-top: 2px;\">{{ verfuegbarkeit }}<\/p>\n{% endif %}"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "61c84594-96a4-4a54-8152-c69986ffcfa8": {
+          "type": "variant_sku",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "d0c65918-6168-4e35-bac6-9c0b7bb0f4be": {
+          "type": "popup",
+          "disabled": true,
+          "settings": {
+            "text": "🍑 Unsere Modelle",
+            "page": "test"
+          }
+        },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Größen",
+            "icon": "ruler",
+            "content": "<p>{{ product.metafields.custom.groessen | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Versand",
+            "icon": "truck",
+            "content": "<p>Lieferzeit <strong>2-4 Werktage<\/strong> (innerhalb Deutschlands)<\/p><p><strong>Deutschland\/Österreich <\/strong>  2,90 € (<strong>kostenfrei ab 50 €)<\/strong><\/p>",
+            "page": ""
+          }
+        },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Retouren",
+            "icon": "return",
+            "content": "<p>{{ product.metafields.custom.retouren | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible-row-3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Pflegehinweis",
+            "icon": "heart",
+            "content": "<p>{{ product.metafields.custom.pflegehinweise | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        },
+        "e06a9ce9-8069-4db1-ad46-f8808dad766b": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Materialien",
+            "icon": "leaf",
+            "content": "<p>{{ product.metafields.custom.materialien | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        },
+        "06aba4e3-fc7d-447b-90c2-d711ee98cd7b": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": ""
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "loox-rating",
+        "43dacb35-839c-41f8-b4dd-0f80160180fd",
+        "fe28c7aa-2e66-4ce4-a093-8ed7e6449843",
+        "price",
+        "variant_picker",
+        "c7fc81bc-564d-44fe-bfaa-057c40f9f4cc",
+        "quantity_selector",
+        "61c84594-96a4-4a54-8152-c69986ffcfa8",
+        "buy_buttons",
+        "description",
+        "d0c65918-6168-4e35-bac6-9c0b7bb0f4be",
+        "collapsible-row-2",
+        "collapsible-row-1",
+        "collapsible-row-0",
+        "collapsible-row-3",
+        "e06a9ce9-8069-4db1-ad46-f8808dad766b",
+        "06aba4e3-fc7d-447b-90c2-d711ee98cd7b"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_position": "left",
+        "gallery_layout": "stacked",
+        "media_size": "large",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "979a83bf-3d62-495a-a334-c006a5af862c": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--17882095714572__979a83bf-3d62-495a-a334-c006a5af862c-1680009449641934c9-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hol dir das Set!",
+            "heading_size": "h1"
+          }
+        },
+        "template--17882095714572__979a83bf-3d62-495a-a334-c006a5af862c-1680009449641934c9-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>und spare auf Oberteil + Leggings<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--17882095714572__979a83bf-3d62-495a-a334-c006a5af862c-1680009449641934c9-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "{{ product.metafields.custom.zum_set_schaltfl_chenbeschriftung_.value }}",
+            "button_link": "{{ product.metafields.custom.zum_set_schaltfl_chenlink.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "template--17882095714572__979a83bf-3d62-495a-a334-c006a5af862c-1680009449641934c9-0",
+        "template--17882095714572__979a83bf-3d62-495a-a334-c006a5af862c-1680009449641934c9-1",
+        "template--17882095714572__979a83bf-3d62-495a-a334-c006a5af862c-1680009449641934c9-2"
+      ],
+      "settings": {
+        "image": "{{ product.metafields.custom.von_leggings_zu_set_verlinkung_bild_.value }}",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "65736dd7-4332-4387-af9c-002658b35f66": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n.buttoncollectiontop {\nposition: relative;\ntransform: translateX(-50%);\ncolor: #121212;\nfont-size: 12px;\nmargin: auto;\n}\n<\/style>\n\n<div class=\"center\">\n{% if product.tags contains \"leggingsandsets\" %}\n            <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/leggings\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion<\/a>\n            {% elsif product.tags contains \"oberteile\" %}\n            <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/oberteile\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion<\/a>\n            {% elsif product.tags contains \"shorts\" %}\n            <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/shorts\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion<\/a>\n            {% else %}\n            <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zu den Kollektionen<\/a>\n            {% endif %}\n<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 8,
+        "padding_bottom": 0
+      }
+    },
+    "loox-product-reviews-app-section": {
+      "type": "apps",
+      "blocks": {
+        "loox-product-reviews": {
+          "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-dynamic-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "only_photos": false,
+            "aggregated": false,
+            "limit": 7,
+            "hide_thumbnails": false,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
+        }
+      },
+      "block_order": [
+        "loox-product-reviews"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "Die könnten dir auch gefallen...",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 100
+      }
+    },
+    "8fa1297c-6c46-415b-ae67-71d371c2ca75": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n  @import url('https:\/\/fonts.googleapis.com\/css2?family=Assistant:wght@400&display=swap');\n\n  .custom-text-header {\n    font-family: 'Assistant', sans-serif;\n    text-align: center;\n    margin-top: 20px;\n    margin-bottom: 0px;\n    font-size: 26px; \/* Basisgröße für Mobilgeräte *\/\ncolor: black; \/* Textfarbe auf Schwarz gesetzt *\/\n  }\n\n  @media (min-width: 768px) {\n    .custom-text-header {\n      font-size: 50px; \/* Größere Schriftgröße für Desktop *\/\ncolor: black; \/* Textfarbe auf Schwarz gesetzt *\/\n    }\n  }\n<\/style>\n\n<div class=\"custom-text-header\">Alle Modelle im Vergleich<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "17008316634891e3bc": {
+      "type": "apps",
+      "blocks": {
+        "fee26190-5b28-4f8c-95dc-35018239756d": {
+          "type": "shopify:\/\/apps\/specification-compare\/blocks\/comparison-table\/a9d09772-f36d-4539-a4c4-7bd785bc12c0",
+          "settings": {
+            "product": "{{product}}",
+            "product_list": [
+
+            ],
+            "enable_show_differences_switch": false,
+            "show_group_names": false,
+            "maximum_rows": 10,
+            "maximum_visible_products": 10,
+            "app_block_margin": 0,
+            "app_block_max_width": "full_width",
+            "app_block_custom_max_width": 800,
+            "show_product_image": true,
+            "show_product_vendor": false,
+            "show_product_price": true,
+            "show_product_rating": false,
+            "show_view_details_button": true
+          }
+        }
+      },
+      "block_order": [
+        "fee26190-5b28-4f8c-95dc-35018239756d"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "97293b3f-a17d-4bb3-b1b3-c10cfaac944c": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n  @import url('https:\/\/fonts.googleapis.com\/css2?family=Assistant:wght@400;500;600&display=swap');\n\n  .custom-text {\n    \/* Stile für Text *\/\n    font-family: 'Assistant', sans-serif;\n    text-align: center;\n    margin-top: 20px;\n    margin-bottom: 0px;\n    font-size: 26px;\n    color: black;\n  }\n\n  .custom-image {\n    \/* Standard-Bildstil für Mobilgeräte *\/\n    width: 100%;\n    border: 0;\n    display: block; \/* Stellt sicher, dass das Bild als Block-Element gerendert wird *\/\n    margin: 0 auto; \/* Zentriert das Bild horizontal *\/\n  }\n\n  @media (min-width: 768px) {\n    .custom-text {\n      \/* Textstil für Desktop *\/\n      font-size: 40px;\n    }\n    .custom-image {\n      \/* Bildstil für Desktop *\/\n      width: 50%;\n    }\n  }\n<\/style>\n\n<div class=\"custom-text\">Bekannt aus<\/div>\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0332\/0640\/3210\/files\/BEKANNT_AUS_13_x_5_cm.png?v=1700657164\" alt=\"Bildbeschreibung\" class=\"custom-image\">",
+        "color_scheme": "background-1",
+        "padding_top": 32,
+        "padding_bottom": 52
+      }
+    },
+    "75ed0cb5-0748-4a79-9abf-601f011a8eee": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--18421946974476__75ed0cb5-0748-4a79-9abf-601f011a8eee-collapsible_row-1": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "Wodurch unterscheiden sich die einzelnen Modelle?",
+            "icon": "none",
+            "row_content": "<p>Die Modelle unterscheiden sich vor allem im Design, in der Farbgebung und leicht variierenden Kompressionsstärken sowie in ihrer Nachhaltigkeit. Diese kleinen, aber feinen Unterschiede beeinflussen deinen bevorzugten Anwendungsbereich kaum - ob beim Wandern, beim Laufen, im Yoga, im Fitnessstudio, zu Hause auf der Couch oder auch als stilvoller Begleiter im Lieblingscafé - es gibt keinerlei Einschränkungen. Hast du dein Lieblingsdesign gefunden? Perfekt! Wenn du nun wissen möchtest, wie viel Kompression die Leggings bieten und wie soft sie im Vergleich zu anderen Modellen sind, wirf einfach einen kurzen Blick in unsere Übersichtstabelle!<\/p>",
+            "page": ""
+          }
+        },
+        "template--18421946974476__75ed0cb5-0748-4a79-9abf-601f011a8eee-collapsible_row-2": {
+          "type": "collapsible_row",
+          "disabled": true,
+          "settings": {
+            "heading": "Was macht die Mountainero Leggings so besonders?",
+            "icon": "none",
+            "row_content": "<p>Die Mountainero Leggings unterstützen dich bei jedem Aufstieg:<\/p><ul><li>Das Zusammenspiel aus der richtigen Passform, den verwendeten Stoffen und der Höhe der Kompression ist ideal abgestimmt, um sowohl im Sport als auch im Alltag höchsten Komfort zu bieten. Kurz gesagt, die Leggings sind so bequem, dass du sie am liebsten immer tragen möchtest.<\/li><li>Mit ihren zeitlosen und schlichten Designs sind die Leggings der perfekte Begleiter für jeden Anlass – sei es beim Sport oder als modisches Must-have im Alltag.<\/li><li>Durch das kleine Berglogo zeigst du deinen Mitmenschen deine Liebe zur Natur 🩶<\/li><\/ul><p>PS: Aspekte wie Blickdichtigkeit und Langlebigkeit sind für uns grundlegende Standards, die in unseren Produkten selbstverständlich enthalten sind.<\/p>",
+            "page": ""
+          }
+        },
+        "template--18421946974476__75ed0cb5-0748-4a79-9abf-601f011a8eee-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Welche Größe soll ich wählen?",
+            "icon": "none",
+            "row_content": "<p>Bitte beachte bei der Auswahl der Größe den Hinweis unterhalb der Größenauswahl, rechts neben dem Produktbild (z.B. 'Passt wie erwartet'). Da viele der Leggings etwas kleiner ausfallen, ist es besonders wichtig, diesen Hinweis zu beachten. Zusätzlich hast du die Möglichkeit, die Größentabelle zu öffnen. Solltest du dennoch unsicher sein, kannst du uns jederzeit eine Nachricht schreiben. Elisa wird sich umgehend um dein Anliegen kümmern.<\/p>",
+            "page": ""
+          }
+        },
+        "template--18421946974476__75ed0cb5-0748-4a79-9abf-601f011a8eee-collapsible_row-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Ist der Versand kostenfrei?",
+            "icon": "none",
+            "row_content": "",
+            "page": "versand-test"
+          }
+        },
+        "6463d893-ea9b-439b-91d5-ce1ba720cc75": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Kann ich meine Leggings umtauschen?",
+            "icon": "none",
+            "row_content": "<p>Ein Umtausch der Produkte ist innerhalb Deutschlands kostenfrei möglich. Die Anmeldung erfolgt über das <a href=\"https:\/\/www.mountainero.com\/pages\/retoure\" title=\"https:\/\/www.mountainero.com\/pages\/retoure\">Retourenportal<\/a>. Aus Österreich können wir aus technischen Gründen leider keinen Umtausch anbieten. <\/p>",
+            "page": ""
+          }
+        },
+        "dfecb924-7828-4c56-bb4d-ce7e73edb69c": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie funktioniert eine Retoure?",
+            "icon": "none",
+            "row_content": "<p>Artikel, die dir nicht passen, kannst du ganz einfach an uns retournieren. Du kannst deine Rücksendung in wenigen Schritten im <a href=\"https:\/\/www.mountainero.com\/pages\/retoure\" title=\"https:\/\/www.mountainero.com\/pages\/retoure\">Retourenportal<\/a> anmelden <strong>(kein Drucker erforderlich)<\/strong>. Wir würden uns wünschen, dass du mit Bedacht bestellst, um die Anzahl der Retouren möglichst gering zu halten. Bitte achte dabei auf den Größenhinweis. <\/p><p>Wenn du das Paket selbst frankierst, entstehen keine Kosten für die Retoure. Die Retouren-Adresse befindet sich selbstverständlich in Deutschland (84094 Elsendorf). Möchtest du ein Retoure-Label direkt als E-Mail (QR-Code), behalten wir einen Unkostenbeitrag vom zurückzuerstattenden Betrag ein. Die Kosten belaufen sich auf insgesamt 4,- Euro aus Deutschland oder 8,- Euro aus Österreich.<\/p>",
+            "page": ""
+          }
+        },
+        "d36b0511-e637-4b93-b928-2734f3b0f243": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Kann man euch kontaktieren?",
+            "icon": "none",
+            "row_content": "<p>Klar! Du erhältst auf alle deine Anfragen innerhalb von wenigen Stunden, maximal innerhalb eines Tages, eine Antwort von uns. Wir sind also stets für dich erreichbar. Schreibe einfach eine E-Mail an <a href=\"mailto:info@mountainero.com\">info@mountainero.com<\/a> oder klicke ganz unten auf der Webseite auf 'Kontakt'.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18421946974476__75ed0cb5-0748-4a79-9abf-601f011a8eee-collapsible_row-1",
+        "template--18421946974476__75ed0cb5-0748-4a79-9abf-601f011a8eee-collapsible_row-2",
+        "template--18421946974476__75ed0cb5-0748-4a79-9abf-601f011a8eee-collapsible_row-3",
+        "template--18421946974476__75ed0cb5-0748-4a79-9abf-601f011a8eee-collapsible_row-4",
+        "6463d893-ea9b-439b-91d5-ce1ba720cc75",
+        "dfecb924-7828-4c56-bb4d-ce7e73edb69c",
+        "d36b0511-e637-4b93-b928-2734f3b0f243"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Fragen & Antworten",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-2",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "7747c7b6-405a-451d-8c53-188a26446149": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n  @import url('https:\/\/fonts.googleapis.com\/css2?family=Assistant:wght@400;500;600&display=swap');\n\n  .custom-text {\n    \/* Stile für Text *\/\n    font-family: 'Assistant', sans-serif;\n    text-align: center;\n    margin-top: 20px;\n    margin-bottom: 0px;\n    font-size: 20px;\n    color: black;\n  }\n\n  .custom-image {\n    \/* Standard-Bildstil für Mobilgeräte *\/\n    width: 100%;\n    border: 0;\n    display: block; \/* Stellt sicher, dass das Bild als Block-Element gerendert wird *\/\n    margin: 0 auto; \/* Zentriert das Bild horizontal *\/\n  }\n\n  @media (min-width: 768px) {\n    .custom-text {\n      \/* Textstil für Desktop *\/\n      font-size: 30px;\n    }\n    .custom-image {\n      \/* Bildstil für Desktop *\/\n      width: 70%;\n    }\n  }\n<\/style>\n\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0332\/0640\/3210\/files\/Wander-Leggings-Yoga-Leggings-Wanderleggings-Outdoorhose-Mountainero-2.png?v=1679654839\" alt=\"Bildbeschreibung\" class=\"custom-image\">\n<div class=\"custom-text\">Dein Mountainero Team<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "98483ce0-f156-4cf3-ad6c-61245c5e7fb4",
+    "bb8adb61-2da5-470c-8030-6333e7188f20",
+    "main",
+    "979a83bf-3d62-495a-a334-c006a5af862c",
+    "65736dd7-4332-4387-af9c-002658b35f66",
+    "loox-product-reviews-app-section",
+    "product-recommendations",
+    "8fa1297c-6c46-415b-ae67-71d371c2ca75",
+    "17008316634891e3bc",
+    "97293b3f-a17d-4bb3-b1b3-c10cfaac944c",
+    "75ed0cb5-0748-4a79-9abf-601f011a8eee",
+    "7747c7b6-405a-451d-8c53-188a26446149"
+  ]
+}
