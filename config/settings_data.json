@@ -183,28 +183,29 @@
               "menu": "main-menu"
             }
           },
-          "footer-1": {
-            "type": "link_list",
-            "settings": {
-              "heading": "Info",
-              "menu": "footer"
-            }
-          },
           "159b93ca-d902-4450-9b62-063c9d059fd9": {
             "type": "text",
             "settings": {
               "heading": "Mountainero GmbH",
               "subtext": "<p>Vielen Dank für deinen Besuch bei Mountainero! Wenn du Fragen hast, kontaktiere uns gerne unter <strong>info@mountainero.com<\/strong><\/p><p>Kirchstrasse 23, 86676 Ehekrichen<\/p><p><strong>(KEINE RETOURE ADRESSE)<\/strong><\/p>"
             }
+          },
+          "footer-1": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Info",
+              "menu": "footer"
+            }
           }
         },
         "block_order": [
           "footer-0",
           "52968eab-5329-47d2-83d7-5d30d22859a4",
-          "footer-1",
-          "159b93ca-d902-4450-9b62-063c9d059fd9"
+          "159b93ca-d902-4450-9b62-063c9d059fd9",
+          "footer-1"
         ],
         "settings": {
+          "background_image": "shopify:\/\/shop_images\/16fdb0b331f11c0172681692766dc207.jpg",
           "color_scheme": "background-2",
           "newsletter_enable": false,
           "newsletter_heading": "Newsletter",
@@ -256,12 +257,6 @@
       },
       "6065014864672580889": {
         "type": "shopify:\/\/apps\/slide-cart-by-amp\/blocks\/app-embed\/0a410b8d-7dc4-4f2d-b4e8-c12d34fd2255",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "421424240597080315": {
-        "type": "shopify:\/\/apps\/teeinblue-product-personalizer\/blocks\/product-personalizer\/67212f31-32b0-450c-97dd-7e182a5fac7b",
         "disabled": false,
         "settings": {
         }
