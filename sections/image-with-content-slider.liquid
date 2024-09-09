@@ -8,6 +8,12 @@
         color : {{ section.settings.heading_color }};
     }
 
+    {% if section.settings.image_background != blank %}
+        #shopify-section-{{ section.id }} .image-with-content-slider-main {
+            --background-image: url('{{ section.settings.image_background | img_url: 'master' }}');
+        }
+    {% endif %}
+
 </style>
 
 {% comment %} begin page image banner section {% endcomment %} 
@@ -167,6 +173,11 @@
             "step" : 5,
             "default" : 50,
             "label": "Padding Bottom(mobile)"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_background",
+            "label": "Image Background"
         }
     ],
     "blocks": [

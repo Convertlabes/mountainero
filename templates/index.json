@@ -28,7 +28,7 @@
         "icon_xmGcT7": {
           "type": "icon",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/da21dde662a19a4b8a6e17048660983a.png"
+            "icon": "shopify:\/\/shop_images\/1f49151004c207fcd82c8bfdbdffddf1.svg"
           }
         },
         "text_KFKiV4": {
@@ -120,7 +120,7 @@
         "background": "",
         "text_color": "#ffffff",
         "enable_full_image": true,
-        "desktop_padding_top": 110,
+        "desktop_padding_top": 54,
         "mobile_padding_top": 30,
         "desktop_padding_bottom": 80,
         "mobile_padding_bottom": 30
@@ -172,7 +172,8 @@
         "desktop_padding_top": 0,
         "mobile_padding_top": 0,
         "desktop_padding_bottom": 80,
-        "mobile_padding_bottom": 50
+        "mobile_padding_bottom": 50,
+        "image_background": "shopify:\/\/shop_images\/Vector.svg"
       }
     },
     "ab_featured_collection_KWNe3X": {
@@ -576,6 +577,29 @@
         "include_margins": true
       }
     },
+    "es_rich_text_jQGWJw": {
+      "type": "es-rich-text",
+      "blocks": {
+        "heading_aPm6tr": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Eure Pinnwand<\/p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_aPm6tr"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "16643577393d95dbc5": {
       "type": "apps",
       "blocks": {
@@ -610,7 +634,7 @@
             "product_handle": "",
             "aggregated": true,
             "data-limit": 20,
-            "maxwidth": 1080,
+            "maxwidth": 1400,
             "is_sample": true
           }
         }
@@ -763,6 +787,7 @@
     "74b2f011-b1a3-4c00-add9-07a3ca9f0383",
     "1710169424d0d47872",
     "1710403088e64ab201",
+    "es_rich_text_jQGWJw",
     "16643577393d95dbc5",
     "1664357093f3c77127",
     "ab_hero_banner_WqBtH3",

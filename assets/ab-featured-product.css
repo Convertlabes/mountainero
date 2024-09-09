@@ -1,11 +1,11 @@
 .ab-featured-collection {
     background-color: #F3F3F3;
-    padding : 80px 0 30px 0;
+    padding : 80px 0;
 }
-
+/* 
 .ab-featured-collection .collection {
     padding: 0;
-}
+} */
 
 .ab-featured-collection .collection__title {
     margin-bottom: 40px;
@@ -93,7 +93,7 @@
 }
 
 .ab-card .ab-card-content {
-    background-color: #F7F7F7;
+    background-color: #ffffff;
     padding: 13px;
 }
 
@@ -136,12 +136,12 @@
 
 .ab-featured-collection-wrapper {
     overflow: hidden;
-    padding: 0 24px;
+    /* padding: 0 24px; */
 }
 
 
-.ab-featured-collection-wrapper  .swiper-pagination {
-    bottom : 32px;
+.ab-featured-collection-wrapper .swiper-pagination {
+    bottom : 40px;
 }
 
 
