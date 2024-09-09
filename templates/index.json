@@ -591,6 +591,7 @@
       "block_order": [
         "heading_aPm6tr"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -643,6 +644,10 @@
         "8f439cae-773a-4b08-a676-e3cb66847f24",
         "klaviyo_email_marketing_sms_form_embed_block_wJAff9",
         "loox_reviews_loox_agg_section_wNQ7Gf"
+      ],
+      "custom_css": [
+        "#looxReviews {padding: 60px;}",
+        "@media (max-width: 768px) {#looxReviews {padding:30px}}"
       ],
       "settings": {
         "include_margins": true
