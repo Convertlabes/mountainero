@@ -283,6 +283,7 @@
       ],
       "disabled": true,
       "settings": {
+        "background_color": "",
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "background-1",
@@ -544,6 +545,7 @@
       ],
       "disabled": true,
       "settings": {
+        "background_color": "",
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "background-1",
@@ -556,7 +558,8 @@
       "type": "apps",
       "disabled": true,
       "settings": {
-        "include_margins": true
+        "include_margins": true,
+        "background_color": ""
       }
     },
     "1710403088e64ab201": {
@@ -574,31 +577,32 @@
       ],
       "disabled": true,
       "settings": {
-        "include_margins": true
+        "include_margins": true,
+        "background_color": ""
       }
     },
-    "es_rich_text_jQGWJw": {
-      "type": "es-rich-text",
+    "rich_text_hJBWJN": {
+      "type": "rich-text",
       "blocks": {
-        "heading_aPm6tr": {
+        "heading_7AfDin": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Eure Pinnwand<\/p>",
+            "heading": "<p>Talk about your brand<\/p>",
             "heading_size": "h1"
           }
         }
       },
       "block_order": [
-        "heading_aPm6tr"
+        "heading_7AfDin"
       ],
-      "disabled": true,
       "settings": {
+        "background_color": "#e7e7e7",
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "background-1",
+        "color_scheme": "background-2",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 0
       }
     },
     "16643577393d95dbc5": {
@@ -646,11 +650,12 @@
         "loox_reviews_loox_agg_section_wNQ7Gf"
       ],
       "custom_css": [
-        "#looxReviews {padding: 60px;}",
-        "@media (max-width: 768px) {#looxReviews {padding:30px}}"
+        "#looxReviews {padding: 50px;}",
+        "@media (max-width: 768px) {#looxReviews {padding: 20px; }}"
       ],
       "settings": {
-        "include_margins": true
+        "include_margins": true,
+        "background_color": "#e7e7e7"
       }
     },
     "1664357093f3c77127": {
@@ -723,8 +728,8 @@
         "Button_text_color": "#ffffff",
         "custom_class": "image-with-text-button-banner",
         "shadow_width": 30,
-        "desktop_padding_top": 80,
-        "mobile_padding_top": 40,
+        "desktop_padding_top": 0,
+        "mobile_padding_top": 0,
         "desktop_padding_bottom": 0,
         "mobile_padding_bottom": 0
       }
@@ -792,7 +797,7 @@
     "74b2f011-b1a3-4c00-add9-07a3ca9f0383",
     "1710169424d0d47872",
     "1710403088e64ab201",
-    "es_rich_text_jQGWJw",
+    "rich_text_hJBWJN",
     "16643577393d95dbc5",
     "1664357093f3c77127",
     "ab_hero_banner_WqBtH3",

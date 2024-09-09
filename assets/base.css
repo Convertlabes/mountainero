@@ -2960,3 +2960,16 @@ details-disclosure > details {
 
 
 .back-button{text-align: center; display: block;}
+
+.rich-text__heading {
+  color: var(--Dark-Grey, #121212);
+  text-align: center;
+
+  /* H2/Light */
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 1px;
+}
