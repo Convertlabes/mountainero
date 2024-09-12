@@ -70,3 +70,290 @@
     padding: 0 24px;
   }
 }
+
+
+body {
+  #slidecarthq {
+    .slidecarthq {
+      top: 15px;
+      height: calc(100% - 30px);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.59);
+      backdrop-filter: blur(8.5px);
+      overflow: auto;
+
+      &.open {
+        transform: translateX(-15px);
+      }
+    }
+
+    .header {
+      padding: 15px;
+
+      h2,
+      h2 * {
+        color: var(--Dark-Grey, #121212) !important;
+        font-family: 'Poppins', sans-serif !important;
+        font-size: 18px !important;
+        font-style: normal !important;
+        font-weight: 600 !important;
+        line-height: normal !important;
+        letter-spacing: 1px !important;
+      }
+
+      button {
+        background-color: #fff;
+      }
+    }
+
+    .upsells {
+      padding: 5px 15px;
+
+      .upsell-item {
+        padding: 8px;
+        background-color: #FFF;
+        border-radius: 8px;
+
+        .upsell-text {
+          h3 {
+            a {
+              color: var(--Dark-Grey, #121212);
+              font-family: 'Poppins', sans-serif;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+              letter-spacing: 0.5px;
+            }
+          }
+
+          .upsell-text-prices,
+          .upsell-text-prices * {
+            color: var(--Dark-Grey, #121212);
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 0.16px;
+          }
+        }
+
+        .upsell-add {
+          button {
+            border-radius: 35px;
+            background: var(--Green-main, #8D9677);
+            padding: 10px 21px;
+            color: var(--White, var(--Primary-Base-White, #FFF));
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: 0.5px;
+          }
+        }
+      }
+    }
+
+    .footer {
+      background: #fff;
+      padding: 16px;
+
+      .footer-row {
+        border: 0;
+        padding: 5px 0;
+
+        * {
+          font-family: 'Poppins', sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          letter-spacing: 0.5px;
+        }
+
+        .slidecart-subtotal {
+          color: var(--Dark-Grey, #121212);
+          font-family: 'Poppins', sans-serif;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          letter-spacing: 1px;
+        }
+      }
+
+      button[name="checkout"] {
+        border-radius: 35px !important;
+        background: var(--Green-main, #8D9677);
+        padding: 14px 40px;
+        color: var(--White, var(--Primary-Base-White, #FFF));
+        font-family: Poppins;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 1px;
+      }
+
+      &::before {
+        content: unset;
+      }
+
+      .shipping-protection {
+        padding: 16px;
+        border-radius: 8px;
+        background: var(--Grey-light, #F3F3F3);
+        margin-bottom: 8px;
+
+        .shipping-protection-title {
+          color: var(--Dark-Grey, #121212);
+          font-family: 'Poppins', sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          letter-spacing: 0.5px;
+        }
+
+        .shipping-protection-description {
+          color: #545454;
+          font-family: 'Poppins', sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+          letter-spacing: 0.5px;
+        }
+
+        .price {
+          color: var(--Dark-Grey, #121212);
+          font-family: 'Poppins', sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          letter-spacing: 0.16px;
+        }
+      }
+
+      .shipping-protection input:checked + .slider {
+        background-color: #8D9677;
+      }
+    }
+
+    .rewards {
+      background-color: #121212;
+      padding: 10px 20px;
+      gap: 0;
+
+      .rewards-pre-unlock-text,
+      .rewards-pre-unlock-text *,
+      .rewards-post-unlock-text,
+      .rewards-post-unlock-text * {
+        color: var(--White, var(--Primary-Base-White, #FFF));
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.5px;
+      }
+
+      .rewards-pre-unlock-text,
+      .rewards-post-unlock-text {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &::before {
+          content: url('https://cdn.shopify.com/s/files/1/0332/0640/3210/files/Frame_e90ffbba-f1c8-4851-8951-d800cf94f863.svg?v=1726055819');
+          display: block;
+        }
+      }
+
+      [data-testid="TieredRewardsProgressBar"] {
+        .rewards-tiers-labels {
+          display: none;
+        }
+      }
+    }
+
+    .items {
+      padding: 15px 15px 0;
+  
+      .item {
+        padding: 8px 16px 8px 8px !important;
+        border-radius: 8px;
+        background: var(--Primary-Base-White, #FFF);
+  
+        & + .item {
+          margin-top: 8px;
+        }
+  
+        .main {
+          .title,
+          .title * {
+            color: var(--Dark-Grey, #121212) !important;
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 14px !important;
+            font-style: normal !important;
+            font-weight: 700 !important;
+            line-height: normal !important;
+            letter-spacing: 0.5px !important;
+          }
+  
+          .properties-key-value {
+            li,
+            li * {
+              color: #545454 !important;
+              font-family: 'Poppins', sans-serif !important;
+              font-size: 14px !important;
+              font-style: normal !important;
+              font-weight: 300 !important;
+              line-height: normal !important;
+              letter-spacing: 0.5px !important;
+            }
+          }
+  
+          .main-bottom {
+            align-items: center;
+  
+            .price-discount-block {
+              order: -1;
+  
+              .price {
+                color: var(--Dark-Grey, #121212) !important;
+                font-family: 'Poppins', sans-serif !important;
+                font-size: 16px !important;
+                font-style: normal !important;
+                font-weight: 600 !important;
+                line-height: normal !important;
+                letter-spacing: 0.16px !important;
+              }
+            }
+  
+            .quantity-selector {
+              button,
+              input {
+                border: 0 !important;
+                color: var(--Grey-90, #282828) !important;
+                font-family: 'Poppins', sans-serif !important;
+                font-size: 16px !important;
+                font-style: normal !important;
+                font-weight: 500 !important;
+                line-height: normal !important;
+                letter-spacing: 1px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ab-card .loox-rating span {
+  line-height: 10px;
+}

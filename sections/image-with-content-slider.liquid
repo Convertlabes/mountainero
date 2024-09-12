@@ -21,12 +21,13 @@
     <div class="image-with-content-slider-wrapper page-width">
         <div class="image-with-content-slider-main">
             <div class="image-with-content-text-wrapper">
-                <div class="image-with-content-slider-heading  h3">{{ section.settings.heading }}</div>
+                {% comment %} <div class="image-with-content-slider-heading  h3">{{ section.settings.heading }}</div> {% endcomment %}
                 <div class="image-with-content-list-slider">
                     <div class="swiper-wrapper">
                         {% for item in section.blocks %}
                             {%- if item.type == "image_list" -%}
                                 <div class="swiper-slide">
+                                    <div class="image-with-content-slider-heading  h3">{{ item.settings.heading }}</div>
                                     <ul class="image-with-content-icon-list">
                                         {%- if item.settings.text1 != blank -%}
                                             <li class="image-with-content-icon-item">
@@ -97,8 +98,10 @@
             el: '#shopify-section-{{ section.id }} .image-with-content-list-slider .swiper-pagination',
 			clickable: true,
 
+        },
+        autoplay: {
+            delay: 3000,
         }
-
     });
 
     var new_swiper = new Swiper("#shopify-section-{{ section.id }} .image-with-content-image-slider", {
@@ -108,7 +111,6 @@
         pagination: {
             el: '#shopify-section-{{ section.id }} .image-with-content-image-slider .swiper-pagination',
 			clickable: true,
-
         }
     });
 
@@ -185,6 +187,12 @@
             "type": "image_list",
             "name" : "Multi Column",
             "settings": [
+                {
+                    "type": "inline_richtext",
+                    "id": "heading",
+                    "label": "Heading",
+                    "default": "Deine neue Leggings"
+                },
                 {
                     "type": "image_picker",
                     "id" : "image",
