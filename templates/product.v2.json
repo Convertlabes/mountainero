@@ -220,13 +220,13 @@
             "tab_button_label": "{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_button_label.value }}",
             "tab_content_icon": "{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_content_icon.value }}",
             "tab_content_heading": "{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_content_heading.value }}",
-            "tab_content_text": "<p>{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_content_text | metafield_tag }}<\/p>",
+            "tab_content_text": "{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_content_text | metafield_tag }}",
             "tab_content_icon_2": "{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_content_icon_2.value }}",
             "tab_content_heading_2": "{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_content_heading_2.value }}",
-            "tab_content_text_2": "<p>{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_content_text_2 | metafield_tag }}<\/p>",
+            "tab_content_text_2": "{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_content_text_2 | metafield_tag }}",
             "tab_content_icon_3": "{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_content_icon_3.value }}",
             "tab_content_heading_3": "{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_content_heading_3.value }}",
-            "tab_content_text_3": "<p>{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_content_text_3 | metafield_tag }}<\/p>",
+            "tab_content_text_3": "{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_content_text_3 | metafield_tag }}",
             "tab_index": 3,
             "tab_active": false
           }
@@ -266,7 +266,7 @@
         "product_guide_tabs_3rDRhq"
       ],
       "settings": {
-        "enable_sticky_info": true,
+        "enable_sticky_info": false,
         "media_position": "left",
         "gallery_layout": "thumbnail_slider",
         "media_size": "large",
@@ -279,11 +279,36 @@
     },
     "65736dd7-4332-4387-af9c-002658b35f66": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "<style>\n.buttoncollectiontop {\nposition: relative;\ntransform: translateX(-50%);\ncolor: #121212;\nfont-size: 12px;\nmargin: auto;\n}\n<\/style>\n\n<div class=\"center\">\n{% if product.tags contains \"leggingsandsets\" %}\n            <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/leggings\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion<\/a>\n            {% elsif product.tags contains \"oberteile\" %}\n            <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/oberteile\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion<\/a>\n            {% elsif product.tags contains \"shorts\" %}\n            <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/shorts\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion<\/a>\n            {% else %}\n            <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zu den Kollektionen<\/a>\n            {% endif %}\n<\/div>",
         "color_scheme": "background-1",
         "padding_top": 8,
         "padding_bottom": 0
+      }
+    },
+    "rich_text_dhDHJd": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_CqHVjw": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Eure Pinnwand<\/p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_CqHVjw"
+      ],
+      "settings": {
+        "background_color": "#e7e7e7",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "loox-product-reviews-app-section": {
@@ -305,7 +330,8 @@
         "loox-product-reviews"
       ],
       "settings": {
-        "include_margins": false
+        "include_margins": false,
+        "background_color": ""
       }
     },
     "product-recommendations": {
@@ -339,6 +365,7 @@
             "fallback_to_related_products": false,
             "exclude_sold_out_products": false,
             "enable_show_differences_switch": false,
+            "differences_switch_mode": "highlight_differences",
             "show_variant_selector": false,
             "show_group_names": false,
             "maximum_rows": 5,
@@ -358,7 +385,8 @@
         "d1f62ef5-78d3-4a7e-aae0-6311f545c864"
       ],
       "settings": {
-        "include_margins": true
+        "include_margins": true,
+        "background_color": ""
       }
     },
     "1859c10a-a976-414d-8bab-2332db508fb0": {
@@ -534,6 +562,50 @@
         "desktop_padding_bottom": 0,
         "mobile_padding_bottom": 0
       }
+    },
+    "es_icon_with_text_LANgJh": {
+      "type": "es-icon-with-text",
+      "blocks": {
+        "item_weJ4Xx": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SVG.svg",
+            "text": ">10.000 GLÜCKLICHE KUNDEN"
+          }
+        },
+        "item_iqtCpR": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SVG_1.svg",
+            "text": "KOSTENLOSER VERSAND AB 50€"
+          }
+        },
+        "item_4i48Lj": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SVG_2.svg",
+            "text": "30 TAGE RÜCKGABERECHT"
+          }
+        },
+        "item_VQwghb": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SVG_3.svg",
+            "text": "SICHER BEZAHLEN"
+          }
+        }
+      },
+      "block_order": [
+        "item_weJ4Xx",
+        "item_iqtCpR",
+        "item_4i48Lj",
+        "item_VQwghb"
+      ],
+      "settings": {
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "background_color": "#f3f3f3"
+      }
     }
   },
   "order": [
@@ -541,6 +613,7 @@
     "bb8adb61-2da5-470c-8030-6333e7188f20",
     "main",
     "65736dd7-4332-4387-af9c-002658b35f66",
+    "rich_text_dhDHJd",
     "loox-product-reviews-app-section",
     "product-recommendations",
     "17008313881279d1fd",
@@ -548,6 +621,7 @@
     "mt_logo_list_fcy3XP",
     "e1ffa94b-cfb0-4417-a0c8-5c9ca1d199b8",
     "7839601a-e1f2-4b62-821e-1a2e1e24c902",
-    "mt_image_with_text_ypdRPC"
+    "mt_image_with_text_ypdRPC",
+    "es_icon_with_text_LANgJh"
   ]
 }

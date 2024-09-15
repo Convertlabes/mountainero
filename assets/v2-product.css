@@ -1,6 +1,6 @@
 .product.v2 * {
     font-family: Poppins;
-    font-weight: 400;
+    /* font-weight: 400; */
     font-size: 14px;
 }
 
@@ -220,6 +220,12 @@ section.page-width:has(.product.v2) {
     text-align: center;
 }
 
+@media (max-width: 767px) {
+    .product.v2 .product-form__input input + label {
+        margin-right: 0 !important;
+    }
+}
+
 .product.v2 .no-js-hidden:has(.price) {
     margin-bottom: 0;
 }
@@ -279,8 +285,8 @@ section.page-width:has(.product.v2) {
     font-size: 12px!important;
     font-weight: 400;
     line-height: 18px;
-    letter-spacing: 0.6000000238418579px;
-    color : #8E9677;
+    letter-spacing: 0.6px;
+    color : #8D9677 !important;
 }
 
 /* tabs */

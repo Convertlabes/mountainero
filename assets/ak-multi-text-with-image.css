@@ -1,8 +1,14 @@
 .our-logo-container .heading {
-    font-family: Petrona;
+    color: var(--Black, #000);
+    text-align: center;
+
+    /* H2/Light */
+    font-family: 'Poppins', sans-serif;
     font-size: 40px;
-    font-weight: 700;
-    line-height: 45.12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 1px;
     text-align: center;
 }
 
@@ -11,17 +17,15 @@
 }
 
 .our-logo-container .brands-lists {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr); */
     gap : 40px;
     list-style: none;
     padding-left: 0;
     margin: 0;
-}
-
-
-.our-logo-container .heading {
-    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .our-logo-container .brands-lists li {

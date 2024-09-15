@@ -611,16 +611,16 @@
               {% if product.title contains 'Antelao - Oberteil' %}
                 <p style="font-size: 13px; margin-bottom: 0px;" class='v2-product-color-heading'>Farbe Oberteile</p>
                 <div style="margin-top: 0px;" class="farbauswahl">
-                  <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; margin-right: 12px; border-radius: 40px;" class="rnd-btn" href="https://www.mountainero.com/products/antelao-oberteil-black-%E2%99%BB%EF%B8%8F">
+                  <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; margin-right: 12px; border-radius: 40px;" class="rnd-btn{% if product.handle contains 'antelao-oberteil-black' %} selected{% endif %}" href="https://www.mountainero.com/products/antelao-oberteil-black-%E2%99%BB%EF%B8%8F">
                 </a>
                 </div>
 
               {% elsif product.title contains 'Civetta - Oberteil' %}
                 <p style="font-size: 13px; margin-bottom: 0px;" class='v2-product-color-heading'>Farbe Oberteile</p>
                 <div style="margin-top: 0px;" class="farbauswahl">
-                  <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; margin-right: 12px; border-radius: 40px;" class="rnd-btn" href="https://www.mountainero.com/products/civetta-oberteil-black?_pos=3&_sid=3b674b37e&_ss=r">
+                  <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; margin-right: 12px; border-radius: 40px;" class="rnd-btn{% if product.handle contains 'civetta-oberteil-black' %} selected{% endif %}" href="https://www.mountainero.com/products/civetta-oberteil-black?_pos=3&_sid=3b674b37e&_ss=r">
                 </a>
-                  <a style="font-size: 0px; text-align: center; color: #754D43; background-color: #754D43; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn" href="https://www.mountainero.com/products/civetta-oberteil-brown?_pos=4&_sid=3b674b37e&_ss=r">
+                  <a style="font-size: 0px; text-align: center; color: #754D43; background-color: #754D43; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'civetta-oberteil-brown' %} selected{% endif %}" href="https://www.mountainero.com/products/civetta-oberteil-brown?_pos=4&_sid=3b674b37e&_ss=r">
                 </a>
                 </div>
 
@@ -629,25 +629,25 @@
                   {% if product.title contains 'Eco' %}
                     <p style="font-size: 13px; margin-bottom: 0px;" class='v2-product-color-heading'>Farbe Leggings</p>
                     <div style="margin-top: 0px;" class="farbauswahl">
-                      <a style="font-size: 0px; text-align: center; color: #74815e; background-color: #74815e; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn" href="/products/tofana-green-♻%EF%B8%8F">
+                      <a style="font-size: 0px; text-align: center; color: #74815e; background-color: #74815e; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'tofana-green' %} selected{% endif %}" href="/products/tofana-green-♻%EF%B8%8F">
                     </a>
-                      <a style="font-size: 0px; text-align: center; color: #5c6f86; background-color: #5c6f86; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn" href="/products/tofana-grey-blue-♻%EF%B8%8F">
+                      <a style="font-size: 0px; text-align: center; color: #5c6f86; background-color: #5c6f86; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'tofana-grey-blue' %} selected{% endif %}" href="/products/tofana-grey-blue-♻%EF%B8%8F">
                     </a>
-                      <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; border-radius: 40px;" class="rnd-btn" href="/products/tofana-black-♻%EF%B8%8F">
+                      <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; border-radius: 40px;" class="rnd-btn{% if product.handle contains 'tofana-black' %} selected{% endif %}" href="/products/tofana-black-♻%EF%B8%8F">
                     </a>
                     </div>
                 {% elsif product.title contains 'Tofana Classic' %}
                     <p style="font-size: 13px; margin-bottom: 0px;" class='v2-product-color-heading'>Farbe Leggings</p>
                     <div style="margin-top: 0px;" class="farbauswahl">
-                      <a style="font-size: 0px; text-align: center; color: #74815e; background-color: #74815e; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn" href="/products/tofana-green">
+                      <a style="font-size: 0px; text-align: center; color: #74815e; background-color: #74815e; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'tofana-green' %} selected{% endif %}" href="/products/tofana-green">
                     </a>
-                      <a style="font-size: 0px; text-align: center; color: #5c6f86; background-color: #5c6f86; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn" href="/products/tofana-grey-blue-1">
+                      <a style="font-size: 0px; text-align: center; color: #5c6f86; background-color: #5c6f86; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'tofana-grey-blue-1' %} selected{% endif %}" href="/products/tofana-grey-blue-1">
                     </a>
-                      <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn" href="/products/tofana-black-1">
+                      <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'tofana-black-1' %} selected{% endif %}" href="/products/tofana-black-1">
                       </a>
-                      <a style="font-size: 0px; text-align: center; color: #754D43; background-color: #754D43; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn" href="https://www.mountainero.com/products/tofana-brown">
+                      <a style="font-size: 0px; text-align: center; color: #754D43; background-color: #754D43; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'tofana-brown' %} selected{% endif %}" href="https://www.mountainero.com/products/tofana-brown">
                     </a>
-                      <a style="font-size: 0px; text-align: center; color: #4D745D; background-color: #4D745D; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn" href="https://www.mountainero.com/products/tofana-tanne">
+                      <a style="font-size: 0px; text-align: center; color: #4D745D; background-color: #4D745D; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'tofana-tanne' %} selected{% endif %}" href="https://www.mountainero.com/products/tofana-tanne">
                     </a>
                     </div>
                   {% endif %}
@@ -658,13 +658,13 @@
                       {% if product.title contains 'Set' %}
                           <p style="font-size: 13px; margin-bottom: 0px;" class='v2-product-color-heading'>Farbe Set</p>
                         <div style="margin-top: 0px;" class="farbauswahl">
-                          <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; margin-right: 12px; border-radius: 40px;" class="rnd-btn">
+                          <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; margin-right: 12px; border-radius: 40px;" class="rnd-btn selected">
                         </a>
                         </div>
                         {% else %} 
                         <p style="font-size: 13px; margin-bottom: 0px;" class='v2-product-color-heading'>Farbe Leggings</p>
                         <div style="margin-top: 0px;" class="farbauswahl">
-                          <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; margin-right: 12px; border-radius: 40px;" class="rnd-btn">
+                          <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; margin-right: 12px; border-radius: 40px;" class="rnd-btn selected">
                         </a>
                         </div>
                         {% endif %}
@@ -672,22 +672,22 @@
                         {% if product.title contains 'Set' %}
                         <p style="font-size: 13px; margin-bottom: 0px;" class='v2-product-color-heading'>Farbe Set</p>
                         <div style="margin-top: 0px;" class="farbauswahl">
-                          <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; margin-right: 12px; border-radius: 40px;" class="rnd-btn" href="/products/antelao-set-classic-black">
+                          <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; margin-right: 12px; border-radius: 40px;" class="rnd-btn{% if product.handle contains 'antelao-set-classic-black' %} selected{% endif %}" href="/products/antelao-set-classic-black">
                         </a>
-                          <a style="font-size: 0px; text-align: center; color: #c78476; background-color: #c78476; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn" href="/products/antelao-set-classic-orange">
+                          <a style="font-size: 0px; text-align: center; color: #c78476; background-color: #c78476; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'antelao-set-classic-orange' %} selected{% endif %}" href="/products/antelao-set-classic-orange">
                         </a>
-                          <a style="font-size: 0px; text-align: center; color: #5c6f86; background-color: #5c6f86; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn" href="/products/antelao-set-classic-blue">
+                          <a style="font-size: 0px; text-align: center; color: #5c6f86; background-color: #5c6f86; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'antelao-set-classic-blue' %} selected{% endif %}" href="/products/antelao-set-classic-blue">
                         </a>
                         </div>
                         {% endif %}
                       {% unless product.title contains 'Set' %}
                         <p style="font-size: 13px; margin-bottom: 0px;" class='v2-product-color-heading'>Farbe Leggings</p>
                         <div style="margin-top: 0px;" class="farbauswahl">
-                          <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; margin-right: 12px; border-radius: 40px;" class="rnd-btn" href="/products/antelao-leggings-black-1">
+                          <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; margin-right: 12px; border-radius: 40px;" class="rnd-btn{% if product.handle contains 'antelao-leggings-black-1' %} selected{% endif %}" href="/products/antelao-leggings-black-1">
                         </a>
-                          <a style="font-size: 0px; text-align: center; color: #c78476; background-color: #c78476; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn" href="/products/antelao-leggings-orange">
+                          <a style="font-size: 0px; text-align: center; color: #c78476; background-color: #c78476; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'antelao-leggings-orange' %} selected{% endif %}" href="/products/antelao-leggings-orange">
                         </a>
-                          <a style="font-size: 0px; text-align: center; color: #5c6f86; background-color: #5c6f86; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn" href="/products/antelao-leggings-blue">
+                          <a style="font-size: 0px; text-align: center; color: #5c6f86; background-color: #5c6f86; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'antelao-leggings-blue' %} selected{% endif %}" href="/products/antelao-leggings-blue">
                         </a>
                         </div>
                       {% endunless %}
@@ -697,18 +697,18 @@
                   {% if product.title contains 'Set' %}
                     <p style="font-size: 13px; margin-bottom: 0px;" class='v2-product-color-heading'>Farbe Set</p>
                     <div style="margin-top: 0px;" class="farbauswahl">
-                      <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; margin-right: 12px; border-radius: 40px;" class="rnd-btn" href="/products/civetta-set-bundle">
+                      <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; margin-right: 12px; border-radius: 40px;" class="rnd-btn{% if product.handle contains 'civetta-set-bundle' %} selected{% endif %}" href="/products/civetta-set-bundle">
                     </a>
-                      <a style="font-size: 0px; text-align: center; color: #754D43; background-color: #754D43; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn" href="/products/civetta-set-braun">
+                      <a style="font-size: 0px; text-align: center; color: #754D43; background-color: #754D43; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'civetta-set-braun' %} selected{% endif %}" href="/products/civetta-set-braun">
                     </a>
                     </div>
                   {% endif %}
                   {% unless product.title contains 'Set' %}
                     <p style="font-size: 13px; margin-bottom: 0px;" class='v2-product-color-heading'>Farbe Leggings</p>
                     <div style="margin-top: 0px;" class="farbauswahl">
-                      <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; margin-right: 12px; border-radius: 40px;" class="rnd-btn" href="/products/civetta-leggings-black">
+                      <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; margin-right: 12px; border-radius: 40px;" class="rnd-btn{% if product.handle contains 'civetta-leggings-black' %} selected{% endif %}" href="/products/civetta-leggings-black">
                     </a>
-                      <a style="font-size: 0px; text-align: center; color: #754D43; background-color: #754D43; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn" href="/products/civetta-leggings-brown">
+                      <a style="font-size: 0px; text-align: center; color: #754D43; background-color: #754D43; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'civetta-leggings-brown' %} selected{% endif %}" href="/products/civetta-leggings-brown">
                     </a>
                     </div>
                   {% endunless %}
@@ -718,9 +718,9 @@
               {% elsif product.title contains 'Faloria' %}
                     <p style="font-size: 13px; margin-bottom: 0px;" class='v2-product-color-heading'>Farbe Leggings</p>
                     <div style="margin-top: 0px;" class="farbauswahl">
-                      <a style="font-size: 0px; text-align: center; color: #000000; background-color: #000000; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn" href="/products/faloria-black-♻%EF%B8%8F-1">
+                      <a style="font-size: 0px; text-align: center; color: #000000; background-color: #000000; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'faloria-black' %} selected{% endif %}" href="/products/faloria-black-♻%EF%B8%8F-1">
                     </a>
-                      <a style="font-size: 0px; text-align: center; color: #74815e; background-color: #74815e; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn" href="/products/leggings-faloria-green-♻%EF%B8%8F-1">
+                      <a style="font-size: 0px; text-align: center; color: #74815e; background-color: #74815e; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'leggings-faloria-green' %} selected{% endif %}" href="/products/leggings-faloria-green-♻%EF%B8%8F-1">
                     </a>
                     </div>
 
@@ -862,6 +862,8 @@
                         <path d="M14.3784 6.9208V3.2C14.3784 1.9864 13.3786 1 12.1486 1H3.22973C1.99973 1 1 1.9864 1 3.2V12.8C1 14.0136 1.99973 15 3.22973 15H11.3378C13.9081 15 16 12.936 16 10.4C16 9.0104 15.3692 7.7648 14.3784 6.9208ZM6.27027 2.2H9.10811V4C9.10811 4.1104 9.0173 4.2 8.90541 4.2H6.47297C6.36108 4.2 6.27027 4.1104 6.27027 4V2.2ZM3.22973 13.8C2.67108 13.8 2.21622 13.3512 2.21622 12.8V3.2C2.21622 2.6488 2.67108 2.2 3.22973 2.2H5.05405V4C5.05405 4.772 5.69054 5.4 6.47297 5.4H8.90541C9.68784 5.4 10.3243 4.772 10.3243 4V2.2H12.1486C12.7073 2.2 13.1622 2.6488 13.1622 3.2V6.1672C12.6011 5.9312 11.9849 5.8 11.3378 5.8C8.76757 5.8 6.67568 7.864 6.67568 10.4C6.67568 11.748 7.27 12.9576 8.20892 13.8H3.22973ZM11.3378 13.8C9.43811 13.8 7.89189 12.2744 7.89189 10.4C7.89189 8.5256 9.43811 7 11.3378 7C13.2376 7 14.7838 8.5256 14.7838 10.4C14.7838 12.2744 13.2376 13.8 11.3378 13.8ZM13.4654 9.2672C13.6519 9.5432 13.5765 9.9152 13.2968 10.0992L10.8643 11.6992C10.7614 11.7664 10.6438 11.8 10.527 11.8C10.3697 11.8 10.2141 11.74 10.0965 11.624L9.28568 10.824C9.04811 10.5896 9.04811 10.2096 9.28568 9.9752C9.52324 9.7408 9.90838 9.7408 10.1459 9.9752L10.6041 10.4272L12.6214 9.1C12.9003 8.9152 13.2781 8.9904 13.4646 9.2664L13.4654 9.2672Z" fill="#8E9677"/>
                       </svg>
                       <label class="variant__label">
+                        <span class="stock-message in-stock{% if product.selected_or_first_available_variant.available %} active{% endif %}"><b>Auf Lager</b> - in ca. 2-4 Werktagen bei dir</span>
+                        <span class="stock-message out-of-stock{% if product.selected_or_first_available_variant.available == false %} active{% endif %}">Derzeit leider nicht lieferbar</span>
                       </label>
                     </div>
                   </div>
@@ -893,22 +895,31 @@
                   </template>
                 </pickup-availability>
               </div>
-                <script>
-                      window.addEventListener('click', function() {
-                      setTimeout(()=>{if(document.getElementById('buy_btn').disabled)
-                      {
-                           document.querySelector('.product-block--price label').innerHTML = "Derzeit leider nicht lieferbar";  
-                            document.querySelector('.product-block--price label').style = "font-size: 13px; color: #a10702; margin-bottom: 8px;";
-                       }
-                      else
-                      {
-                           document.querySelector('.product-block--price label').innerHTML = "Auf Lager - in ca. 2-4 Werktagen bei dir";
-                                document.querySelector('.product-block--price label').style = "font-size: 13px; color:  #2f4b26; margin-bottom: 8px;";
-                       }}, 700);
-                      
-                      });
-                                            
-                   </script>
+              <script>
+                document.querySelectorAll('.mt-variant-selector input')?.forEach((input) => {
+                  input.addEventListener('change', function () {
+                    console.log(document.getElementById('buy_btn').disabled);
+                    if (document.getElementById('buy_btn').disabled) {
+                      document.querySelector('.in-stock').classList.remove('active');
+                      document.querySelector('.out-of-stock').classList.add('active');
+                    } else {
+                      document.querySelector('.in-stock').classList.add('active');
+                      document.querySelector('.out-of-stock').classList.remove('active');
+                    }
+                  })
+                });
+                {% comment %} window.addEventListener('click', function() {
+                  setTimeout(() => {
+                    if (document.getElementById('buy_btn').disabled) {
+                      document.querySelector('.product-block--price label').innerHTML = "Derzeit leider nicht lieferbar";  
+                      document.querySelector('.product-block--price label').style = "font-size: 13px; color: #a10702; margin-bottom: 8px;";
+                    } else {
+                      document.querySelector('.product-block--price label').innerHTML = "<b>Auf Lager</b> - in ca. 2-4 Werktagen bei dir";
+                      document.querySelector('.product-block--price label').style = "font-size: 13px; color:  #2f4b26; margin-bottom: 8px;";
+                    }
+                  }, 0);
+                }); {% endcomment %}
+              </script>
             {% comment %}CHRIS: Start Benefit-Box {% endcomment %}
             {{ 'section-benefit-icons.css' | asset_url | stylesheet_tag }}
 
@@ -1418,8 +1429,8 @@ window.addEventListener('click', function(event) {
               </svg>
             </div> 
             <div class="mt-product-compare-model-body">
-              <div class="mt-product-compare-title">dd-{{ product_meta.value.title }}</div>
-              <div class="mt-product-compare-text">cc-{{ product_meta.value.content }}</div>
+              <div class="mt-product-compare-title">{{ product_meta.value.title }}</div>
+              <div class="mt-product-compare-text">{{ product_meta.value.content }}</div>
             </div> 
             <div class="mt-product-compare-model-link">
               <a href="{{ product_meta.value.link }}" class="mt-product-compare-go-to-model">

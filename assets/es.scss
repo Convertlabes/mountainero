@@ -357,3 +357,14 @@ body {
 .ab-card .loox-rating span {
   line-height: 10px;
 }
+
+.product.v2 .rnd-btn.selected {
+  outline: 1px solid #000;
+  outline-offset: 3px;
+}
+.product.v2 .mt-delivery-text .variant__label .stock-message {
+  display: none;
+}
+.product.v2 .mt-delivery-text .variant__label .stock-message.active {
+  display: block;
+}
