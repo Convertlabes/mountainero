@@ -331,7 +331,11 @@
       ],
       "settings": {
         "include_margins": false,
-        "background_color": ""
+        "background_color": "",
+        "heading": "",
+        "padding_top": 0,
+        "Badding_bottom": 0,
+        "padding_right": false
       }
     },
     "product-recommendations": {
@@ -386,7 +390,11 @@
       ],
       "settings": {
         "include_margins": true,
-        "background_color": ""
+        "background_color": "#8e9677",
+        "heading": "<p>Alle Modelle im Vergleich<\/p>",
+        "padding_top": 60,
+        "Badding_bottom": 0,
+        "padding_right": true
       }
     },
     "1859c10a-a976-414d-8bab-2332db508fb0": {

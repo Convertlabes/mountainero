@@ -368,3 +368,41 @@ body {
 .product.v2 .mt-delivery-text .variant__label .stock-message.active {
   display: block;
 }
+
+.search {
+  .field {
+    &::after,
+    &::before {
+      content: unset;
+    }
+
+    button {
+      z-index: 2;
+      border-bottom-left-radius: 50px;
+      border-top-left-radius: 50px;
+    }
+
+    .search__input.field__input {
+      padding-left: 5rem;
+      padding-right: 1.5rem;
+      border-radius: 50px;
+
+      &:focus {
+        box-shadow: unset;
+        padding: 1.5rem 1.5rem 1.5rem 5rem !important;
+      }
+    }
+  }
+}
+
+ss-product {
+  .relative {
+    width: 100%;
+
+    .product__image-wrapper {
+      width: 100%;
+      display: block;
+      max-width: unset;
+    }
+  }
+}
