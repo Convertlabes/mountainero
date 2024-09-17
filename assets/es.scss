@@ -385,6 +385,7 @@ body {
     .search__input.field__input {
       padding: 1.5rem 3rem 1.5rem 4rem !important;
       border-radius: 50px;
+      border: 1px solid rgba(0, 0, 0, 0.25);
 
       &:focus {
         box-shadow: unset;
