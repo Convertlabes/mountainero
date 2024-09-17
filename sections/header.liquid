@@ -703,7 +703,7 @@
     {%- endif -%}
 
     <div class="header__icons">
-      {% comment %} <details-modal class="header__search">
+      <details-modal class="header__search medium-hide large-up-hide">
         <details>
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
             <span>
@@ -774,12 +774,21 @@
             </div>
           </div>
         </details>
-      </details-modal> {% endcomment %}
-
+      </details-modal>
+      <a href="javascript:;" class="header__icon small-hide header__icon--search es-header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
+        <span>
+          <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false" role="presentation">
+            <use href="#icon-search">
+          </svg>
+          <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false" role="presentation">
+            <use href="#icon-close">
+          </svg>
+        </span>
+      </a>
       {%- if settings.predictive_search_enabled -%}
-        <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
+        <predictive-search class="search-modal__form small-hide" data-loading-text="{{ 'accessibility.loading' | t }}">
       {%- endif -%}
-        <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+        <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form small-hide">
           <div class="field">
             <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
               <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
@@ -807,6 +816,11 @@
             >
             {% comment %} <label class="field__label" for="Search-In-Modal">{{ 'general.search.search' | t }}</label> {% endcomment %}
             <input type="hidden" name="options[prefix]" value="last">
+            <a href="javascript:;" class="es-search-form-close">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <path d="M6.5 18.5L18.5 6.5M6.5 6.5L18.5 18.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
           </div>
 
           {%- if settings.predictive_search_enabled -%}
@@ -865,6 +879,22 @@
 {%- if settings.cart_type == "notification" -%}
   {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
 {%- endif -%}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    (() => {
+      const searchOpenButton = document.querySelector('.es-header__icon--search');
+      const searchCloseButton = document.querySelector('.es-search-form-close');
+
+      searchOpenButton.addEventListener("click", function () {
+        this.classList.add('open');
+      });
+      searchCloseButton.addEventListener('click', function () {
+        searchOpenButton.classList.remove('open');
+      })
+    })()
+  });
+</script>
 
 {% javascript %}
   class StickyHeader extends HTMLElement {
