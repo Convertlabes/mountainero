@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "ab_hero_banner_B9B9FQ": {
@@ -132,6 +141,7 @@
         "image_list_Pwyq7P": {
           "type": "image_list",
           "settings": {
+            "heading": "Deine neue Leggings",
             "image": "shopify:\/\/shop_images\/aa9e402161be39ed8b6ea6868f799e57_1.png",
             "text1": "<p>Perfekter Halt<\/p>",
             "text2": "<p>Blickdicht<\/p>",
@@ -142,6 +152,7 @@
         "image_list_RgYwzn": {
           "type": "image_list",
           "settings": {
+            "heading": "Test",
             "image": "shopify:\/\/shop_images\/16fdb0b331f11c0172681692766dc207.jpg",
             "text1": "<p>Blickdicht<\/p>",
             "text2": "<p>Schnelltrocknend & Atmungsaktiv<\/p>",
@@ -152,6 +163,7 @@
         "image_list_hAxcw6": {
           "type": "image_list",
           "settings": {
+            "heading": "Deine neue Leggings",
             "image": "shopify:\/\/shop_images\/e0d0fba859ba931030457b55ac623548.png",
             "text1": "<p>Perfekter Halt<\/p>",
             "text2": "<p>Blickdicht<\/p>",
@@ -559,7 +571,11 @@
       "disabled": true,
       "settings": {
         "include_margins": true,
-        "background_color": ""
+        "background_color": "",
+        "heading": "",
+        "padding_top": 0,
+        "Badding_bottom": 0,
+        "padding_right": false
       }
     },
     "1710403088e64ab201": {
@@ -578,7 +594,11 @@
       "disabled": true,
       "settings": {
         "include_margins": true,
-        "background_color": ""
+        "background_color": "",
+        "heading": "",
+        "padding_top": 0,
+        "Badding_bottom": 0,
+        "padding_right": false
       }
     },
     "rich_text_hJBWJN": {
@@ -655,7 +675,11 @@
       ],
       "settings": {
         "include_margins": true,
-        "background_color": "#e7e7e7"
+        "background_color": "#e7e7e7",
+        "heading": "",
+        "padding_top": 0,
+        "Badding_bottom": 0,
+        "padding_right": false
       }
     },
     "1664357093f3c77127": {
