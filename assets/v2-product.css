@@ -237,7 +237,19 @@ section.page-width:has(.product.v2) {
 }
 
 .product.v2 .mt-size-description p {
-    margin-bottom: 0;
+    margin: 0;
+    color: var(--Grey-80, #767676);
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+}
+.product.v2 .mt-size-description p b,
+.product.v2 .mt-size-description p a {
+    font-weight: 700;
+    color: var(--Grey-80, #767676) !important;
 }
 
 .product.v2 #buy_btn {
