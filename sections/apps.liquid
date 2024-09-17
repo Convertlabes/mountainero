@@ -38,7 +38,7 @@
   }
 </style>
 
-<div class="{% if section.settings.include_margins %}page-width{% endif %}">
+<div class="{% if section.settings.include_margins %}page-width{% endif %}"{% if section.settings.custom_id != blank %} id="{{ section.settings.custom_id }}"{% endif %}>
   {% if section.settings.heading != blank %}
     <h2 class="heading-font-h3">{{ section.settings.heading }}</h2>
   {% endif %}
@@ -53,6 +53,11 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "Custom ID"
+    },
     {
       "type": "checkbox",
       "id": "include_margins",

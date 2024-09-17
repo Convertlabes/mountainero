@@ -16,6 +16,13 @@
         background : {{ background }};
     }
 
+
+    #shopify-section-{{ section.id }} .olc-wrapper {
+      border-radius: 20px;
+      border: 1px solid var(--Grey-light, rgba(0,0,0,.1));
+      padding: 20px;
+    }
+
     @media (max-width : 768px) {
         #shopify-section-{{ section.id }} .our-logo-container {
             padding-top: {{ mobile_padding_top }}px;
@@ -29,23 +36,24 @@
 
 {% comment %} begin our misssion code {% endcomment %}
 <div class='our-logo-container page-width'>
+  <div class="olc-wrapper">
+    {%- if section.settings.heading != blank -%}
+      <div class='brand-heading'>
+        <div class='heading'>{{ section.settings.heading }}</div>
+      </div>
+    {%- endif -%}
 
-  {%- if section.settings.heading != blank -%}
-    <div class='brand-heading'>
-      <div class='heading'>{{ section.settings.heading }}</div>
+    <div class='brand-content {% if section.settings.brand-list-display-mode == "slider" %} swiper brand-swiper-slider-{{ section.id }} {% endif %}'>
+      <ul class='brands-lists {% if section.settings.brand-image-show-mode != blank %} {{ section.settings.brand-image-show-mode }} {% endif %} {% if section.settings.brand-list-display-mode == "slider" %} swiper-wrapper {% endif %}'>
+        {% for block in section.blocks %}
+          {%- if block.type == "brands-list" -%}
+              <li class='list-item'>
+                  <img src="{{ block.settings.brand-image  |  image_url: width: 1200 }}" width="" height="" alt="">
+              </li>
+          {%- endif -%}
+        {% endfor %}
+      </ul>
     </div>
-  {%- endif -%}
-
-  <div class='brand-content {% if section.settings.brand-list-display-mode == "slider" %} swiper brand-swiper-slider-{{ section.id }} {% endif %}'>
-    <ul class='brands-lists {% if section.settings.brand-image-show-mode != blank %} {{ section.settings.brand-image-show-mode }} {% endif %} {% if section.settings.brand-list-display-mode == "slider" %} swiper-wrapper {% endif %}'>
-      {% for block in section.blocks %}
-        {%- if block.type == "brands-list" -%}
-            <li class='list-item'>
-                <img src="{{ block.settings.brand-image  |  image_url: width: 1200 }}" width="" height="" alt="">
-            </li>
-        {%- endif -%}
-      {% endfor %}
-    </ul>
   </div>
 </div>
 {% comment %} end our misssion code {% endcomment %}

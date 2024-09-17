@@ -325,6 +325,7 @@
         "loox-product-reviews"
       ],
       "settings": {
+        "custom_id": "",
         "include_margins": false,
         "background_color": "",
         "heading": "",
@@ -384,6 +385,7 @@
         "d1f62ef5-78d3-4a7e-aae0-6311f545c864"
       ],
       "settings": {
+        "custom_id": "compare_modal",
         "include_margins": true,
         "background_color": "#8e9677",
         "heading": "<p>Alle Modelle im Vergleich<\/p>",

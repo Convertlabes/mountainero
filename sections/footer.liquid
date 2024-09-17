@@ -51,148 +51,143 @@ window.addEventListener('DOMContentLoaded', () => {
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'disclosure.css' | asset_url | stylesheet_tag }}</noscript>
 
-{%- style -%}
-  .footer {
-    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
-  }
-
+<style>
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
-  {% if section.settings.background_image != blank %}
-      .footer {
-        background-image: url("{{ section.settings.background_image | img_url: '1920x' }}");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        position: relative;
-        --color-foreground: #FFF;
-      }
-      .section-footer-padding {
-        padding-top: 76px !important;
-        padding-bottom: 76px !important;
-      }
-      .footer::before {
-        content: '';
-        background-color: rgba(0,0,0,.6);
-        position: absolute;
-        display: block;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-      .footer > div {
-        z-index: 2;
-        position: relative;
-      }
-      .footer .footer-block__heading {
-        color: var(--Primary-Base-White, #FFF);
-        font-family: "Poppins", sans-serif;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 23.4px; /* 130% */
-        letter-spacing: 0.6px;
-      }
-      .footer .list-menu__item--link {
-        color: rgba(255, 255, 255, 0.75);
-        font-family: "Assistant", sans-serif;
-        font-size: 16px !important;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 25.2px; /* 157.5% */
-        letter-spacing: 0.6px;
-      }
-      .footer .footer-block__details-content {
-        color: rgba(255, 255, 255, 0.75);
-        font-family: "Poppins", sans-serif;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 28.8px; /* 180% */
-        letter-spacing: 0.6px;
-      }
-      .footer .footer-block__details-content strong {
-        color: #fff;
-      }
-      .footer-block__details-content--group {
-        display: flex;
-        gap: 50px;
-      }
-      @media (max-width: 768px) {
-        .footer-block__details-content--group {
-          gap: 20px;
-        }
-      }
-      .klaviyo-form-WFjG5d {
-        border-radius: 11px;
-        background: rgba(0, 0, 0, 0.50);
-        backdrop-filter: blur(3px);
-        padding: 20px;
-        max-width: 500px;
-      }
-      .klaviyo-form-WFjG5d form {
-        max-width: unset !important;
-      }
-      .klaviyo-form-WFjG5d form > div {
-        min-height: unset !important;
-      }
-      .klaviyo-form-WFjG5d form > div span {
-        color: var(--Primary-Base-White, #FFF);
-        font-family: "Nunito Sans", sans-serif;
-        font-size: 17px !important;
-        font-style: normal;
-        font-weight: 400 !important;
-        line-height: normal;
-      }
-      .klaviyo-form-WFjG5d form > div [data-testid="form-row"] + [data-testid="form-row"] {
-        margin-top: 15px;
-      }
-      .klaviyo-form-WFjG5d form input {
-        font-family: "Poppins", sans-serif !important;
-        font-size: 14px !important;
-        font-style: normal !important;
-        font-weight: 400 !important;
-        line-height: normal !important;
-      }
-      .klaviyo-form-WFjG5d form button {
-        border-radius: 5px !important;
-        background: var(--Primary-Base-White, #FFF) !important;
-        {% comment %} padding: 11px 20px !important; {% endcomment %}
-        color: #000 !important;
-        text-align: center !important;
-        font-family: "Poppins", sans-serif !important;
-        font-size: 16px !important;
-        font-style: normal !important;
-        font-weight: 600 !important;
-        line-height: 16px !important; /* 100% */
-      }
-      .footer .page-width {
-        max-width: 1400px;
-      }
-      .footer .page-width .grid {
-        justify-content: space-between;
-      }
-      .footer .page-width .grid .grid__item {
-        max-width: 500px;
-      }
-      @media (max-width: 768px) {
-        .footer {
-          padding-top: 36px !important;
-          padding-bottom: 36px !important;
-        }
-        .footer .page-width {
-          padding-left: 15px;
-          padding-right: 15px;
-        }
-        .footer .list-menu__item--link {
-          font-size: 14px;
-        }
-      }
-    {% endif %}
+  .footer {
+    background-image: url("{{ section.settings.background_image | img_url: '1920x' }}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+    --color-foreground: #FFF;
+  }
+  .section-footer-padding {
+    padding-top: 76px !important;
+    padding-bottom: 76px !important;
+  }
+  .footer::before {
+    content: '';
+    background-color: rgba(0,0,0,.6);
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .footer > div {
+    z-index: 2;
+    position: relative;
+  }
+  .footer .footer-block__heading {
+    color: var(--Primary-Base-White, #FFF);
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23.4px; /* 130% */
+    letter-spacing: 0.6px;
+  }
+  .footer .list-menu__item--link {
+    color: rgba(255, 255, 255, 0.75);
+    font-family: "Assistant", sans-serif;
+    font-size: 16px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25.2px; /* 157.5% */
+    letter-spacing: 0.6px;
+  }
+  .footer .footer-block__details-content {
+    color: rgba(255, 255, 255, 0.75);
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28.8px; /* 180% */
+    letter-spacing: 0.6px;
+  }
+  .footer .footer-block__details-content strong {
+    color: #fff;
+  }
+  .footer-block__details-content--group {
+    display: flex;
+    gap: 50px;
+  }
+  @media (max-width: 768px) {
+    .footer-block__details-content--group {
+      gap: 20px;
+    }
+  }
+  .klaviyo-form-WFjG5d {
+    border-radius: 11px;
+    background: rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(3px);
+    padding: 20px;
+    max-width: 500px;
+  }
+  .klaviyo-form-WFjG5d form {
+    max-width: unset !important;
+  }
+  .klaviyo-form-WFjG5d form > div {
+    min-height: unset !important;
+  }
+  .klaviyo-form-WFjG5d form > div span {
+    color: var(--Primary-Base-White, #FFF);
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 17px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    line-height: normal;
+  }
+  .klaviyo-form-WFjG5d form > div [data-testid="form-row"] + [data-testid="form-row"] {
+    margin-top: 15px;
+  }
+  .klaviyo-form-WFjG5d form input {
+    font-family: "Poppins", sans-serif !important;
+    font-size: 14px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: normal !important;
+  }
+  .klaviyo-form-WFjG5d form button {
+    border-radius: 5px !important;
+    background: var(--Primary-Base-White, #FFF) !important;
+    {% comment %} padding: 11px 20px !important; {% endcomment %}
+    color: #000 !important;
+    text-align: center !important;
+    font-family: "Poppins", sans-serif !important;
+    font-size: 16px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: 16px !important; /* 100% */
+  }
+  .footer .page-width {
+    max-width: 1400px;
+  }
+  .footer .page-width .grid {
+    justify-content: space-between;
+  }
+  .footer .page-width .grid .grid__item {
+    max-width: 500px;
+  }
+  @media (max-width: 768px) {
+    .footer {
+      padding-top: 36px !important;
+      padding-bottom: 36px !important;
+    }
+    .footer .page-width {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .footer .list-menu__item--link {
+      font-size: 14px;
+    }
+  }
 
   @media screen and (min-width: 750px) {
     .footer {
@@ -204,7 +199,7 @@ window.addEventListener('DOMContentLoaded', () => {
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
-{%- endstyle -%}
+</style>
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
   {%- if section.blocks.size > 0 or section.settings.newsletter_enable or section.settings.show_social -%}
