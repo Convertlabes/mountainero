@@ -223,6 +223,7 @@ section.page-width:has(.product.v2) {
 @media (max-width: 767px) {
     .product.v2 .product-form__input input + label {
         margin-right: 0 !important;
+        padding: 1rem 1.5rem;
     }
 }
 
