@@ -201,16 +201,13 @@
         "product_tabs_pXiHgt": {
           "type": "product-tabs",
           "settings": {
-            "tab_button_label": "{{ product.metafields.custom.product_tabs.value.tab_2.value.tab_button_label.value }}",
-            "tab_content_icon": "{{ product.metafields.custom.product_tabs.value.tab_2.value.tab_content_icon.value }}",
-            "tab_content_heading": "{{ product.metafields.custom.product_tabs.value.tab_2.value.tab_content_heading.value }}",
-            "tab_content_text": "{{ product.metafields.custom.product_tabs.value.tab_2.value.tab_content_text | metafield_tag }}",
-            "tab_content_icon_2": "{{ product.metafields.custom.product_tabs.value.tab_2.value.tab_content_icon_2.value }}",
-            "tab_content_heading_2": "{{ product.metafields.custom.product_tabs.value.tab_2.value.tab_content_heading_3.value }}",
-            "tab_content_text_2": "{{ product.metafields.custom.product_tabs.value.tab_2.value.tab_content_text_2 | metafield_tag }}",
-            "tab_content_icon_3": "{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_content_icon_3.value }}",
-            "tab_content_heading_3": "{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_content_heading_3.value }}",
-            "tab_content_text_3": "{{ product.metafields.custom.product_tabs.value.tab_2.value.tab_content_text_3 | metafield_tag }}",
+            "tab_button_label": "Tofana",
+            "tab_content_heading": "",
+            "tab_content_text": "{{ product.metafields.custom.tofana | metafield_tag }}",
+            "tab_content_heading_2": "",
+            "tab_content_text_2": "",
+            "tab_content_heading_3": "",
+            "tab_content_text_3": "",
             "tab_index": 2,
             "tab_active": false
           }
@@ -218,16 +215,13 @@
         "product_tabs_BjDeij": {
           "type": "product-tabs",
           "settings": {
-            "tab_button_label": "{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_button_label.value }}",
-            "tab_content_icon": "{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_content_icon.value }}",
-            "tab_content_heading": "{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_content_heading.value }}",
-            "tab_content_text": "{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_content_text | metafield_tag }}",
-            "tab_content_icon_2": "{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_content_icon_2.value }}",
-            "tab_content_heading_2": "{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_content_heading_2.value }}",
-            "tab_content_text_2": "{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_content_text_2 | metafield_tag }}",
-            "tab_content_icon_3": "{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_content_icon_3.value }}",
-            "tab_content_heading_3": "{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_content_heading_3.value }}",
-            "tab_content_text_3": "{{ product.metafields.custom.product_tabs.value.tab_3.value.tab_content_text_3 | metafield_tag }}",
+            "tab_button_label": "ALLGEMEIN",
+            "tab_content_heading": "",
+            "tab_content_text": "{{ product.metafields.custom.allgemein | metafield_tag }}",
+            "tab_content_heading_2": "",
+            "tab_content_text_2": "",
+            "tab_content_heading_3": "",
+            "tab_content_text_3": "",
             "tab_index": 3,
             "tab_active": false
           }
@@ -274,8 +268,8 @@
         "mobile_thumbnails": "show",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 24,
-        "padding_bottom": 12
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     },
     "65736dd7-4332-4387-af9c-002658b35f66": {
