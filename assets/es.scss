@@ -39,6 +39,10 @@
         text-align: center;
         max-width: max-content;
 
+        a {
+          text-decoration: unset;
+        }
+
         @media (max-width: 768px) {
           max-width: calc(50% - var(--grid-mobile-horizontal-spacing) / 2);
           width: 100%;
@@ -349,7 +353,9 @@ body {
 }
 
 .ab-card .loox-rating span {
-  line-height: 10px;
+  line-height: 11px;
+  display: block;
+  margin-top: 3px;
 }
 
 .product.v2 .rnd-btn.selected {

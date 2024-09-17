@@ -18,14 +18,16 @@
   <div class="grid">
     {% for block in section.blocks %}
       <div class="grid__item">
-        <div class="image">
-          {%- if block.settings.image != blank -%}
-            <img src="{{ block.settings.image | img_url: 'master' }}" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" alt="{{ block.settings.image.alt }}">
-          {%- endif -%}
-        </div>
-        <div class="content">
-          <div class="font-p1">{{ block.settings.text }}</div>
-        </div>
+        <a href="{{ block.settings.link }}">
+          <div class="image">
+            {%- if block.settings.image != blank -%}
+              <img src="{{ block.settings.image | img_url: 'master' }}" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" alt="{{ block.settings.image.alt }}">
+            {%- endif -%}
+          </div>
+          <div class="content">
+            <div class="font-p1">{{ block.settings.text }}</div>
+          </div>
+        </a>
       </div>
     {% endfor %}
   </div>
@@ -78,6 +80,11 @@
           "type": "inline_richtext",
           "id": "text",
           "label": "Text"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
         }
       ]
     }
