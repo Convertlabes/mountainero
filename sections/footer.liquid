@@ -65,12 +65,20 @@ window.addEventListener('DOMContentLoaded', () => {
   @media screen and (min-width: 750px) {
     .footer {
       margin-top: {{ section.settings.margin_top }}px;
-      background-attachment: scroll;
     }
 
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  @media (max-width: 749px) {
+    .footer {
+      background-attachment: scroll;
+      {% if section.settings.mobile_background_image != blank %}
+        --background-image: url('{{ section.settings.mobile_background_image | img_url: '720x' }}');
+      {% endif %}
     }
   }
 </style>
@@ -538,6 +546,11 @@ window.addEventListener('DOMContentLoaded', () => {
       "type": "image_picker",
       "id": "background_image",
       "label": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_background_image",
+      "label": "Mobile Background Image"
     },
     {
       "type": "select",
