@@ -25,43 +25,47 @@ endfor
         {% for block in section.blocks %}
         {% if block.type == 'product-tabs' %}
             <div class="ta-tab-item {% if block.settings.tab_active %} active {% endif %}" data-tab="{{block.settings.tab_index}}">
-            <div class="tab-content-wrapper">
-                {% if block.settings.tab_content_icon != blank %} 
-                <div class="tab-content_icon">
-                    <img src="{{ block.settings.tab_content_icon | img_url: 'master' }}">
-                </div>
+                {% if block.settings.tab_content_heading != blank or block.settings.tab_content_text != blank %}
+                    <div class="tab-content-wrapper">
+                        {% if block.settings.tab_content_icon != blank %} 
+                        <div class="tab-content_icon">
+                            <img src="{{ block.settings.tab_content_icon | img_url: 'master' }}">
+                        </div>
+                        {% endif %}
+                        <div class="tab-content_text-wrap">
+                            <div class="tab-content-heading">{{ block.settings.tab_content_heading }}</div>
+                            <div class="tab-content-text">{{ block.settings.tab_content_text }}</div>
+                        </div>
+                    </div>
                 {% endif %}
-                <div class="tab-content_text-wrap">
-                    <div class="tab-content-heading">{{ block.settings.tab_content_heading }}</div>
-                    <div class="tab-content-text">{{ block.settings.tab_content_text }}</div>
-                </div>
-            </div>
 
-
-            <div class="tab-content-wrapper">
-                {% if block.settings.tab_content_icon != blank %} 
-                <div class="tab-content_icon">
-                    <img src="{{ block.settings.tab_content_icon_2 | img_url: 'master' }}">
-                </div>
+                {% if block.settings.tab_content_heading_2 != blank or block.settings.tab_content_text_2 != blank %}
+                    <div class="tab-content-wrapper">
+                        {% if block.settings.tab_content_icon != blank %} 
+                        <div class="tab-content_icon">
+                            <img src="{{ block.settings.tab_content_icon_2 | img_url: 'master' }}">
+                        </div>
+                        {% endif %}
+                        <div class="tab-content_text-wrap">
+                            <div class="tab-content-heading">{{ block.settings.tab_content_heading_2 }}</div>
+                            <div class="tab-content-text">{{ block.settings.tab_content_text_2 }}</div>
+                        </div>
+                    </div>
                 {% endif %}
-                <div class="tab-content_text-wrap">
-                    <div class="tab-content-heading">{{ block.settings.tab_content_heading_2 }}</div>
-                    <div class="tab-content-text">{{ block.settings.tab_content_text_2 }}</div>
-                </div>
-            </div>
 
-
-            <div class="tab-content-wrapper">
-                {% if block.settings.tab_content_icon != blank %} 
-                <div class="tab-content_icon">
-                    <img src="{{ block.settings.tab_content_icon_3 | img_url: 'master' }}">
-                </div>
+                {% if block.settings.tab_content_heading_3 != blank or block.settings.tab_content_text_3 != blank %}
+                    <div class="tab-content-wrapper">
+                        {% if block.settings.tab_content_icon != blank %} 
+                        <div class="tab-content_icon">
+                            <img src="{{ block.settings.tab_content_icon_3 | img_url: 'master' }}">
+                        </div>
+                        {% endif %}
+                        <div class="tab-content_text-wrap">
+                            <div class="tab-content-heading">{{ block.settings.tab_content_heading_3 }}</div>
+                            <div class="tab-content-text">{{ block.settings.tab_content_text_3 }}</div>
+                        </div>
+                    </div>
                 {% endif %}
-                <div class="tab-content_text-wrap">
-                    <div class="tab-content-heading">{{ block.settings.tab_content_heading_3 }}</div>
-                    <div class="tab-content-text">{{ block.settings.tab_content_text_3 }}</div>
-                </div>
-            </div>
             </div>
         {% endif %}
         {% endfor %} 

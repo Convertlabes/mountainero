@@ -215,7 +215,7 @@
         "product_tabs_BjDeij": {
           "type": "product-tabs",
           "settings": {
-            "tab_button_label": "ALLGEMEIN",
+            "tab_button_label": "Allgemein",
             "tab_content_heading": "",
             "tab_content_text": "{{ product.metafields.custom.allgemein | metafield_tag }}",
             "tab_content_heading_2": "",
@@ -575,28 +575,32 @@
           "type": "item",
           "settings": {
             "image": "shopify:\/\/shop_images\/SVG.svg",
-            "text": ">10.000 GLÜCKLICHE KUNDEN"
+            "text": ">10.000 GLÜCKLICHE KUNDEN",
+            "link": ""
           }
         },
         "item_iqtCpR": {
           "type": "item",
           "settings": {
             "image": "shopify:\/\/shop_images\/SVG_1.svg",
-            "text": "KOSTENLOSER VERSAND AB 50€"
+            "text": "KOSTENLOSER VERSAND AB 50€",
+            "link": ""
           }
         },
         "item_4i48Lj": {
           "type": "item",
           "settings": {
             "image": "shopify:\/\/shop_images\/SVG_2.svg",
-            "text": "30 TAGE RÜCKGABERECHT"
+            "text": "30 TAGE RÜCKGABERECHT",
+            "link": ""
           }
         },
         "item_VQwghb": {
           "type": "item",
           "settings": {
             "image": "shopify:\/\/shop_images\/SVG_3.svg",
-            "text": "SICHER BEZAHLEN"
+            "text": "SICHER BEZAHLEN",
+            "link": ""
           }
         }
       },
