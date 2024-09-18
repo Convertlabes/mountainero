@@ -36,6 +36,14 @@
     max-width: {{ section.settings.logo_width }}px;
   }
 
+  {% if template contains 'index' %}
+    @media (max-width: 767px) {
+      #shopify-section-header {
+        height: 0;
+      }
+    }
+  {% endif %}
+
   @media screen and (min-width: 990px) {
     header-drawer {
       display: none;
