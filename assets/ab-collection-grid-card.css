@@ -40,12 +40,12 @@
 
 .ab-collection-main-container .card-top-info ~ .card-information .price {
     margin-top: 0;
-    color: #F0F0F0;
+    color: var(--Black, #000);
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 24px; /* 171.429% */
+    line-height: normal;
 }
 
 .ab-collection-main-container .ab-card .loox-rating,
@@ -68,27 +68,29 @@
 }
 
 .ab-collection-main-container .ab-card .loox-rating span {
-    color: #F0F0F0;
+    color: #000000;
 }
 
 .ab-collection-main-container .ab-card .card__heading {
-    color: #F0F0F0;
+    color: var(--Black, #000);
+
+    /* Paragraph/Regular */
     font-family: 'Poppins', sans-serif;
-    font-size: 13px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 16.9px; /* 130% */
-    letter-spacing: 0.6px;
+    line-height: normal;
+    letter-spacing: 1px;
 }
 
 .ab-collection-main-container .ab-card .ab-card-content {
-    border-radius: 0px 0px 7px 7px;
-    background: rgba(0, 0, 0, 0.60);
-    backdrop-filter: blur(5.5px);
     padding: 13px;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+    border-radius: 0px 0px 5.722px 5.722px;
+    border-right: 0.817px solid var(--Grey-50, #E7E7E7);
+    border-bottom: 0.817px solid var(--Grey-50, #E7E7E7);
+    border-left: 0.817px solid var(--Grey-50, #E7E7E7);
+    background: var(--Primary-Base-White, #FFF);
+    backdrop-filter: blur(4.495652198791504px);
 }
 
 .ab-collection-main-container .ab-card .ab-card-content > .card__information {

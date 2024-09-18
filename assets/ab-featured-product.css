@@ -36,6 +36,12 @@
     margin-bottom: 7px;
 }
 
+@media (max-width: 767px) {
+    .ab-card .card-top-info {
+        gap: 2px;
+    }
+}
+
 .ab-card .color_swatches > div {
     line-height: 0;
     display: flex;
