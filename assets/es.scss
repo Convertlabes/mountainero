@@ -79,6 +79,8 @@ body {
       background: rgba(255, 255, 255, 0.59);
       backdrop-filter: blur(8.5px);
       overflow: auto;
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none; 
 
       &.open {
         transform: translateX(-15px);
