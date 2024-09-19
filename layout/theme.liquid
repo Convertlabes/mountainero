@@ -316,6 +316,14 @@
       {%- if settings.predictive_search_enabled -%}
         <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
       {%- endif -%}
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          window.SLIDECART_UPDATED = function(cart) {
+            console.log(cart);
+          }
+        })
+      </script>
     
     {{ shop.metafields.loox["global_html_body"] }}
   {% comment %} Chris: Reinladen Custom Fonts. 

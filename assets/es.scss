@@ -107,6 +107,10 @@ body {
 
     .header {
       padding: 15px;
+      background-color: #c8c8c8;
+      position: sticky;
+      top: 0;
+      z-index: 99;
 
       h2,
       h2 * {
@@ -121,6 +125,10 @@ body {
 
       button {
         background-color: #fff;
+      }
+
+      .cart-count {
+        display: none;
       }
     }
 
@@ -197,7 +205,7 @@ body {
     }
 
     .upsells {
-      padding: 5px 15px;
+      padding: 15px 15px 0;
 
       .upsell-item {
         padding: 8px;
@@ -248,7 +256,7 @@ body {
 
     .footer {
       background: #fff;
-      padding: 16px;
+      padding: 16px 16px 14px !important;
 
       .footer-row {
         border: 0;
@@ -337,6 +345,9 @@ body {
       background-color: #121212;
       padding: 10px 20px;
       gap: 0;
+      position: sticky;
+      top: 60px;
+      z-index: 99;
 
       &:has(.rewards-post-unlock-text) {
         background: var(--Green-main, #8D9677);
@@ -384,6 +395,19 @@ body {
   
         & + .item {
           margin-top: 8px;
+        }
+
+        .item-image-anchor {
+          width: 84px;
+          position: relative;
+
+          img {
+            width: 100% !important;
+            height: 100% !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
         }
   
         .main {
