@@ -145,6 +145,7 @@
 
 .ab-collection-main-container .facets-container {
     height: 0;
+    display: none;
 }
 
 .ab-collection-main-container .mobile-facets__inner {
