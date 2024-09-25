@@ -55,7 +55,7 @@ predictive-search[loading] .predictive-search {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
   margin: 0 auto;
   padding: 1.5rem 2rem 0.75rem;
-  background-color: #fff;
+  /* background-color: #fff; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -108,7 +108,7 @@ predictive-search[loading] .predictive-search__results-list:first-child {
 
 .predictive-search__item {
   display: flex;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   text-align: left;
   text-decoration: none;
   width: 100%;

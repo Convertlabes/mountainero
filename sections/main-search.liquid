@@ -1,7 +1,7 @@
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
-
+{{ 'ab-collection-grid-card.css' |  asset_url |  stylesheet_tag }}
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
 
 <noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
@@ -17,13 +17,13 @@
   }
 
   .template-search__search {
-    margin: 0 auto 3.5rem;
+    margin: 0 auto;
     max-width: 47.8rem;
   }
-
+{% comment %} 
   .template-search__search .search {
     margin-top: 3rem;
-  }
+  } {% endcomment %}
 
   .template-search--empty {
     padding-bottom: 18rem;
@@ -47,9 +47,87 @@
 -%}
 
 {%- style -%}
+  .template-search .h2 {
+    color: var(--Primary-Base-White, #FFF);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    z-index: 2;
+    position: relative;
+    font-size: 39px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    margin: 0;
+  }
+  .template-search .search .field__label {
+    display: none;
+  }
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  .template-search__header {
+    {% if section.settings.background_image != blank %}
+      background-image: url('{{ section.settings.background_image | img_url: "3840x" }}');
+    {% endif %}
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 0;
+    position: relative;
+    padding: 160px 50px 0;
+  }
+  .template-search__header::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+  }
+
+  .template-search__header + div {
+    padding-top: 30px;
+  }
+
+  .template-search__search {
+    position: relative;
+    bottom: -20px;
+    display: flex;
+  }
+  .template-search__header .template-search__search predictive-search {
+    flex: 1;
+  }
+  .template-search__header .template-search__search .facets-container {
+    padding: 0;
+  }
+  .template-search__header .template-search__search .facets-container menu-drawer {
+    margin: 0;
+  }
+  .template-search__header .template-search__search .facets-container-drawer {
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 50px;
+    background: #fff;
+    padding: 0 10px !important;
+  }
+  .template-search__header .template-search__search .mobile-facets__open-label {
+    color: var(--Black, #000);
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1px;
+  }
+  .facets-wrapper .mobile-facets__wrapper {
+    display: none !important;
+  }
+  .facets-container-drawer {
+    justify-content: flex-end;
   }
 
   @media screen and (min-width: 750px) {
@@ -60,7 +138,7 @@
   }
 {%- endstyle -%}
 
-<div class="template-search{% unless search.performed and search.results_count > 0 %} template-search--empty{% endunless %} section-{{ section.id }}-padding">
+<div class="template-search{% unless search.performed and search.results_count > 0 %} template-search--empty{% endunless %} section-{{ section.id }}-padding ab-collection-main-container">
   <div class="template-search__header page-width center">
     {%- if search.performed -%}
       <h1 class="h2">{{ 'templates.search.title' | t }}</h1>
@@ -118,7 +196,7 @@
       {%- if settings.predictive_search_enabled -%}
         </predictive-search>
       {%- endif -%}
-
+      {% render 'facets-header', results: search, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, filter_type: section.settings.filter_type %}
     </div>
     {%- if search.performed -%}
       {%- unless section.settings.enable_filtering or section.settings.enable_sorting -%}
@@ -210,7 +288,7 @@
                     {%- case item.object_type -%}
                       {%- when 'product' -%}
                         {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
-                        {% render 'card-product',
+                        {% render 'ab-card-product',
                           card_product: item,
                           media_aspect_ratio: section.settings.image_ratio,
                           show_secondary_image: section.settings.show_secondary_image,
@@ -266,6 +344,11 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
     {
       "type": "range",
       "id": "columns_desktop",

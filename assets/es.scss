@@ -540,7 +540,7 @@ ss-product {
 
 .predictive-search {
   border-radius: 15px !important;
-  background: rgba(255, 255, 255, 0.90);
+  background: rgba(255, 255, 255, 0.60);
   box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25) !important;
   backdrop-filter: blur(5px);
 
@@ -555,12 +555,14 @@ ss-product {
   }
 }
 
-.es-header__icon--search.open,
 .es-header__icon--search + .search-modal__form {
   display: none;
 }
 .es-header__icon--search.open + .search-modal__form {
   display: block;
+  position: absolute;
+  transform: translateX(calc(-100% + 50px));
+  max-width: 280px;
 }
 
 .es-search-form-close {
