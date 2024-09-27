@@ -141,7 +141,7 @@
         "image_list_Pwyq7P": {
           "type": "image_list",
           "settings": {
-            "heading": "Deineneue Lieblings-Leggings:",
+            "heading": "Deine neue Lieblings-Leggings:",
             "image": "shopify://shop_images/aa9e402161be39ed8b6ea6868f799e57_1.png",
             "text1": "<p>Leichte Kompression für optimalen Halt</p>",
             "text2": "<p>Super bequem für jede Aktivität</p>",
@@ -152,9 +152,9 @@
         "image_list_RgYwzn": {
           "type": "image_list",
           "settings": {
-            "heading": "Unser Versand:",
+            "heading": "Unser Versand",
             "image": "shopify://shop_images/16fdb0b331f11c0172681692766dc207.jpg",
-            "text1": "<p>Klimaneutral mit DHL GoGreen aus unserem Lager in Elsendorf, Bayern</p>",
+            "text1": "<p>Mit DHL GoGreen aus unserem Lager in Elsendorf, Bayern</p>",
             "text2": "<p>Plastikfrei und mit viel Liebe verpackt</p>",
             "text3": "<p>Persönliche, handgeschriebene Postkarte als kleines Extra</p>",
             "text4": ""
