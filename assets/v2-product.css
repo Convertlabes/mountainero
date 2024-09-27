@@ -332,7 +332,7 @@ section.page-width:has(.product.v2) {
 
 .tab-button.active {
     background-color:transparent;
-    color : white;
+    color : white !important;
 }
 
 
