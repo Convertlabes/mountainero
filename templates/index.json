@@ -152,11 +152,11 @@
         "image_list_RgYwzn": {
           "type": "image_list",
           "settings": {
-            "heading": "Test",
+            "heading": "Unser Versand:",
             "image": "shopify://shop_images/16fdb0b331f11c0172681692766dc207.jpg",
-            "text1": "<p>Blickdicht</p>",
-            "text2": "<p>Schnelltrocknend & Atmungsaktiv</p>",
-            "text3": "",
+            "text1": "<p>Klimaneutral mit DHL GoGreen aus unserem Lager in Elsendorf, Bayern</p>",
+            "text2": "<p>Plastikfrei und mit viel Liebe verpackt</p>",
+            "text3": "<p>Persönliche, handgeschriebene Postkarte als kleines Extra</p>",
             "text4": ""
           }
         },
