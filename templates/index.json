@@ -18,7 +18,7 @@
         "heading": "<p>Bereit für Dein </p><p>nächstes Abenteuer?</p>",
         "sub_heading": "",
         "button_text": "Zu den Leggings",
-        "button_link": "shopify://collections",
+        "button_link": "shopify://collections/leggings",
         "enable_shadow": true,
         "enable_content_overlap": true,
         "button_background": "#ffffff",
