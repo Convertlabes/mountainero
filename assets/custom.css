@@ -30,6 +30,7 @@ sticky-header.header-wrapper {
 
 sticky-header.header-wrapper.is-scroll-active .mt-header { 
     background-color: rgba(255, 255 , 255, 0.5)!important;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .mt-header .header__menu-item {
@@ -218,6 +219,7 @@ sticky-header.header-wrapper.is-scroll-active .mt-header {
 
 sticky-header.header-wrapper.is-scroll-active .mt-header .mega-menu__list { 
     background-color: rgba(255, 255 , 255, 0.5);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .mt-header .mega-menu__list .mt-mega-menu-item {

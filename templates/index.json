@@ -1,15 +1,24 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "ab_hero_banner_B9B9FQ": {
       "type": "ab-hero-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Wandern-Leggings-Wanderleggings-Damen-leggins-Yoga-Wanderhosen-Mountainero-21_5ea654c7-bd0a-49e8-8fd4-5055cf703d6b.jpg",
+        "image": "shopify://shop_images/Wandern-Leggings-Wanderleggings-Damen-leggins-Yoga-Wanderhosen-Mountainero-21_5ea654c7-bd0a-49e8-8fd4-5055cf703d6b.jpg",
         "desktop_image_height": 720,
         "mobile_image_height": 720,
-        "heading": "<p>Bereit für Dein <\/p><p>nächstes Abenteuer?<\/p>",
+        "heading": "<p>Bereit für Dein </p><p>nächstes Abenteuer?</p>",
         "sub_heading": "",
         "button_text": "Zu den Leggings",
-        "button_link": "shopify:\/\/collections",
+        "button_link": "shopify://collections",
         "enable_shadow": true,
         "enable_content_overlap": true,
         "button_background": "#ffffff",
@@ -28,13 +37,13 @@
         "icon_xmGcT7": {
           "type": "icon",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/1f49151004c207fcd82c8bfdbdffddf1.svg"
+            "icon": "shopify://shop_images/1f49151004c207fcd82c8bfdbdffddf1.svg"
           }
         },
         "text_KFKiV4": {
           "type": "text",
           "settings": {
-            "text": "<p>Mit unseren Leggings bist Du perfekt für Deine nächste Wanderung ausgestattet. Mithilfe ihrer leichten Kompression fühlen sie sich wie eine zweite Haut an.<\/p>"
+            "text": "<p>Mit unseren Leggings bist Du perfekt für Deine nächste Wanderung ausgestattet. Mithilfe ihrer leichten Kompression fühlen sie sich wie eine zweite Haut an.</p>"
           }
         },
         "title_bXEeQR": {
@@ -133,10 +142,10 @@
           "type": "image_list",
           "settings": {
             "heading": "Deine neue Leggings",
-            "image": "shopify:\/\/shop_images\/aa9e402161be39ed8b6ea6868f799e57_1.png",
-            "text1": "<p>Perfekter Halt<\/p>",
-            "text2": "<p>Blickdicht<\/p>",
-            "text3": "<p>Schnelltrocknend & Atmungsaktiv<\/p>",
+            "image": "shopify://shop_images/aa9e402161be39ed8b6ea6868f799e57_1.png",
+            "text1": "<p>Perfekter Halt</p>",
+            "text2": "<p>Blickdicht</p>",
+            "text3": "<p>Schnelltrocknend & Atmungsaktiv</p>",
             "text4": ""
           }
         },
@@ -144,9 +153,9 @@
           "type": "image_list",
           "settings": {
             "heading": "Test",
-            "image": "shopify:\/\/shop_images\/16fdb0b331f11c0172681692766dc207.jpg",
-            "text1": "<p>Blickdicht<\/p>",
-            "text2": "<p>Schnelltrocknend & Atmungsaktiv<\/p>",
+            "image": "shopify://shop_images/16fdb0b331f11c0172681692766dc207.jpg",
+            "text1": "<p>Blickdicht</p>",
+            "text2": "<p>Schnelltrocknend & Atmungsaktiv</p>",
             "text3": "",
             "text4": ""
           }
@@ -155,10 +164,10 @@
           "type": "image_list",
           "settings": {
             "heading": "Deine neue Leggings",
-            "image": "shopify:\/\/shop_images\/e0d0fba859ba931030457b55ac623548.png",
-            "text1": "<p>Perfekter Halt<\/p>",
-            "text2": "<p>Blickdicht<\/p>",
-            "text3": "<p>Schnelltrocknend & Atmungsaktiv<\/p>",
+            "image": "shopify://shop_images/e0d0fba859ba931030457b55ac623548.png",
+            "text1": "<p>Perfekter Halt</p>",
+            "text2": "<p>Blickdicht</p>",
+            "text3": "<p>Schnelltrocknend & Atmungsaktiv</p>",
             "text4": ""
           }
         }
@@ -169,14 +178,14 @@
         "image_list_hAxcw6"
       ],
       "settings": {
-        "heading": "<p>Deine neue Leggings<\/p>",
+        "heading": "<p>Deine neue Leggings</p>",
         "heading_color": "",
         "background": "",
         "desktop_padding_top": 0,
         "mobile_padding_top": 0,
         "desktop_padding_bottom": 80,
         "mobile_padding_bottom": 50,
-        "image_background": "shopify:\/\/shop_images\/Vector.svg"
+        "image_background": "shopify://shop_images/Vector.svg"
       }
     },
     "ab_featured_collection_KWNe3X": {
@@ -200,8 +209,8 @@
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "image_banner": {
@@ -218,13 +227,13 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "LEGGINGS & SETS",
-            "button_link_1": "shopify:\/\/collections\/leggings",
+            "button_link_1": "shopify://collections/leggings",
             "button_style_secondary_1": false,
             "button_label_2": "OBERTEILE",
-            "button_link_2": "shopify:\/\/collections\/oberteile",
+            "button_link_2": "shopify://collections/oberteile",
             "button_style_secondary_2": false,
             "button_label_3": "SHORTS",
-            "button_link_3": "shopify:\/\/collections\/shorts",
+            "button_link_3": "shopify://collections/shorts",
             "button_style_secondary_3": false
           }
         }
@@ -235,7 +244,7 @@
       ],
       "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/Wandern-Leggings-Wanderleggings-Damen-leggins-Yoga-Wanderhosen-Mountainero-21_5ea654c7-bd0a-49e8-8fd4-5055cf703d6b.jpg",
+        "image": "shopify://shop_images/Wandern-Leggings-Wanderleggings-Damen-leggins-Yoga-Wanderhosen-Mountainero-21_5ea654c7-bd0a-49e8-8fd4-5055cf703d6b.jpg",
         "image_overlay_opacity": 40,
         "image_height": "large",
         "adapt_height_first_image": false,
@@ -263,10 +272,10 @@
           "type": "button",
           "settings": {
             "button_label": "Leggings & Sets",
-            "button_link": "shopify:\/\/collections\/leggings",
+            "button_link": "shopify://collections/leggings",
             "button_style_secondary": false,
             "button_label_2": "Oberteile",
-            "button_link_2": "shopify:\/\/collections\/oberteile",
+            "button_link_2": "shopify://collections/oberteile",
             "button_style_secondary_2": false
           }
         },
@@ -367,7 +376,7 @@
       "settings": {
         "heading": "",
         "heading_size": "h1",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": false,
         "color_scheme": "background-1",
@@ -388,7 +397,7 @@
         "166435614344ee4e0c-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Perfekter Halt<\/p><p>Blickdicht<\/p><p>Schnelltrocknend & Atmungsaktiv<\/p>",
+            "text": "<p>Perfekter Halt</p><p>Blickdicht</p><p>Schnelltrocknend & Atmungsaktiv</p>",
             "text_style": "body"
           }
         }
@@ -399,7 +408,7 @@
       ],
       "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/Wandern-Leggings-Wanderleggings-Mountainero-V202.jpg",
+        "image": "shopify://shop_images/Wandern-Leggings-Wanderleggings-Mountainero-V202.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -425,7 +434,7 @@
         "166435663859f6776a-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Hochwertiger Stoff Q-nova®, umweltverträglicher Nylon aus nachwachsendem Rohstoff produziert in Italien  - unsere Modelle Tofana Eco und Faloria Eco<\/p>",
+            "text": "<p>Hochwertiger Stoff Q-nova®, umweltverträglicher Nylon aus nachwachsendem Rohstoff produziert in Italien  - unsere Modelle Tofana Eco und Faloria Eco</p>",
             "text_style": "body"
           }
         }
@@ -436,7 +445,7 @@
       ],
       "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/Wandern-Leggings-Wanderleggings-Mountainero-4.jpg",
+        "image": "shopify://shop_images/Wandern-Leggings-Wanderleggings-Mountainero-4.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -462,7 +471,7 @@
         "1664356694cd9a8a7c-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Entwickeln neue Produkte nach deinen Wünschen<\/p><p>Sind stets für dich erreichbar<\/p>",
+            "text": "<p>Entwickeln neue Produkte nach deinen Wünschen</p><p>Sind stets für dich erreichbar</p>",
             "text_style": "body"
           }
         }
@@ -473,7 +482,7 @@
       ],
       "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/Wandern-Leggings-Wanderleggings-Mountainero-5.jpg",
+        "image": "shopify://shop_images/Wandern-Leggings-Wanderleggings-Mountainero-5.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "text_first",
@@ -499,7 +508,7 @@
         "1664357164bbfa49a0-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Schnelle Lieferung - DHL green<\/p><p>Personalisiert & frei von Plastik<\/p>",
+            "text": "<p>Schnelle Lieferung - DHL green</p><p>Personalisiert & frei von Plastik</p>",
             "text_style": "body"
           }
         }
@@ -510,7 +519,7 @@
       ],
       "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/Wandern-Leggings-Wanderleggings-Mountainero-6.jpg",
+        "image": "shopify://shop_images/Wandern-Leggings-Wanderleggings-Mountainero-6.jpg",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
@@ -574,7 +583,7 @@
       "type": "apps",
       "blocks": {
         "klaviyo_email_marketing_sms_form_embed_block_WhrHWK": {
-          "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/form-embed-block\/2632fe16-c075-4321-a88b-50b567f42507",
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
           "settings": {
             "formId": ""
           }
@@ -600,7 +609,7 @@
         "heading_7AfDin": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Talk about your brand<\/p>",
+            "heading": "<p>Talk about your brand</p>",
             "heading_size": "h1"
           }
         }
@@ -609,7 +618,7 @@
         "heading_7AfDin"
       ],
       "custom_css": [
-        "@media (max-width: 767px) {.rich-text__heading {font-size: 27px;} }"
+        "@media (max-width: 767px) {.rich-text__heading {font-size: 27px; }}"
       ],
       "settings": {
         "background_color": "#e7e7e7",
@@ -625,7 +634,7 @@
       "type": "apps",
       "blocks": {
         "8f439cae-773a-4b08-a676-e3cb66847f24": {
-          "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-carousel-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "type": "shopify://apps/loox-reviews/blocks/loox-carousel-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "disabled": true,
           "settings": {
             "max_width": 1920,
@@ -641,14 +650,14 @@
           }
         },
         "klaviyo_email_marketing_sms_form_embed_block_wJAff9": {
-          "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/form-embed-block\/2632fe16-c075-4321-a88b-50b567f42507",
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
           "disabled": true,
           "settings": {
             "formId": ""
           }
         },
         "loox_reviews_loox_agg_section_wNQ7Gf": {
-          "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-agg-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "type": "shopify://apps/loox-reviews/blocks/loox-agg-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
             "only_photos": false,
             "hide_thumbnails": false,
@@ -702,7 +711,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "ZU DEN LEGGINGS",
-            "button_link_1": "shopify:\/\/collections\/leggings",
+            "button_link_1": "shopify://collections/leggings",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -720,7 +729,7 @@
       ],
       "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/Wandern-Leggings-Wanderleggings-Mountainero-10.jpg",
+        "image": "shopify://shop_images/Wandern-Leggings-Wanderleggings-Mountainero-10.jpg",
         "image_overlay_opacity": 40,
         "image_height": "large",
         "adapt_height_first_image": false,
@@ -736,10 +745,10 @@
     "ab_hero_banner_WqBtH3": {
       "type": "ab-hero-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Wandern-Leggings-Wanderleggings-Mountainero-10.jpg",
+        "image": "shopify://shop_images/Wandern-Leggings-Wanderleggings-Mountainero-10.jpg",
         "desktop_image_height": 720,
         "mobile_image_height": 400,
-        "heading": "<p>Unsere Sommer Kollektion <\/p><p>für dein nächstes <\/p><p>Abenteuer.<\/p>",
+        "heading": "<p>Unsere Sommer Kollektion </p><p>für dein nächstes </p><p>Abenteuer.</p>",
         "sub_heading": "",
         "button_text": "ZU DEN LEGGINGS",
         "button_link": "",
@@ -761,7 +770,7 @@
         "item_weJ4Xx": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/SVG.svg",
+            "image": "shopify://shop_images/SVG.svg",
             "text": ">10.000 GLÜCKLICHE KUNDEN",
             "link": ""
           }
@@ -769,7 +778,7 @@
         "item_iqtCpR": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/SVG_1.svg",
+            "image": "shopify://shop_images/SVG_1.svg",
             "text": "KOSTENLOSER VERSAND AB 50€",
             "link": ""
           }
@@ -777,7 +786,7 @@
         "item_4i48Lj": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/SVG_2.svg",
+            "image": "shopify://shop_images/SVG_2.svg",
             "text": "30 TAGE RÜCKGABERECHT",
             "link": ""
           }
@@ -785,7 +794,7 @@
         "item_VQwghb": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/SVG_3.svg",
+            "image": "shopify://shop_images/SVG_3.svg",
             "text": "SICHER BEZAHLEN",
             "link": ""
           }
@@ -796,6 +805,9 @@
         "item_iqtCpR",
         "item_4i48Lj",
         "item_VQwghb"
+      ],
+      "custom_css": [
+        ".grid {border-radius: 11px;}"
       ],
       "settings": {
         "padding_top": 80,
