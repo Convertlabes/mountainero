@@ -56,7 +56,7 @@
     color : white;
     max-width: 800px;
     font-family: 'Petrona', sans-serif;
-    font-size: 50px;
+    font-size: 61px;
     font-weight: 300;
     line-height: 75px;
     letter-spacing: 0.6000000238418579px;
@@ -115,7 +115,6 @@
     }
     
     .ab-image-hero-banner-container .ab-image-hero-banner-main-content .gs-heading {
-        font-family: Poppins;
         font-size: 41px;
         font-weight: 300;
         line-height: 61.5px;
