@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "colors_solid_button_labels": "#ffffff",
@@ -121,7 +130,7 @@
     "cart_type": "notification",
     "show_vendor": false,
     "show_cart_note": false,
-    "checkout_logo_image": "shopify:\/\/shop_images\/Favicon32x32_V3_3d767ab5-2ec2-4f58-b7fa-61690c64626a.png",
+    "checkout_logo_image": "shopify://shop_images/Favicon32x32_V3_3d767ab5-2ec2-4f58-b7fa-61690c64626a.png",
     "checkout_logo_position": "center",
     "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
     "checkout_accent_color": "#121212",
@@ -155,8 +164,8 @@
             "settings": {
               "parent_title": "Alle Produkte",
               "title": "Leggings & Sets",
-              "image": "shopify:\/\/shop_images\/cc25041ca2b7d9d138e8883cf3e34847.png",
-              "link": "shopify:\/\/collections\/leggings",
+              "image": "shopify://shop_images/cc25041ca2b7d9d138e8883cf3e34847.png",
+              "link": "shopify://collections/leggings",
               "badge_text": "Jetzt ansehen",
               "enable_mobile": true
             }
@@ -166,8 +175,8 @@
             "settings": {
               "parent_title": "Alle Produkte",
               "title": "Bundles",
-              "image": "shopify:\/\/shop_images\/aa9e402161be39ed8b6ea6868f799e57.png",
-              "link": "shopify:\/\/collections\/bundles",
+              "image": "shopify://shop_images/aa9e402161be39ed8b6ea6868f799e57.png",
+              "link": "shopify://collections/bundles",
               "badge_text": "",
               "enable_mobile": false
             }
@@ -177,8 +186,8 @@
             "settings": {
               "parent_title": "Alle Produkte",
               "title": "Oberteile",
-              "image": "shopify:\/\/shop_images\/8ace3e843881558005dd0cbcc2da9e1f.png",
-              "link": "shopify:\/\/collections\/oberteile",
+              "image": "shopify://shop_images/8ace3e843881558005dd0cbcc2da9e1f.png",
+              "link": "shopify://collections/oberteile",
               "badge_text": "",
               "enable_mobile": true
             }
@@ -188,8 +197,8 @@
             "settings": {
               "parent_title": "Alle Produkte",
               "title": "Shorts",
-              "image": "shopify:\/\/shop_images\/e0d0fba859ba931030457b55ac623548.png",
-              "link": "shopify:\/\/collections\/shorts",
+              "image": "shopify://shop_images/e0d0fba859ba931030457b55ac623548.png",
+              "link": "shopify://collections/shorts",
               "badge_text": "",
               "enable_mobile": true
             }
@@ -199,8 +208,8 @@
             "settings": {
               "parent_title": "Alle Produkte",
               "title": "Schmuck",
-              "image": "shopify:\/\/shop_images\/1884898167f68ae28f7760abff835d14.png",
-              "link": "shopify:\/\/collections\/schmuck",
+              "image": "shopify://shop_images/1884898167f68ae28f7760abff835d14.png",
+              "link": "shopify://collections/schmuck",
               "badge_text": "",
               "enable_mobile": true
             }
@@ -210,8 +219,8 @@
             "settings": {
               "parent_title": "Alle Produkte",
               "title": "HOODIES & T-SHIRTS",
-              "image": "shopify:\/\/shop_images\/fb2159f10a2c6af36fea96b311be7042.png",
-              "link": "shopify:\/\/collections\/hoodies",
+              "image": "shopify://shop_images/fb2159f10a2c6af36fea96b311be7042.png",
+              "link": "shopify://collections/hoodies",
               "badge_text": "",
               "enable_mobile": true
             }
@@ -227,7 +236,7 @@
         ],
         "settings": {
           "color_scheme": "background-1",
-          "logo": "shopify:\/\/shop_images\/Favicon32x32_V3_3d767ab5-2ec2-4f58-b7fa-61690c64626a.png",
+          "logo": "shopify://shop_images/Favicon32x32_V3_3d767ab5-2ec2-4f58-b7fa-61690c64626a.png",
           "logo_width": 50,
           "logo_position": "middle-left",
           "menu": "new-menu",
@@ -264,7 +273,7 @@
             "type": "text",
             "settings": {
               "heading": "Mountainero GmbH",
-              "subtext": "<p>Vielen Dank für deinen Besuch bei Mountainero! Wenn du Fragen hast, kontaktiere uns gerne unter <strong>info@mountainero.com<\/strong><\/p><p>Kirchstrasse 23, 86676 Ehekrichen<\/p><p><strong>(KEINE RETOURE ADRESSE)<\/strong><\/p>"
+              "subtext": "<p>Vielen Dank für deinen Besuch bei Mountainero! Wenn du Fragen hast, kontaktiere uns gerne unter <strong>info@mountainero.com</strong></p><p>Kirchstrasse 23, 86676 Ehekrichen</p><p><strong>(KEINE RETOURE ADRESSE)</strong></p>"
             }
           },
           "footer-1": {
@@ -282,8 +291,8 @@
           "footer-1"
         ],
         "settings": {
-          "background_image": "shopify:\/\/shop_images\/Footer.jpg",
-          "mobile_background_image": "shopify:\/\/shop_images\/Mobile.png",
+          "background_image": "shopify://shop_images/Footer.jpg",
+          "mobile_background_image": "shopify://shop_images/Mobile.png",
           "color_scheme": "background-2",
           "newsletter_enable": false,
           "newsletter_heading": "Newsletter",
@@ -316,13 +325,13 @@
     ],
     "blocks": {
       "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {
         }
       },
       "15683396631634586217": {
-        "type": "shopify:\/\/apps\/inbox\/blocks\/chat\/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
         "disabled": true,
         "settings": {
           "button_color": "#202a36",
@@ -334,9 +343,18 @@
         }
       },
       "6065014864672580889": {
-        "type": "shopify:\/\/apps\/slide-cart-by-amp\/blocks\/app-embed\/0a410b8d-7dc4-4f2d-b4e8-c12d34fd2255",
+        "type": "shopify://apps/slide-cart-by-amp/blocks/app-embed/0a410b8d-7dc4-4f2d-b4e8-c12d34fd2255",
         "disabled": false,
         "settings": {
+        }
+      },
+      "9853681688192222153": {
+        "type": "shopify://apps/kameleoon-a-b-testing/blocks/app-embed/59f0ac10-ad8a-4d58-b924-e251fce50804",
+        "disabled": false,
+        "settings": {
+          "kameleoon_cart_snippet": true,
+          "kameleoon_product_snippet": true,
+          "kameleoon_collection_snippet": true
         }
       }
     }
@@ -522,7 +540,7 @@
               "type": "text",
               "settings": {
                 "heading": "Our mission",
-                "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+                "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
               }
             }
           },
