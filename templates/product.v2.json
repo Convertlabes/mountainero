@@ -13,7 +13,7 @@
       "type": "custom-liquid",
       "disabled": true,
       "settings": {
-        "custom_liquid": "<style>\n.breadcrumbs{\nmargin-left: 5%;\nfont-size: 12px;\ncolor: #121212;\ntext-decoration: none;\n}\n.breadcrumbsinner{\ncolor: #121212;\n}\n<\/style>\n<div class = breadcrumbs>\n{% if product.tags contains \"leggingsandsets\" %}\n<a class = \"breadcrumbsinner\"\n             href={{ \"https:\/\/www.mountainero.com\" }} target=\"_blank\" rel=\"noopener noreferrer\">Home<\/a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\/collections\" }} target=\"_blank\" rel=\"noopener noreferrer\">Kollektionen<\/a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\/collections\/leggings\" }} target=\"_blank\" rel=\"noopener noreferrer\">Leggings<\/a>\n            {% elsif product.tags contains \"oberteile\" %}\n            <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\" }} target=\"_blank\" rel=\"noopener noreferrer\">Home<\/a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\/collections\" }} target=\"_blank\" rel=\"noopener noreferrer\">Kollektionen<\/a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\/collections\/oberteile\" }} target=\"_blank\" rel=\"noopener noreferrer\">Oberteile<\/a>\n            {% elsif product.tags contains \"shorts\" %}\n            <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\" }} target=\"_blank\" rel=\"noopener noreferrer\">Home<\/a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\/collections\" }} target=\"_blank\" rel=\"noopener noreferrer\">Kollektionen<\/a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\/collections\/shorts\" }} target=\"_blank\" rel=\"noopener noreferrer\">Shorts<\/a>\n            {% else %}}\n            <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\" }} target=\"_blank\" rel=\"noopener noreferrer\">Home<\/a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https:\/\/www.mountainero.com\/collections\" }} target=\"_blank\" rel=\"noopener noreferrer\">Kollektionen<\/a>\n            {% endif %}\n<\/div>",
+        "custom_liquid": "<style>\n.breadcrumbs{\nmargin-left: 5%;\nfont-size: 12px;\ncolor: #121212;\ntext-decoration: none;\n}\n.breadcrumbsinner{\ncolor: #121212;\n}\n</style>\n<div class = breadcrumbs>\n{% if product.tags contains \"leggingsandsets\" %}\n<a class = \"breadcrumbsinner\"\n             href={{ \"https://www.mountainero.com\" }} target=\"_blank\" rel=\"noopener noreferrer\">Home</a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https://www.mountainero.com/collections\" }} target=\"_blank\" rel=\"noopener noreferrer\">Kollektionen</a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https://www.mountainero.com/collections/leggings\" }} target=\"_blank\" rel=\"noopener noreferrer\">Leggings</a>\n            {% elsif product.tags contains \"oberteile\" %}\n            <a class = \"breadcrumbsinner\" href={{ \"https://www.mountainero.com\" }} target=\"_blank\" rel=\"noopener noreferrer\">Home</a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https://www.mountainero.com/collections\" }} target=\"_blank\" rel=\"noopener noreferrer\">Kollektionen</a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https://www.mountainero.com/collections/oberteile\" }} target=\"_blank\" rel=\"noopener noreferrer\">Oberteile</a>\n            {% elsif product.tags contains \"shorts\" %}\n            <a class = \"breadcrumbsinner\" href={{ \"https://www.mountainero.com\" }} target=\"_blank\" rel=\"noopener noreferrer\">Home</a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https://www.mountainero.com/collections\" }} target=\"_blank\" rel=\"noopener noreferrer\">Kollektionen</a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https://www.mountainero.com/collections/shorts\" }} target=\"_blank\" rel=\"noopener noreferrer\">Shorts</a>\n            {% else %}}\n            <a class = \"breadcrumbsinner\" href={{ \"https://www.mountainero.com\" }} target=\"_blank\" rel=\"noopener noreferrer\">Home</a> ►\n              <a class = \"breadcrumbsinner\" href={{ \"https://www.mountainero.com/collections\" }} target=\"_blank\" rel=\"noopener noreferrer\">Kollektionen</a>\n            {% endif %}\n</div>",
         "color_scheme": "background-1",
         "padding_top": 20,
         "padding_bottom": 0
@@ -22,7 +22,7 @@
     "bb8adb61-2da5-470c-8030-6333e7188f20": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<style>\n    .buttoncollectiontop {\n    position: relative;\n    transform: translateX(-50%);\n    color: #121212;\n    font-size: 12px;\n    margin: auto;\n    }\n    <\/style>\n    \n    <div class=\"page-width mt-product-top-link\">\n    {% if product.tags contains \"leggingsandsets\" %}\n    \n              \n      <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/leggings\" }} target=\"_self\" rel=\"noopener noreferrer\">\n      <div class=\"cicle-back-btn\">\n        <svg width=\"20\" height=\"18\" viewBox=\"0 0 20 18\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n          <path d=\"M8.5 16.5L1 9M1 9L8.5 1.5M1 9H19\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"\/>\n        <\/svg>\n      <\/div>\n    Zurück zur Kollektion<\/a>\n                {% elsif product.tags contains \"oberteile\" %}\n                <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/oberteile\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion<\/a>\n                {% elsif product.tags contains \"shorts\" %}\n                <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/shorts\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion<\/a>\n                {% else %}\n                <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zu den Kollektionen<\/a>\n                {% endif %}\n    <\/div>",
+        "custom_liquid": "<style>\n    .buttoncollectiontop {\n    position: relative;\n    transform: translateX(-50%);\n    color: #121212;\n    font-size: 12px;\n    margin: auto;\n    }\n    </style>\n    \n    <div class=\"page-width mt-product-top-link\">\n    {% if product.tags contains \"leggingsandsets\" %}\n    \n              \n      <a class = \"buttoncollectiontop\" href={{ \"https://www.mountainero.com/collections/leggings\" }} target=\"_self\" rel=\"noopener noreferrer\">\n      <div class=\"cicle-back-btn\">\n        <svg width=\"20\" height=\"18\" viewBox=\"0 0 20 18\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <path d=\"M8.5 16.5L1 9M1 9L8.5 1.5M1 9H19\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n        </svg>\n      </div>\n    Zurück zur Kollektion</a>\n                {% elsif product.tags contains \"oberteile\" %}\n                <a class = \"buttoncollectiontop\" href={{ \"https://www.mountainero.com/collections/oberteile\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion</a>\n                {% elsif product.tags contains \"shorts\" %}\n                <a class = \"buttoncollectiontop\" href={{ \"https://www.mountainero.com/collections/shorts\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion</a>\n                {% else %}\n                <a class = \"buttoncollectiontop\" href={{ \"https://www.mountainero.com/collections/\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zu den Kollektionen</a>\n                {% endif %}\n    </div>",
         "color_scheme": "background-1",
         "padding_top": 20,
         "padding_bottom": 0
@@ -45,7 +45,7 @@
           }
         },
         "loox-rating": {
-          "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-rating\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
             "contentSize": 16,
             "pattern": "",
@@ -63,7 +63,7 @@
           "type": "custom_liquid",
           "disabled": true,
           "settings": {
-            "custom_liquid": "{% if product.title contains 'Tofana' %}\n<p style=\"font-size: 13px; color: #121212BF; margin-bottom: -4px; margin-top: 0px;\">Wahl des Materials:<\/p>\n<a href=\"https:\/\/www.mountainero.com\/products\/tofana-black-1?_pos=4&_psq=Tofana&_ss=e&_v=1.0\" style=\"display: inline-block; background-color: black; color: white; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; font-size: 16px;\">\n  Classic\n<\/a>\n<a href=\"https:\/\/www.mountainero.com\/products\/tofana-black-%E2%99%BB%EF%B8%8F?_pos=3&_psq=Tofana&_ss=e&_v=1.0\" style=\"display: inline-block; background-color: #f2f2f2; color: black; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; font-size: 16px;\">\n  Eco\n<\/a>\n{% endif %}\n\n\n{% if product.title contains 'Antelao - Set' %}\n{% if product.tags contains 'eco' %}\n<p style=\"font-size: 13px; color: #121212BF; margin-bottom: -4px; margin-top: 0px;\">Wahl des Materials:<\/p>\n<a href=\"https:\/\/www.mountainero.com\/products\/antelao-set-classic-black\" style=\"display: inline-block; background-color: #f2f2f2; color: black; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; font-size: 16px;\">\n  Classic\n<\/a>\n<a  href=\"https:\/\/www.mountainero.com\/products\/antelao-set-eco\" style=\"display: inline-block; background-color: black; color: white; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; font-size: 16px;\">\n  Eco\n<\/a>\n{% else %}\n<p style=\"font-size: 13px; color: #121212BF; margin-bottom: -4px; margin-top: 0px;\">Wahl des Materials:<\/p>\n<a style=\"display: inline-block; background-color: black; color: white; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; font-size: 16px;\">\n  Classic\n<\/a>\n<a  href=\"https:\/\/www.mountainero.com\/products\/antelao-set-eco\" style=\"display: inline-block; background-color: #f2f2f2; color: black; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; font-size: 16px;\">\n  Eco\n<\/a>\n\n\n{% endif %}\n{% endif %}\n<br>"
+            "custom_liquid": "{% if product.title contains 'Tofana' %}\n<p style=\"font-size: 13px; color: #121212BF; margin-bottom: -4px; margin-top: 0px;\">Wahl des Materials:</p>\n<a href=\"https://www.mountainero.com/products/tofana-black-1?_pos=4&_psq=Tofana&_ss=e&_v=1.0\" style=\"display: inline-block; background-color: black; color: white; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; font-size: 16px;\">\n  Classic\n</a>\n<a href=\"https://www.mountainero.com/products/tofana-black-%E2%99%BB%EF%B8%8F?_pos=3&_psq=Tofana&_ss=e&_v=1.0\" style=\"display: inline-block; background-color: #f2f2f2; color: black; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; font-size: 16px;\">\n  Eco\n</a>\n{% endif %}\n\n\n{% if product.title contains 'Antelao - Set' %}\n{% if product.tags contains 'eco' %}\n<p style=\"font-size: 13px; color: #121212BF; margin-bottom: -4px; margin-top: 0px;\">Wahl des Materials:</p>\n<a href=\"https://www.mountainero.com/products/antelao-set-classic-black\" style=\"display: inline-block; background-color: #f2f2f2; color: black; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; font-size: 16px;\">\n  Classic\n</a>\n<a  href=\"https://www.mountainero.com/products/antelao-set-eco\" style=\"display: inline-block; background-color: black; color: white; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; font-size: 16px;\">\n  Eco\n</a>\n{% else %}\n<p style=\"font-size: 13px; color: #121212BF; margin-bottom: -4px; margin-top: 0px;\">Wahl des Materials:</p>\n<a style=\"display: inline-block; background-color: black; color: white; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; font-size: 16px;\">\n  Classic\n</a>\n<a  href=\"https://www.mountainero.com/products/antelao-set-eco\" style=\"display: inline-block; background-color: #f2f2f2; color: black; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 4px; border: none; cursor: pointer; font-size: 16px;\">\n  Eco\n</a>\n\n\n{% endif %}\n{% endif %}\n<br>"
           }
         },
         "5ea9fa34-bba6-4952-b024-e4aeecc84d51": {
@@ -98,14 +98,14 @@
           "type": "custom_liquid",
           "disabled": true,
           "settings": {
-            "custom_liquid": "{% assign passform = product.metafields.custom.passform %}\n{% if passform %}\n  <p style=\"color: {% if passform contains 'erwartet' %}green{% else %}orange{% endif %}; font-weight: font-size: 13px;\"> {{ passform }}<\/p>\n{% endif %}\n{% assign verfuegbarkeit = product.metafields.custom.verf_gbarkeit_ %}\n{% if verfuegbarkeit %}\n  <p style=\"font-size: 13px;\">{{ verfuegbarkeit }}<\/p>\n{% endif %}"
+            "custom_liquid": "{% assign passform = product.metafields.custom.passform %}\n{% if passform %}\n  <p style=\"color: {% if passform contains 'erwartet' %}green{% else %}orange{% endif %}; font-weight: font-size: 13px;\"> {{ passform }}</p>\n{% endif %}\n{% assign verfuegbarkeit = product.metafields.custom.verf_gbarkeit_ %}\n{% if verfuegbarkeit %}\n  <p style=\"font-size: 13px;\">{{ verfuegbarkeit }}</p>\n{% endif %}"
           }
         },
         "custom_liquid_XPJVPc": {
           "type": "custom_liquid",
           "disabled": true,
           "settings": {
-            "custom_liquid": "{% assign passform = product.metafields.custom.passform %}\n                  {% if passform %}\n                    <!-- Erhöhung der font-size für eine größere Darstellung des Textes -->\n                    <div style=\"display : flex; gap : 5px;\">\n                      <svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" style=\"min-width : 16px;\">\n                        <path d=\"M15.1139 4.57736L11.4234 0.886859C11.2279 0.691359 10.9119 0.691359 10.7164 0.886859L0.886859 10.7164C0.691359 10.9119 0.691359 11.2279 0.886859 11.4234L4.57636 15.1139C4.67036 15.2079 4.79686 15.2604 4.92986 15.2604C5.06286 15.2604 5.18986 15.2079 5.28336 15.1139L15.1134 5.28486C15.2074 5.19086 15.2599 5.06386 15.2599 4.93136C15.2599 4.79886 15.2074 4.67136 15.1139 4.57736ZM13.2164 5.76786L11.7244 4.27786C11.5289 4.08286 11.2124 4.08236 11.0169 4.27836C10.8219 4.47386 10.8219 4.79036 11.0174 4.98536L12.5094 6.47536L11.5659 7.41886L10.6909 6.54336C10.4954 6.34736 10.1794 6.34786 9.98386 6.54286C9.78836 6.73786 9.78836 7.05436 9.98386 7.24986L10.8589 8.12586L9.91586 9.06886L8.42436 7.57736C8.22886 7.38186 7.91286 7.38186 7.71736 7.57736C7.52186 7.77286 7.52186 8.08886 7.71736 8.28436L9.20836 9.77586L8.26586 10.7184L7.38886 9.84286C7.19336 9.64786 6.87736 9.64736 6.68186 9.84336C6.48636 10.0389 6.48636 10.3554 6.68186 10.5504L7.55836 11.4259L6.61486 12.3689L5.12436 10.8784C4.92886 10.6829 4.61286 10.6829 4.41736 10.8784C4.22186 11.0739 4.22186 11.3899 4.41736 11.5854L5.90786 13.0759L4.92986 14.0539L1.94736 11.0704L11.0699 1.94786L14.0534 4.93136L13.2164 5.76786Z\" fill=\"#878787\"\/>\n                      <\/svg>\n                      <p style=\"color: {% if passform contains 'erwartet' %} #878787{% else %} #878787{% endif %}; font-size: 12px; margin-bottom: 2px; margin-top : 0;\">{{ passform }}<\/p>\n                    <\/div>\n                  {% endif %}\n                  {% assign verfuegbarkeit = product.metafields.custom.verf_gbarkeit_ %}\n                  {% if verfuegbarkeit %}\n                    <!-- Beibehaltung der ursprünglichen font-size für den zweiten <p>-Tag -->\n                    <div style=\"display : flex; gap : 5px;\">\n                      <svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" style=\"min-width : 16px;\">\n                        <path d=\"M15.1139 4.57736L11.4234 0.886859C11.2279 0.691359 10.9119 0.691359 10.7164 0.886859L0.886859 10.7164C0.691359 10.9119 0.691359 11.2279 0.886859 11.4234L4.57636 15.1139C4.67036 15.2079 4.79686 15.2604 4.92986 15.2604C5.06286 15.2604 5.18986 15.2079 5.28336 15.1139L15.1134 5.28486C15.2074 5.19086 15.2599 5.06386 15.2599 4.93136C15.2599 4.79886 15.2074 4.67136 15.1139 4.57736ZM13.2164 5.76786L11.7244 4.27786C11.5289 4.08286 11.2124 4.08236 11.0169 4.27836C10.8219 4.47386 10.8219 4.79036 11.0174 4.98536L12.5094 6.47536L11.5659 7.41886L10.6909 6.54336C10.4954 6.34736 10.1794 6.34786 9.98386 6.54286C9.78836 6.73786 9.78836 7.05436 9.98386 7.24986L10.8589 8.12586L9.91586 9.06886L8.42436 7.57736C8.22886 7.38186 7.91286 7.38186 7.71736 7.57736C7.52186 7.77286 7.52186 8.08886 7.71736 8.28436L9.20836 9.77586L8.26586 10.7184L7.38886 9.84286C7.19336 9.64786 6.87736 9.64736 6.68186 9.84336C6.48636 10.0389 6.48636 10.3554 6.68186 10.5504L7.55836 11.4259L6.61486 12.3689L5.12436 10.8784C4.92886 10.6829 4.61286 10.6829 4.41736 10.8784C4.22186 11.0739 4.22186 11.3899 4.41736 11.5854L5.90786 13.0759L4.92986 14.0539L1.94736 11.0704L11.0699 1.94786L14.0534 4.93136L13.2164 5.76786Z\" fill=\"#878787\"\/>\n                      <\/svg>\n                      <p style=\"font-size: 12px; margin-top: 2px; margin-top : 0;\">{{ verfuegbarkeit }}<\/p>\n                    <\/div>\n                  {% endif %}"
+            "custom_liquid": "{% assign passform = product.metafields.custom.passform %}\n                  {% if passform %}\n                    <!-- Erhöhung der font-size für eine größere Darstellung des Textes -->\n                    <div style=\"display : flex; gap : 5px;\">\n                      <svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"min-width : 16px;\">\n                        <path d=\"M15.1139 4.57736L11.4234 0.886859C11.2279 0.691359 10.9119 0.691359 10.7164 0.886859L0.886859 10.7164C0.691359 10.9119 0.691359 11.2279 0.886859 11.4234L4.57636 15.1139C4.67036 15.2079 4.79686 15.2604 4.92986 15.2604C5.06286 15.2604 5.18986 15.2079 5.28336 15.1139L15.1134 5.28486C15.2074 5.19086 15.2599 5.06386 15.2599 4.93136C15.2599 4.79886 15.2074 4.67136 15.1139 4.57736ZM13.2164 5.76786L11.7244 4.27786C11.5289 4.08286 11.2124 4.08236 11.0169 4.27836C10.8219 4.47386 10.8219 4.79036 11.0174 4.98536L12.5094 6.47536L11.5659 7.41886L10.6909 6.54336C10.4954 6.34736 10.1794 6.34786 9.98386 6.54286C9.78836 6.73786 9.78836 7.05436 9.98386 7.24986L10.8589 8.12586L9.91586 9.06886L8.42436 7.57736C8.22886 7.38186 7.91286 7.38186 7.71736 7.57736C7.52186 7.77286 7.52186 8.08886 7.71736 8.28436L9.20836 9.77586L8.26586 10.7184L7.38886 9.84286C7.19336 9.64786 6.87736 9.64736 6.68186 9.84336C6.48636 10.0389 6.48636 10.3554 6.68186 10.5504L7.55836 11.4259L6.61486 12.3689L5.12436 10.8784C4.92886 10.6829 4.61286 10.6829 4.41736 10.8784C4.22186 11.0739 4.22186 11.3899 4.41736 11.5854L5.90786 13.0759L4.92986 14.0539L1.94736 11.0704L11.0699 1.94786L14.0534 4.93136L13.2164 5.76786Z\" fill=\"#878787\"/>\n                      </svg>\n                      <p style=\"color: {% if passform contains 'erwartet' %} #878787{% else %} #878787{% endif %}; font-size: 12px; margin-bottom: 2px; margin-top : 0;\">{{ passform }}</p>\n                    </div>\n                  {% endif %}\n                  {% assign verfuegbarkeit = product.metafields.custom.verf_gbarkeit_ %}\n                  {% if verfuegbarkeit %}\n                    <!-- Beibehaltung der ursprünglichen font-size für den zweiten <p>-Tag -->\n                    <div style=\"display : flex; gap : 5px;\">\n                      <svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" style=\"min-width : 16px;\">\n                        <path d=\"M15.1139 4.57736L11.4234 0.886859C11.2279 0.691359 10.9119 0.691359 10.7164 0.886859L0.886859 10.7164C0.691359 10.9119 0.691359 11.2279 0.886859 11.4234L4.57636 15.1139C4.67036 15.2079 4.79686 15.2604 4.92986 15.2604C5.06286 15.2604 5.18986 15.2079 5.28336 15.1139L15.1134 5.28486C15.2074 5.19086 15.2599 5.06386 15.2599 4.93136C15.2599 4.79886 15.2074 4.67136 15.1139 4.57736ZM13.2164 5.76786L11.7244 4.27786C11.5289 4.08286 11.2124 4.08236 11.0169 4.27836C10.8219 4.47386 10.8219 4.79036 11.0174 4.98536L12.5094 6.47536L11.5659 7.41886L10.6909 6.54336C10.4954 6.34736 10.1794 6.34786 9.98386 6.54286C9.78836 6.73786 9.78836 7.05436 9.98386 7.24986L10.8589 8.12586L9.91586 9.06886L8.42436 7.57736C8.22886 7.38186 7.91286 7.38186 7.71736 7.57736C7.52186 7.77286 7.52186 8.08886 7.71736 8.28436L9.20836 9.77586L8.26586 10.7184L7.38886 9.84286C7.19336 9.64786 6.87736 9.64736 6.68186 9.84336C6.48636 10.0389 6.48636 10.3554 6.68186 10.5504L7.55836 11.4259L6.61486 12.3689L5.12436 10.8784C4.92886 10.6829 4.61286 10.6829 4.41736 10.8784C4.22186 11.0739 4.22186 11.3899 4.41736 11.5854L5.90786 13.0759L4.92986 14.0539L1.94736 11.0704L11.0699 1.94786L14.0534 4.93136L13.2164 5.76786Z\" fill=\"#878787\"/>\n                      </svg>\n                      <p style=\"font-size: 12px; margin-top: 2px; margin-top : 0;\">{{ verfuegbarkeit }}</p>\n                    </div>\n                  {% endif %}"
           }
         },
         "quantity_selector": {
@@ -146,7 +146,7 @@
           "settings": {
             "heading": "Größen",
             "icon": "ruler",
-            "content": "<p>{{ product.metafields.custom.groessen | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.custom.groessen | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -156,7 +156,7 @@
           "settings": {
             "heading": "Versand",
             "icon": "truck",
-            "content": "<p>Lieferzeit <strong>2-4 Werktage<\/strong> (innerhalb Deutschlands)<\/p><p><strong>Deutschland\/Österreich <\/strong>  2,90 € (<strong>kostenfrei ab 50 €)<\/strong><\/p>",
+            "content": "<p>Lieferzeit <strong>2-4 Werktage</strong> (innerhalb Deutschlands)</p><p><strong>Deutschland/Österreich </strong>  2,90 € (<strong>kostenfrei ab 50 €)</strong></p>",
             "page": ""
           }
         },
@@ -166,7 +166,7 @@
           "settings": {
             "heading": "Retouren",
             "icon": "return",
-            "content": "<p>{{ product.metafields.custom.retouren | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.custom.retouren | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -176,7 +176,7 @@
           "settings": {
             "heading": "Pflegehinweis",
             "icon": "heart",
-            "content": "<p>{{ product.metafields.custom.pflegehinweise | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.custom.pflegehinweise | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -186,7 +186,7 @@
           "settings": {
             "heading": "Materialien",
             "icon": "leaf",
-            "content": "<p>{{ product.metafields.custom.materialien | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.custom.materialien | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -210,7 +210,7 @@
         "product_tabs_pXiHgt": {
           "type": "product-tabs",
           "settings": {
-            "tab_button_label": "Tofana",
+            "tab_button_label": "{{ product.metafields.custom.tab_2_title.value }}",
             "tab_content_heading": "",
             "tab_content_text": "{{ product.metafields.custom.tofana | metafield_tag }}",
             "tab_content_heading_2": "",
@@ -224,9 +224,9 @@
         "product_tabs_BjDeij": {
           "type": "product-tabs",
           "settings": {
-            "tab_button_label": "Allgemein",
+            "tab_button_label": "Mountainero",
             "tab_content_heading": "",
-            "tab_content_text": "{{ product.metafields.custom.allgemein | metafield_tag }}",
+            "tab_content_text": "<p>{{ product.metafields.custom.allgemein | metafield_tag }}</p>",
             "tab_content_heading_2": "",
             "tab_content_text_2": "",
             "tab_content_heading_3": "",
@@ -285,7 +285,7 @@
       "type": "custom-liquid",
       "disabled": true,
       "settings": {
-        "custom_liquid": "<style>\n.buttoncollectiontop {\nposition: relative;\ntransform: translateX(-50%);\ncolor: #121212;\nfont-size: 12px;\nmargin: auto;\n}\n<\/style>\n\n<div class=\"center\">\n{% if product.tags contains \"leggingsandsets\" %}\n            <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/leggings\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion<\/a>\n            {% elsif product.tags contains \"oberteile\" %}\n            <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/oberteile\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion<\/a>\n            {% elsif product.tags contains \"shorts\" %}\n            <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/shorts\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion<\/a>\n            {% else %}\n            <a class = \"buttoncollectiontop\" href={{ \"https:\/\/www.mountainero.com\/collections\/\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zu den Kollektionen<\/a>\n            {% endif %}\n<\/div>",
+        "custom_liquid": "<style>\n.buttoncollectiontop {\nposition: relative;\ntransform: translateX(-50%);\ncolor: #121212;\nfont-size: 12px;\nmargin: auto;\n}\n</style>\n\n<div class=\"center\">\n{% if product.tags contains \"leggingsandsets\" %}\n            <a class = \"buttoncollectiontop\" href={{ \"https://www.mountainero.com/collections/leggings\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion</a>\n            {% elsif product.tags contains \"oberteile\" %}\n            <a class = \"buttoncollectiontop\" href={{ \"https://www.mountainero.com/collections/oberteile\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion</a>\n            {% elsif product.tags contains \"shorts\" %}\n            <a class = \"buttoncollectiontop\" href={{ \"https://www.mountainero.com/collections/shorts\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion</a>\n            {% else %}\n            <a class = \"buttoncollectiontop\" href={{ \"https://www.mountainero.com/collections/\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zu den Kollektionen</a>\n            {% endif %}\n</div>",
         "color_scheme": "background-1",
         "padding_top": 8,
         "padding_bottom": 0
@@ -297,7 +297,7 @@
         "heading_CqHVjw": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Eure Pinnwand<\/p>",
+            "heading": "<p>Eure Pinnwand</p>",
             "heading_size": "h1"
           }
         }
@@ -319,7 +319,7 @@
       "type": "apps",
       "blocks": {
         "loox-product-reviews": {
-          "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-dynamic-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
             "only_photos": false,
             "aggregated": false,
@@ -365,7 +365,7 @@
       "type": "apps",
       "blocks": {
         "d1f62ef5-78d3-4a7e-aae0-6311f545c864": {
-          "type": "shopify:\/\/apps\/specification-compare\/blocks\/comparison-table\/a9d09772-f36d-4539-a4c4-7bd785bc12c0",
+          "type": "shopify://apps/specification-compare/blocks/comparison-table/a9d09772-f36d-4539-a4c4-7bd785bc12c0",
           "settings": {
             "product": "{{product}}",
             "product_list": [
@@ -397,7 +397,7 @@
         "custom_id": "compare_modal",
         "include_margins": true,
         "background_color": "#8e9677",
-        "heading": "<p>Alle Modelle im Vergleich<\/p>",
+        "heading": "<p>Alle Modelle im Vergleich</p>",
         "padding_top": 60,
         "Badding_bottom": 0,
         "padding_right": true
@@ -407,7 +407,7 @@
       "type": "custom-liquid",
       "disabled": true,
       "settings": {
-        "custom_liquid": "<style>\n  @import url('https:\/\/fonts.googleapis.com\/css2?family=Assistant:wght@400;500;600&display=swap');\n\n  .custom-text {\n    \/* Stile für Text *\/\n    font-family: 'Assistant', sans-serif;\n    text-align: center;\n    margin-top: 20px;\n    margin-bottom: 0px;\n    font-size: 26px;\n    color: black;\n  }\n\n  .custom-image {\n    \/* Standard-Bildstil für Mobilgeräte *\/\n    width: 100%;\n    border: 0;\n    display: block; \/* Stellt sicher, dass das Bild als Block-Element gerendert wird *\/\n    margin: 0 auto; \/* Zentriert das Bild horizontal *\/\n  }\n\n  @media (min-width: 768px) {\n    .custom-text {\n      \/* Textstil für Desktop *\/\n      font-size: 40px;\n    }\n    .custom-image {\n      \/* Bildstil für Desktop *\/\n      width: 50%;\n    }\n  }\n<\/style>\n\n<div class=\"custom-text\">Bekannt aus<\/div>\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0332\/0640\/3210\/files\/BEKANNT_AUS_13_x_5_cm.png?v=1700657164\" alt=\"Bildbeschreibung\" class=\"custom-image\">",
+        "custom_liquid": "<style>\n  @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600&display=swap');\n\n  .custom-text {\n    /* Stile für Text */\n    font-family: 'Assistant', sans-serif;\n    text-align: center;\n    margin-top: 20px;\n    margin-bottom: 0px;\n    font-size: 26px;\n    color: black;\n  }\n\n  .custom-image {\n    /* Standard-Bildstil für Mobilgeräte */\n    width: 100%;\n    border: 0;\n    display: block; /* Stellt sicher, dass das Bild als Block-Element gerendert wird */\n    margin: 0 auto; /* Zentriert das Bild horizontal */\n  }\n\n  @media (min-width: 768px) {\n    .custom-text {\n      /* Textstil für Desktop */\n      font-size: 40px;\n    }\n    .custom-image {\n      /* Bildstil für Desktop */\n      width: 50%;\n    }\n  }\n</style>\n\n<div class=\"custom-text\">Bekannt aus</div>\n<img src=\"https://cdn.shopify.com/s/files/1/0332/0640/3210/files/BEKANNT_AUS_13_x_5_cm.png?v=1700657164\" alt=\"Bildbeschreibung\" class=\"custom-image\">",
         "color_scheme": "background-1",
         "padding_top": 32,
         "padding_bottom": 52
@@ -419,25 +419,25 @@
         "brands_list_xfpzLJ": {
           "type": "brands-list",
           "settings": {
-            "brand-image": "shopify:\/\/shop_images\/BEKANNT_AUS_13_x_5_cm_png.png"
+            "brand-image": "shopify://shop_images/BEKANNT_AUS_13_x_5_cm_png.png"
           }
         },
         "brands_list_Bkc9Vr": {
           "type": "brands-list",
           "settings": {
-            "brand-image": "shopify:\/\/shop_images\/BEKANNT_AUS_13_x_5_cm.png_1.png"
+            "brand-image": "shopify://shop_images/BEKANNT_AUS_13_x_5_cm.png_1.png"
           }
         },
         "brands_list_kdMzW9": {
           "type": "brands-list",
           "settings": {
-            "brand-image": "shopify:\/\/shop_images\/BEKANNT_AUS_13_x_5_cm.png_2.png"
+            "brand-image": "shopify://shop_images/BEKANNT_AUS_13_x_5_cm.png_2.png"
           }
         },
         "brands_list_gPRbpf": {
           "type": "brands-list",
           "settings": {
-            "brand-image": "shopify:\/\/shop_images\/BEKANNT_AUS_13_x_5_cm.png_3.png"
+            "brand-image": "shopify://shop_images/BEKANNT_AUS_13_x_5_cm.png_3.png"
           }
         }
       },
@@ -464,7 +464,7 @@
           "settings": {
             "heading": "Wodurch unterscheiden sich die einzelnen Modelle?",
             "icon": "none",
-            "row_content": "<p>Die Modelle unterscheiden sich vor allem im Design, in der Farbgebung und leicht variierenden Kompressionsstärken sowie in ihrer Nachhaltigkeit. Diese kleinen, aber feinen Unterschiede beeinflussen deinen bevorzugten Anwendungsbereich kaum - ob beim Wandern, beim Laufen, im Yoga, im Fitnessstudio, zu Hause auf der Couch oder auch als stilvoller Begleiter im Lieblingscafé - es gibt keinerlei Einschränkungen. Hast du dein Lieblingsdesign gefunden? Perfekt! Wenn du nun wissen möchtest, wie viel Kompression die Leggings bieten und wie soft sie im Vergleich zu anderen Modellen sind, wirf einfach einen kurzen Blick in unsere Übersichtstabelle!<\/p>",
+            "row_content": "<p>Die Modelle unterscheiden sich vor allem im Design, in der Farbgebung und leicht variierenden Kompressionsstärken sowie in ihrer Nachhaltigkeit. Diese kleinen, aber feinen Unterschiede beeinflussen deinen bevorzugten Anwendungsbereich kaum - ob beim Wandern, beim Laufen, im Yoga, im Fitnessstudio, zu Hause auf der Couch oder auch als stilvoller Begleiter im Lieblingscafé - es gibt keinerlei Einschränkungen. Hast du dein Lieblingsdesign gefunden? Perfekt! Wenn du nun wissen möchtest, wie viel Kompression die Leggings bieten und wie soft sie im Vergleich zu anderen Modellen sind, wirf einfach einen kurzen Blick in unsere Übersichtstabelle!</p>",
             "page": ""
           }
         },
@@ -474,7 +474,7 @@
           "settings": {
             "heading": "Was macht die Mountainero Leggings so besonders?",
             "icon": "none",
-            "row_content": "<p>Die Mountainero Leggings unterstützen dich bei jedem Aufstieg:<\/p><ul><li>Das Zusammenspiel aus der richtigen Passform, den verwendeten Stoffen und der Höhe der Kompression ist ideal abgestimmt, um sowohl im Sport als auch im Alltag höchsten Komfort zu bieten. Kurz gesagt, die Leggings sind so bequem, dass du sie am liebsten immer tragen möchtest.<\/li><li>Mit ihren zeitlosen und schlichten Designs sind die Leggings der perfekte Begleiter für jeden Anlass – sei es beim Sport oder als modisches Must-have im Alltag.<\/li><li>Durch das kleine Berglogo zeigst du deinen Mitmenschen deine Liebe zur Natur 🩶<\/li><\/ul><p>PS: Aspekte wie Blickdichtigkeit und Langlebigkeit sind für uns grundlegende Standards, die in unseren Produkten selbstverständlich enthalten sind.<\/p>",
+            "row_content": "<p>Die Mountainero Leggings unterstützen dich bei jedem Aufstieg:</p><ul><li>Das Zusammenspiel aus der richtigen Passform, den verwendeten Stoffen und der Höhe der Kompression ist ideal abgestimmt, um sowohl im Sport als auch im Alltag höchsten Komfort zu bieten. Kurz gesagt, die Leggings sind so bequem, dass du sie am liebsten immer tragen möchtest.</li><li>Mit ihren zeitlosen und schlichten Designs sind die Leggings der perfekte Begleiter für jeden Anlass – sei es beim Sport oder als modisches Must-have im Alltag.</li><li>Durch das kleine Berglogo zeigst du deinen Mitmenschen deine Liebe zur Natur 🩶</li></ul><p>PS: Aspekte wie Blickdichtigkeit und Langlebigkeit sind für uns grundlegende Standards, die in unseren Produkten selbstverständlich enthalten sind.</p>",
             "page": ""
           }
         },
@@ -483,7 +483,7 @@
           "settings": {
             "heading": "Welche Größe soll ich wählen?",
             "icon": "none",
-            "row_content": "<p>Bitte beachte bei der Auswahl der Größe den Hinweis unterhalb der Größenauswahl, rechts neben dem Produktbild (z.B. 'Passt wie erwartet'). Da viele der Leggings etwas kleiner ausfallen, ist es besonders wichtig, diesen Hinweis zu beachten. Zusätzlich hast du die Möglichkeit, die Größentabelle zu öffnen. Solltest du dennoch unsicher sein, kannst du uns jederzeit eine Nachricht schreiben. Elisa wird sich umgehend um dein Anliegen kümmern.<\/p>",
+            "row_content": "<p>Bitte beachte bei der Auswahl der Größe den Hinweis unterhalb der Größenauswahl, rechts neben dem Produktbild (z.B. 'Passt wie erwartet'). Da viele der Leggings etwas kleiner ausfallen, ist es besonders wichtig, diesen Hinweis zu beachten. Zusätzlich hast du die Möglichkeit, die Größentabelle zu öffnen. Solltest du dennoch unsicher sein, kannst du uns jederzeit eine Nachricht schreiben. Elisa wird sich umgehend um dein Anliegen kümmern.</p>",
             "page": ""
           }
         },
@@ -501,7 +501,7 @@
           "settings": {
             "heading": "Kann ich meine Leggings umtauschen?",
             "icon": "none",
-            "row_content": "<p>Ein Umtausch der Produkte ist innerhalb Deutschlands kostenfrei möglich. Die Anmeldung erfolgt über das <a href=\"https:\/\/www.mountainero.com\/pages\/retoure\" title=\"https:\/\/www.mountainero.com\/pages\/retoure\">Retourenportal<\/a>. Aus Österreich können wir aus technischen Gründen leider keinen Umtausch anbieten. <\/p>",
+            "row_content": "<p>Ein Umtausch der Produkte ist innerhalb Deutschlands kostenfrei möglich. Die Anmeldung erfolgt über das <a href=\"https://www.mountainero.com/pages/retoure\" title=\"https://www.mountainero.com/pages/retoure\">Retourenportal</a>. Aus Österreich können wir aus technischen Gründen leider keinen Umtausch anbieten. </p>",
             "page": ""
           }
         },
@@ -510,7 +510,7 @@
           "settings": {
             "heading": "Wie funktioniert eine Retoure?",
             "icon": "none",
-            "row_content": "<p>Artikel, die dir nicht passen, kannst du ganz einfach an uns retournieren. Du kannst deine Rücksendung in wenigen Schritten im <a href=\"https:\/\/www.mountainero.com\/pages\/retoure\" title=\"https:\/\/www.mountainero.com\/pages\/retoure\">Retourenportal<\/a> anmelden <strong>(kein Drucker erforderlich)<\/strong>. Wir würden uns wünschen, dass du mit Bedacht bestellst, um die Anzahl der Retouren möglichst gering zu halten. Bitte achte dabei auf den Größenhinweis. <\/p><p>Wenn du das Paket selbst frankierst, entstehen keine Kosten für die Retoure. Die Retouren-Adresse befindet sich selbstverständlich in Deutschland (84094 Elsendorf). Möchtest du ein Retoure-Label direkt als E-Mail (QR-Code), behalten wir einen Unkostenbeitrag vom zurückzuerstattenden Betrag ein. Die Kosten belaufen sich auf insgesamt 4,- Euro aus Deutschland oder 8,- Euro aus Österreich.<\/p>",
+            "row_content": "<p>Artikel, die dir nicht passen, kannst du ganz einfach an uns retournieren. Du kannst deine Rücksendung in wenigen Schritten im <a href=\"https://www.mountainero.com/pages/retoure\" title=\"https://www.mountainero.com/pages/retoure\">Retourenportal</a> anmelden <strong>(kein Drucker erforderlich)</strong>. Wir würden uns wünschen, dass du mit Bedacht bestellst, um die Anzahl der Retouren möglichst gering zu halten. Bitte achte dabei auf den Größenhinweis. </p><p>Wenn du das Paket selbst frankierst, entstehen keine Kosten für die Retoure. Die Retouren-Adresse befindet sich selbstverständlich in Deutschland (84094 Elsendorf). Möchtest du ein Retoure-Label direkt als E-Mail (QR-Code), behalten wir einen Unkostenbeitrag vom zurückzuerstattenden Betrag ein. Die Kosten belaufen sich auf insgesamt 4,- Euro aus Deutschland oder 8,- Euro aus Österreich.</p>",
             "page": ""
           }
         },
@@ -519,7 +519,7 @@
           "settings": {
             "heading": "Kann man euch kontaktieren?",
             "icon": "none",
-            "row_content": "<p>Klar! Du erhältst auf alle deine Anfragen innerhalb von wenigen Stunden, maximal innerhalb eines Tages, eine Antwort von uns. Wir sind also stets für dich erreichbar. Schreibe einfach eine E-Mail an <a href=\"mailto:info@mountainero.com\">info@mountainero.com<\/a> oder klicke ganz unten auf der Webseite auf 'Kontakt'.<\/p>",
+            "row_content": "<p>Klar! Du erhältst auf alle deine Anfragen innerhalb von wenigen Stunden, maximal innerhalb eines Tages, eine Antwort von uns. Wir sind also stets für dich erreichbar. Schreibe einfach eine E-Mail an <a href=\"mailto:info@mountainero.com\">info@mountainero.com</a> oder klicke ganz unten auf der Webseite auf 'Kontakt'.</p>",
             "page": ""
           }
         }
@@ -552,7 +552,7 @@
       "type": "custom-liquid",
       "disabled": true,
       "settings": {
-        "custom_liquid": "<style>\n  @import url('https:\/\/fonts.googleapis.com\/css2?family=Assistant:wght@400;500;600&display=swap');\n\n  .custom-text {\n    \/* Stile für Text *\/\n    font-family: 'Assistant', sans-serif;\n    text-align: center;\n    margin-top: 20px;\n    margin-bottom: 0px;\n    font-size: 20px;\n    color: black;\n  }\n\n  .custom-image {\n    \/* Standard-Bildstil für Mobilgeräte *\/\n    width: 100%;\n    border: 0;\n    display: block; \/* Stellt sicher, dass das Bild als Block-Element gerendert wird *\/\n    margin: 0 auto; \/* Zentriert das Bild horizontal *\/\n  }\n\n  @media (min-width: 768px) {\n    .custom-text {\n      \/* Textstil für Desktop *\/\n      font-size: 30px;\n    }\n    .custom-image {\n      \/* Bildstil für Desktop *\/\n      width: 70%;\n    }\n  }\n<\/style>\n\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0332\/0640\/3210\/files\/Wander-Leggings-Yoga-Leggings-Wanderleggings-Outdoorhose-Mountainero-2.png?v=1679654839\" alt=\"Bildbeschreibung\" class=\"custom-image\">\n<div class=\"custom-text\">Dein Mountainero Team<\/div>",
+        "custom_liquid": "<style>\n  @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600&display=swap');\n\n  .custom-text {\n    /* Stile für Text */\n    font-family: 'Assistant', sans-serif;\n    text-align: center;\n    margin-top: 20px;\n    margin-bottom: 0px;\n    font-size: 20px;\n    color: black;\n  }\n\n  .custom-image {\n    /* Standard-Bildstil für Mobilgeräte */\n    width: 100%;\n    border: 0;\n    display: block; /* Stellt sicher, dass das Bild als Block-Element gerendert wird */\n    margin: 0 auto; /* Zentriert das Bild horizontal */\n  }\n\n  @media (min-width: 768px) {\n    .custom-text {\n      /* Textstil für Desktop */\n      font-size: 30px;\n    }\n    .custom-image {\n      /* Bildstil für Desktop */\n      width: 70%;\n    }\n  }\n</style>\n\n<img src=\"https://cdn.shopify.com/s/files/1/0332/0640/3210/files/Wander-Leggings-Yoga-Leggings-Wanderleggings-Outdoorhose-Mountainero-2.png?v=1679654839\" alt=\"Bildbeschreibung\" class=\"custom-image\">\n<div class=\"custom-text\">Dein Mountainero Team</div>",
         "color_scheme": "background-1",
         "padding_top": 32,
         "padding_bottom": 52
@@ -561,10 +561,10 @@
     "mt_image_with_text_ypdRPC": {
       "type": "mt-image-with-text",
       "settings": {
-        "image": "shopify:\/\/shop_images\/image_1_1.jpg",
+        "image": "shopify://shop_images/image_1_1.jpg",
         "title": "Über uns",
         "sub_title": "",
-        "content": "<p>Wir sind ein junges, kleines Team und haben alle eins gemeinsam - Wir sind begeisterte Bergliebhaber. Die Wochenenden verbringen wir als Freunde meistens zusammen beim Wandern, Biken oder Klettern. Wir sind im schönen München Zuhause, von wo aus wir mit unseren Bergtouren starten. <\/p><p>Du kennst das Gefühl - es ist früh am Vormittag, du stehst am Berg, gut ausgeschlafen, leckere Brotzeit im Rucksack, du nimmst tief Luft, spazierst los, du erfreust dich einfach nur am Anblick der Berge und vor allem auf den Start in diesen Tag. Unser Mountainero-Berglogo soll dieses Gefühl ein Stück weit zum Ausdruck bringen! Lass die anderen daran teilhaben.<\/p>",
+        "content": "<p>Wir sind ein junges, kleines Team und haben alle eins gemeinsam - Wir sind begeisterte Bergliebhaber. Die Wochenenden verbringen wir als Freunde meistens zusammen beim Wandern, Biken oder Klettern. Wir sind im schönen München Zuhause, von wo aus wir mit unseren Bergtouren starten. </p><p>Du kennst das Gefühl - es ist früh am Vormittag, du stehst am Berg, gut ausgeschlafen, leckere Brotzeit im Rucksack, du nimmst tief Luft, spazierst los, du erfreust dich einfach nur am Anblick der Berge und vor allem auf den Start in diesen Tag. Unser Mountainero-Berglogo soll dieses Gefühl ein Stück weit zum Ausdruck bringen! Lass die anderen daran teilhaben.</p>",
         "background": "#f6f6f6",
         "text_color": "#000000",
         "desktop_title_size": 40,
@@ -583,7 +583,7 @@
         "item_weJ4Xx": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/SVG.svg",
+            "image": "shopify://shop_images/SVG.svg",
             "text": ">10.000 GLÜCKLICHE KUNDEN",
             "link": ""
           }
@@ -591,7 +591,7 @@
         "item_iqtCpR": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/SVG_1.svg",
+            "image": "shopify://shop_images/SVG_1.svg",
             "text": "KOSTENLOSER VERSAND AB 50€",
             "link": ""
           }
@@ -599,7 +599,7 @@
         "item_4i48Lj": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/SVG_2.svg",
+            "image": "shopify://shop_images/SVG_2.svg",
             "text": "30 TAGE RÜCKGABERECHT",
             "link": ""
           }
@@ -607,7 +607,7 @@
         "item_VQwghb": {
           "type": "item",
           "settings": {
-            "image": "shopify:\/\/shop_images\/SVG_3.svg",
+            "image": "shopify://shop_images/SVG_3.svg",
             "text": "SICHER BEZAHLEN",
             "link": ""
           }
