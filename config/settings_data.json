@@ -172,6 +172,7 @@
           },
           "mega_menu_bTgV9Y": {
             "type": "mega_menu",
+            "disabled": true,
             "settings": {
               "parent_title": "Alle Produkte",
               "title": "Bundles",
