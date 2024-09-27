@@ -36,7 +36,7 @@
     max-width: {{ section.settings.logo_width }}px;
   }
 
-  {% if template contains 'index' %}
+  {% if template contains 'index' or template contains 'collection' %}
     @media (max-width: 767px) {
       #shopify-section-header {
         height: 0;

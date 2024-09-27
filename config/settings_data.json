@@ -347,15 +347,6 @@
         "disabled": false,
         "settings": {
         }
-      },
-      "9853681688192222153": {
-        "type": "shopify://apps/kameleoon-a-b-testing/blocks/app-embed/59f0ac10-ad8a-4d58-b924-e251fce50804",
-        "disabled": false,
-        "settings": {
-          "kameleoon_cart_snippet": true,
-          "kameleoon_product_snippet": true,
-          "kameleoon_collection_snippet": true
-        }
       }
     }
   },
