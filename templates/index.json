@@ -141,11 +141,11 @@
         "image_list_Pwyq7P": {
           "type": "image_list",
           "settings": {
-            "heading": "Deine neue Lieblings-Leggings:",
+            "heading": "Deineneue Lieblings-Leggings:",
             "image": "shopify://shop_images/aa9e402161be39ed8b6ea6868f799e57_1.png",
-            "text1": "",
-            "text2": "<p>Blickdicht</p>",
-            "text3": "<p>Schnelltrocknend & Atmungsaktiv</p>",
+            "text1": "<p>Leichte Kompression für optimalen Halt</p>",
+            "text2": "<p>Super bequem für jede Aktivität</p>",
+            "text3": "<p>100% blickdicht für sorgenfreies Tragen</p>",
             "text4": ""
           }
         },
