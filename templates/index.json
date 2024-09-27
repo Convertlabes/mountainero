@@ -76,6 +76,7 @@
         },
         "collection_item_pFr4iJ": {
           "type": "collection_item",
+          "disabled": true,
           "settings": {
             "collection": "bundles",
             "collection_title": "",
@@ -113,6 +114,14 @@
             "collection_title": "",
             "collection_description": ""
           }
+        },
+        "collection_item_AD6Chm": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "bestseller",
+            "collection_title": "Bestseller",
+            "collection_description": ""
+          }
         }
       },
       "block_order": [
@@ -121,7 +130,8 @@
         "collection_item_ianwzQ",
         "collection_item_FXhxy6",
         "collection_item_Wf3Jrc",
-        "collection_item_N4awcC"
+        "collection_item_N4awcC",
+        "collection_item_AD6Chm"
       ],
       "settings": {
         "heading": "",
