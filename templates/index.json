@@ -63,6 +63,78 @@
         "color": ""
       }
     },
+    "ab_collection_list_RGtMY3": {
+      "type": "ab-collection-list",
+      "blocks": {
+        "collection_item_jQ4tBB": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "leggings",
+            "collection_title": "",
+            "collection_description": ""
+          }
+        },
+        "collection_item_9xTrPr": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "oberteile",
+            "collection_title": "",
+            "collection_description": ""
+          }
+        },
+        "collection_item_D9dGkF": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "shorts",
+            "collection_title": "",
+            "collection_description": ""
+          }
+        },
+        "collection_item_ddaL8B": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "schmuck",
+            "collection_title": "",
+            "collection_description": ""
+          }
+        },
+        "collection_item_gFTKfM": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "hoodies",
+            "collection_title": "",
+            "collection_description": ""
+          }
+        },
+        "collection_item_xtUErx": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "bestseller",
+            "collection_title": "",
+            "collection_description": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_item_jQ4tBB",
+        "collection_item_9xTrPr",
+        "collection_item_D9dGkF",
+        "collection_item_ddaL8B",
+        "collection_item_gFTKfM",
+        "collection_item_xtUErx"
+      ],
+      "settings": {
+        "heading": "",
+        "text": "",
+        "background": "",
+        "text_color": "#ffffff",
+        "enable_full_image": true,
+        "desktop_padding_top": 54,
+        "mobile_padding_top": 30,
+        "desktop_padding_bottom": 80,
+        "mobile_padding_bottom": 30
+      }
+    },
     "ab_collection_list_z97gVw": {
       "type": "ab-collection-list",
       "blocks": {
@@ -830,6 +902,7 @@
   "order": [
     "ab_hero_banner_B9B9FQ",
     "mt_multi_text_gcCWFy",
+    "ab_collection_list_RGtMY3",
     "ab_collection_list_z97gVw",
     "image_with_content_slider_QNBkFK",
     "ab_featured_collection_KWNe3X",
