@@ -92,7 +92,7 @@
     border-bottom: 0.817px solid var(--Grey-50, #E7E7E7);
     border-left: 0.817px solid var(--Grey-50, #E7E7E7);
     background: var(--Primary-Base-White, #FFF);
-    backdrop-filter: blur(4.495652198791504px);
+    /**** backdrop-filter: blur(4.495652198791504px); ****/
 }
 
 .ab-collection-main-container .ab-card .ab-card-content > .card__information {
@@ -242,42 +242,4 @@
         justify-content: flex-start;
     }
 }
-.card__heading a:after {
-    bottom: 0;
-    content: ""!important;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 1;
-}
-.card__heading a::after {
-  bottom: 0;
-  content: '';
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1;
-}
 
-.card__heading a:after {
-  outline-offset: 0.3rem;
-}
-.card__heading a:after {
-    outline-offset: .3rem;
-}
-
-.ab-collection-main-container .ab-card .card__heading a:after {
-    bottom: 0;
-    content: ""!important;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 1;
-}
-
-.ab-collection-main-container .ab-card .card__heading a:after {
-    outline-offset: .3rem;
-}
