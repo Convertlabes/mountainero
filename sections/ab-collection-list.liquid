@@ -207,7 +207,7 @@
                     {% for block in section.blocks %}
                         {%- if block.type == "collection_item" -%}
                             <div class="swiper-slide ab-collection-list-item">
-                                <a href="{{ icon-btn-next }}" class="ab-collection-list-media ris-media {% if  block.settings.collection.featured_image == blank %} ris-empty-media {% endif %}">
+                                <a href="{{ block.settings.collection.url }}" class="ab-collection-list-media ris-media {% if  block.settings.collection.featured_image == blank %} ris-empty-media {% endif %}">
                                     {%- if block.settings.collection.featured_image != blank -%}
                                         <img src="{{ block.settings.collection.featured_image |  image_url: width: 1000 }}" width="" height="" alt="">
                                         {%- if enable_full_image == true -%}
