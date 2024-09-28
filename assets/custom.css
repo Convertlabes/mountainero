@@ -525,3 +525,19 @@ sticky-header.header-wrapper.is-scroll-active .mt-header .mega-menu__list {
     border : 1px solid #F6F6F6;
     width: fit-content;
 }
+
+/*** bug ****/
+
+.card__heading a:after {
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.card__heading a:after {
+    outline-offset: .3rem;
+}
