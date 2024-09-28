@@ -192,8 +192,8 @@
         "heading": "<p>Deine neue Leggings</p>",
         "heading_color": "",
         "background": "",
-        "desktop_padding_top": 0,
-        "mobile_padding_top": 0,
+        "desktop_padding_top": 35,
+        "mobile_padding_top": 25,
         "desktop_padding_bottom": 80,
         "mobile_padding_bottom": 50,
         "image_background": "shopify://shop_images/Vector.svg"
