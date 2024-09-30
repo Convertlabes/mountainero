@@ -555,9 +555,10 @@ ss-product {
   }
 }
 
-// .es-header__icon--search {
-//   display: none;
-// }
+.header__search,
+.es-header__icon--search {
+  display: none;
+}
 
 .es-header__icon--search + .search-modal__form {
   display: none;
