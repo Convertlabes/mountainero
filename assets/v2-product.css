@@ -18,7 +18,7 @@
 }
 
 .modal__toggle {
-    display: none !important;
+   display:none !important:
 }
 .product.v2 input,
 .product.v2 textarea,
