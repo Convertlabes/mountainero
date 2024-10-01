@@ -17,7 +17,7 @@
     font-weight: bold !important;
 }
 
-.modal-toggle {
+.modal__toggle {
     display: none;
 }
 .product.v2 input,
