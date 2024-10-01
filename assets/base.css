@@ -2087,6 +2087,7 @@ input[type='checkbox'] {
 /* component-modal */
 .modal__toggle {
   list-style-type: none;
+
 }
 
 .no-js details[open] .modal__toggle {
@@ -2377,6 +2378,7 @@ input[type='checkbox'] {
 
 .header__icon {
   color: rgb(var(--color-foreground));
+  /* display: none !important; */
 }
 
 .header__icon span {

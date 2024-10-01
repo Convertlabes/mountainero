@@ -7,15 +7,6 @@
 * made to this file may be overwritten.
 * ------------------------------------------------------------
 */
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "98483ce0-f156-4cf3-ad6c-61245c5e7fb4": {
@@ -31,7 +22,7 @@
     "bb8adb61-2da5-470c-8030-6333e7188f20": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<style>\n    .buttoncollectiontop {\n    position: relative;\n    transform: translateX(-50%);\n    color: #121212;\n    font-size: 12px;\n    margin: auto;\n    }\n    </style>\n    \n    <div class=\"page-width mt-product-top-link\">\n    {% if product.tags contains \"leggingsandsets\" %}\n    \n              \n      <a class = \"buttoncollectiontop\" href={{ \"https://www.mountainero.com/collections/leggings\" }} target=\"_self\" rel=\"noopener noreferrer\">\n      <div class=\"cicle-back-btn\">\n        <svg width=\"20\" height=\"18\" viewBox=\"0 0 20 18\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <path d=\"M8.5 16.5L1 9M1 9L8.5 1.5M1 9H19\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n        </svg>\n      </div>\n    Zurück zur Kollektion</a>\n                {% elsif product.tags contains \"oberteile\" %}\n                <a class = \"buttoncollectiontop\" href={{ \"https://www.mountainero.com/collections/oberteile\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion</a>\n                {% elsif product.tags contains \"shorts\" %}\n                <a class = \"buttoncollectiontop\" href={{ \"https://www.mountainero.com/collections/shorts\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zur Kollektion</a>\n                {% else %}\n                <a class = \"buttoncollectiontop\" href={{ \"https://www.mountainero.com/collections/\" }} target=\"_self\" rel=\"noopener noreferrer\">Zurück zu den Kollektionen</a>\n                {% endif %}\n    </div>",
+        "custom_liquid": "<style>\n  .buttoncollectiontop {\n    display:flex;\n    flex-direction: row;\n    position: relative;\n    transform: translateX(-50%);\n    color: #121212;\n    font-size: 12px;\n    margin: auto;\n    height:35px;\n  }\n\n  </style>\n<div class=\"page-width mt-product-top-link\">\n  \n  <a class = \"buttoncollectiontop\" href={{ \"https://www.mountainero.com/collections/leggings\" }} target=\"_self\" rel=\"noopener noreferrer\">\n    <div class=\"cicle-back-btn\">\n      <svg width=\"15\" height=\"15\" viewBox=\"0 0 20 18\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path d=\"M8.5 16.5L1 9M1 9L8.5 1.5M1 9H19\" stroke=\"black\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n        </svg>\n      </div>\n      <span>Zurück zur Kollektion </span>\n    </a>\n  </div>",
         "color_scheme": "background-1",
         "padding_top": 20,
         "padding_bottom": 0
