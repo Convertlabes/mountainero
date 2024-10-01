@@ -2087,6 +2087,7 @@ input[type='checkbox'] {
 /* component-modal */
 .modal__toggle {
   list-style-type: none;
+  display:none;
 
 }
 
