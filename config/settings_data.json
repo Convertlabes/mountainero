@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "colors_solid_button_labels": "#ffffff",
@@ -127,7 +127,7 @@
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
     "currency_code_enabled": true,
-    "cart_type": "notification",
+    "cart_type": "drawer",
     "show_vendor": false,
     "show_cart_note": false,
     "checkout_logo_image": "shopify://shop_images/Favicon32x32_V3_3d767ab5-2ec2-4f58-b7fa-61690c64626a.png",
