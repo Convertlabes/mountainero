@@ -361,48 +361,6 @@
         "padding_bottom": 100
       }
     },
-    "17008313881279d1fd": {
-      "type": "apps",
-      "blocks": {
-        "d1f62ef5-78d3-4a7e-aae0-6311f545c864": {
-          "type": "shopify://apps/specification-compare/blocks/comparison-table/a9d09772-f36d-4539-a4c4-7bd785bc12c0",
-          "settings": {
-            "product": "{{product}}",
-            "product_list": [
-
-            ],
-            "fallback_to_related_products": false,
-            "exclude_sold_out_products": false,
-            "enable_show_differences_switch": false,
-            "differences_switch_mode": "highlight_differences",
-            "show_variant_selector": false,
-            "show_group_names": false,
-            "maximum_rows": 5,
-            "maximum_visible_products": 10,
-            "app_block_margin": 0,
-            "app_block_max_width": "full_width",
-            "app_block_custom_max_width": 800,
-            "show_product_image": true,
-            "show_product_vendor": false,
-            "show_product_price": true,
-            "show_product_rating": false,
-            "show_view_details_button": true
-          }
-        }
-      },
-      "block_order": [
-        "d1f62ef5-78d3-4a7e-aae0-6311f545c864"
-      ],
-      "settings": {
-        "custom_id": "compare_modal",
-        "include_margins": true,
-        "background_color": "#8e9677",
-        "heading": "<p>Alle Modelle im Vergleich</p>",
-        "padding_top": 60,
-        "Badding_bottom": 0,
-        "padding_right": true
-      }
-    },
     "1859c10a-a976-414d-8bab-2332db508fb0": {
       "type": "custom-liquid",
       "disabled": true,
@@ -634,7 +592,6 @@
     "rich_text_dhDHJd",
     "loox-product-reviews-app-section",
     "product-recommendations",
-    "17008313881279d1fd",
     "1859c10a-a976-414d-8bab-2332db508fb0",
     "mt_logo_list_fcy3XP",
     "e1ffa94b-cfb0-4417-a0c8-5c9ca1d199b8",

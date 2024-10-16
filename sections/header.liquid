@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'search-custom.css' | asset_url }}">
 {%- if settings.predictive_search_enabled -%}
   <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="{{ 'component-loading-overlay.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -1024,56 +1025,58 @@
     ],
     "url": {{ request.origin | append: page.url | json }}
   }
+  
 </script>
 
 <script>
 
-    document.addEventListener("DOMContentLoaded", function() {
-      var menu_item = document.querySelectorAll(".mt-header .mt-mega-menu-item summary");
-      var menu_content = document.querySelectorAll(".mt-header .mega-menu__content");
-      console.log("itmes", menu_item);
-      menu_item.forEach(item => {
-        item.addEventListener("mouseover", function() {
-          this.closest("details").setAttribute("open", "");
-        });
 
-        item.addEventListener("mouseleave", function() {
-          this.closest("details").removeAttribute("open");
-        });
-      });
-
-      menu_content.forEach(item => {
-        item.addEventListener("mouseover", function() {
-          this.closest("details").setAttribute("open", "");
-        });
-
-        item.addEventListener("mouseleave", function() {
-          this.closest("details").removeAttribute("open");
-        });
-      });
-
-
-      const drawer_menu = document.querySelectorAll("summary.menu-drawer__menu-item");
-      const drawer_colse_btn = document.querySelectorAll(".menu-drawer__submenu .menu-drawer__close-button");
-      const container = document.querySelector("#menu-drawer");
-      const container_height = container.clientHeight;
-
-      drawer_menu.forEach(item => {
-
-        item.addEventListener("click", function() {
-          var content = this.nextElementSibling.querySelector(".mt-menu-drawer__sub_container");
-          container.style.minHeight = (content.clientHeight + 70) + "px";
-        });
-      });
-
-
-      drawer_colse_btn.forEach(item => {
-        item.addEventListener("click", function() {
-          container.style.minHeight = container_height + "px";
-        });
-      });
-
+document.addEventListener("DOMContentLoaded", function() {
+  
+  var menuItems = document.querySelectorAll(".mt-header .mt-mega-menu-item summary");
+  var menuContents = document.querySelectorAll(".mt-header .mega-menu__content");
+  
+  menuItems.forEach(item => {
+    item.addEventListener("mouseover", function() {
+      this.closest("details").setAttribute("open", "");
     });
+
+    item.addEventListener("mouseleave", function() {
+      this.closest("details").removeAttribute("open");
+    });
+  });
+
+  menuContents.forEach(content => {
+    content.addEventListener("mouseover", function() {
+      this.closest("details").setAttribute("open", "");
+    });
+
+    content.addEventListener("mouseleave", function() {
+      this.closest("details").removeAttribute("open");
+    });
+  });
+
+  const drawerMenus = document.querySelectorAll("summary.menu-drawer__menu-item");
+  const drawerCloseBtns = document.querySelectorAll(".menu-drawer__submenu .menu-drawer__close-button");
+  const container = document.querySelector("#menu-drawer");
+  const originalContainerHeight = container.clientHeight;
+
+  drawerMenus.forEach(item => {
+    item.addEventListener("click", function() {
+      const subContainer = this.nextElementSibling.querySelector(".mt-menu-drawer__sub_container");
+      if (subContainer) {
+        container.style.minHeight = (subContainer.clientHeight + 70) + "px";
+      }
+    });
+  });
+
+  drawerCloseBtns.forEach(btn => {
+    btn.addEventListener("click", function() {
+      container.style.minHeight = originalContainerHeight + "px";
+    });
+  });
+
+});
 
 </script>
 

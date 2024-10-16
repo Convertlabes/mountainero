@@ -1500,12 +1500,42 @@
       {
         "type": "header",
         "content": "t:settings_schema.cart.settings.cart_drawer.header"
+      },    
+      {
+        "type": "number",
+        "id": "free_shipping_value",
+        "label": "Free Shipping Price"
+      },
+      {
+        "type": "number",
+        "id": "shipping_value",
+        "label": "Shipping Price"
       },
       {
         "type": "collection",
         "id": "cart_drawer_collection",
         "label": "t:settings_schema.cart.settings.cart_drawer.collection.label",
         "info": "t:settings_schema.cart.settings.cart_drawer.collection.info"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_protected_shipping",
+        "label": "Show Protected Shipping"
+      },
+      {
+        "type": "collection",
+        "id": "cart_drawer_selected_collection",
+        "label": "Cart Drawer Selected Collection"
+      },
+      {
+        "type": "product",
+        "id": "shipping_product",
+        "label": "Priority Shipping"
+      },
+      {
+        "type": "number",
+        "id": "cart_value_limitation",
+        "label": "Cart Value Limitation"
       }
     ]
   }

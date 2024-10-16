@@ -1,12 +1,3 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "banner": {
@@ -84,7 +75,7 @@
         "template--18421946253580__dc013a66-1d86-4477-8afa-91bcff3fa0f6-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Mit bis zu -25% OFF</p>",
+            "text": "<p>Mit bis zu -25% OFF<\/p>",
             "text_style": "body"
           }
         },
@@ -92,7 +83,7 @@
           "type": "button",
           "settings": {
             "button_label": "Alle Bundles",
-            "button_link": "shopify://collections/bundles"
+            "button_link": "shopify:\/\/collections\/bundles"
           }
         }
       },
@@ -103,7 +94,7 @@
       ],
       "disabled": true,
       "settings": {
-        "image": "shopify://shop_images/EvergreenBundles.png",
+        "image": "shopify:\/\/shop_images\/EvergreenBundles.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",

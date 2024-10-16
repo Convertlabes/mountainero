@@ -1,7 +1,7 @@
 
 .ab-collection-main-container .ab-card {
     border-radius: 6px;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
 }
 

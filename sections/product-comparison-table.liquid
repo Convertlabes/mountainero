@@ -1,0 +1,573 @@
+{% comment %}
+Product Comparison Table Section
+{% endcomment %}
+
+<section class="comparison-table-section">
+    <h3 class="table-title" data-live-text-setting="table_title">{{ section.settings.table_title }}</h3>
+    <div class="comparison-table-container">
+        <table class="comparison-table">
+            <thead class="row-group row-group--head">
+                <tr class="row row--product">
+                    <td class="column-header sticky-column"></td>
+                    {%- for comparison in product.metafields.custom.comparison.value -%}
+                    <th scope="col" class="column-header" aria-label="">
+                        <div class="product" product-handle="{{ comparison.handle }}">
+                            <div class="relative">
+                                <a href="/products/{{ comparison.handle }}" class="product__image-wrapper">
+                                    <img src="{{ comparison.media[0] | img_url: '480x' }}" alt="{{ comparison.title }}">
+                                </a>
+                            </div>
+                            <div class="product__info">
+                                <a href="/products/{{ comparison.handle }}" class="product__title">{{ comparison.title
+                                    }}</a>
+                                <span class="product__price">{{ comparison.price | money_with_currency }}</span>
+                            </div>
+                        </div>
+                    </th>
+                    {%- endfor -%}
+                </tr>
+            </thead>
+            <tbody class="row-group row-group--body">
+                <tr class="row row--attribute">
+                    <th scope="row" class="row-header sticky-column">
+                        <div class="attribute-name" data-scope="product">Farben</div>
+                    </th>
+                    {%- for comparison in product.metafields.custom.comparison.value %}
+                    <td class="cell">
+                        <div class="attribute-value">
+                            <div class="color-swatch-list">
+                                {%- for color in comparison.metafields.custom.custom_color.value -%}
+                                    <span class="color-swatch"
+                                        style="background-color: #{{ color.color_value | handleize }};">
+                                    </span>
+                                {%- endfor -%}
+                            </div>
+                        </div>
+                    </td>
+                    {% endfor %}
+                </tr>
+                <tr class="row row--attribute">
+                    <th scope="row" class="row-header sticky-column">
+                        <div class="attribute-name" data-scope="product">Anwendung</div>
+                    </th>
+                    {% for comparison in product.metafields.custom.comparison.value %}
+                    <td class="cell">
+                        <div class="attribute-value">
+                            {% assign applications = comparison.metafields.custom.application | split: ',' %}
+                            {% for application in applications %}
+                            {{ application | strip_newlines | remove: '[' | remove: ']' | remove: '"' }}<br>
+                            {% endfor %}
+                        </div>
+                    </td>
+                    {% endfor %}
+                </tr>
+                <tr class="row row--attribute">
+                    <th scope="row" class="row-header sticky-column">
+                        <div class="attribute-name" data-scope="product">Saison</div>
+                    </th>
+                    {% for comparison in product.metafields.custom.comparison.value %}
+                    <td class="cell">
+                        <div class="attribute-value">
+                            {{ comparison.metafields.custom.season }}
+                        </div>
+                    </td>
+                    {% endfor %}
+                </tr>
+                <tr class="row row--attribute">
+                    <th scope="row" class="row-header sticky-column">
+                        <div class="attribute-name" data-scope="product">Kompression</div>
+                    </th>
+                    {% for comparison in product.metafields.custom.comparison.value %}
+                    <td class="cell">
+                        <div class="attribute-value">
+                            <div class="raters">
+                                <svg class="rating-svg" xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14" fill="none">
+                                <g clip-path="url(#clip0_147_8152)">
+                                    <path d="M12.8441 5.78206C12.8441 5.89423 12.778 6.01645 12.6457 6.14873L9.87528 8.84983L10.5314 12.6658C10.5367 12.7012 10.5393 12.7525 10.5393 12.8187C10.5423 12.915 10.5143 13.0098 10.4594 13.089C10.433 13.1255 10.3978 13.1548 10.3572 13.1742C10.3165 13.1936 10.2716 13.2025 10.2266 13.2002C10.1298 13.2002 10.0282 13.1695 9.92131 13.1081L6.49481 11.3081L3.0683 13.1092C2.95613 13.17 2.85454 13.2007 2.76301 13.2007C2.65613 13.2007 2.57623 13.1636 2.52279 13.0896C2.46768 13.0104 2.43949 12.9156 2.44237 12.8192C2.44237 12.7885 2.44766 12.7377 2.45824 12.6663L3.11433 8.85089L0.336516 6.14926C0.209001 6.01116 0.145508 5.88947 0.145508 5.78206C0.145508 5.59422 0.288367 5.47676 0.573027 5.43126L4.40377 4.87411L6.12073 1.4021C6.21756 1.1931 6.3419 1.08887 6.49481 1.08887C6.64772 1.08887 6.77206 1.1931 6.86889 1.4021L8.58584 4.87411L12.4166 5.43126C12.7018 5.47676 12.8441 5.59422 12.8441 5.78206Z" fill="#E7E7E7"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_147_8152">
+                                    <rect width="12.6986" height="12.6986" fill="white" transform="translate(0.145508 0.794922)"/>
+                                    </clipPath>
+                                </defs>
+                                </svg>
+                                <svg class="rating-svg" xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14" fill="none">
+                                <g clip-path="url(#clip0_147_8152)">
+                                    <path d="M12.8441 5.78206C12.8441 5.89423 12.778 6.01645 12.6457 6.14873L9.87528 8.84983L10.5314 12.6658C10.5367 12.7012 10.5393 12.7525 10.5393 12.8187C10.5423 12.915 10.5143 13.0098 10.4594 13.089C10.433 13.1255 10.3978 13.1548 10.3572 13.1742C10.3165 13.1936 10.2716 13.2025 10.2266 13.2002C10.1298 13.2002 10.0282 13.1695 9.92131 13.1081L6.49481 11.3081L3.0683 13.1092C2.95613 13.17 2.85454 13.2007 2.76301 13.2007C2.65613 13.2007 2.57623 13.1636 2.52279 13.0896C2.46768 13.0104 2.43949 12.9156 2.44237 12.8192C2.44237 12.7885 2.44766 12.7377 2.45824 12.6663L3.11433 8.85089L0.336516 6.14926C0.209001 6.01116 0.145508 5.88947 0.145508 5.78206C0.145508 5.59422 0.288367 5.47676 0.573027 5.43126L4.40377 4.87411L6.12073 1.4021C6.21756 1.1931 6.3419 1.08887 6.49481 1.08887C6.64772 1.08887 6.77206 1.1931 6.86889 1.4021L8.58584 4.87411L12.4166 5.43126C12.7018 5.47676 12.8441 5.59422 12.8441 5.78206Z" fill="#E7E7E7"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_147_8152">
+                                    <rect width="12.6986" height="12.6986" fill="white" transform="translate(0.145508 0.794922)"/>
+                                    </clipPath>
+                                </defs>
+                                </svg>
+                                <svg class="rating-svg" xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14" fill="none">
+                                <g clip-path="url(#clip0_147_8152)">
+                                    <path d="M12.8441 5.78206C12.8441 5.89423 12.778 6.01645 12.6457 6.14873L9.87528 8.84983L10.5314 12.6658C10.5367 12.7012 10.5393 12.7525 10.5393 12.8187C10.5423 12.915 10.5143 13.0098 10.4594 13.089C10.433 13.1255 10.3978 13.1548 10.3572 13.1742C10.3165 13.1936 10.2716 13.2025 10.2266 13.2002C10.1298 13.2002 10.0282 13.1695 9.92131 13.1081L6.49481 11.3081L3.0683 13.1092C2.95613 13.17 2.85454 13.2007 2.76301 13.2007C2.65613 13.2007 2.57623 13.1636 2.52279 13.0896C2.46768 13.0104 2.43949 12.9156 2.44237 12.8192C2.44237 12.7885 2.44766 12.7377 2.45824 12.6663L3.11433 8.85089L0.336516 6.14926C0.209001 6.01116 0.145508 5.88947 0.145508 5.78206C0.145508 5.59422 0.288367 5.47676 0.573027 5.43126L4.40377 4.87411L6.12073 1.4021C6.21756 1.1931 6.3419 1.08887 6.49481 1.08887C6.64772 1.08887 6.77206 1.1931 6.86889 1.4021L8.58584 4.87411L12.4166 5.43126C12.7018 5.47676 12.8441 5.59422 12.8441 5.78206Z" fill="#E7E7E7"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_147_8152">
+                                    <rect width="12.6986" height="12.6986" fill="white" transform="translate(0.145508 0.794922)"/>
+                                    </clipPath>
+                                </defs>
+                                </svg>
+                                <svg class="rating-svg" xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14" fill="none">
+                                <g clip-path="url(#clip0_147_8152)">
+                                    <path d="M12.8441 5.78206C12.8441 5.89423 12.778 6.01645 12.6457 6.14873L9.87528 8.84983L10.5314 12.6658C10.5367 12.7012 10.5393 12.7525 10.5393 12.8187C10.5423 12.915 10.5143 13.0098 10.4594 13.089C10.433 13.1255 10.3978 13.1548 10.3572 13.1742C10.3165 13.1936 10.2716 13.2025 10.2266 13.2002C10.1298 13.2002 10.0282 13.1695 9.92131 13.1081L6.49481 11.3081L3.0683 13.1092C2.95613 13.17 2.85454 13.2007 2.76301 13.2007C2.65613 13.2007 2.57623 13.1636 2.52279 13.0896C2.46768 13.0104 2.43949 12.9156 2.44237 12.8192C2.44237 12.7885 2.44766 12.7377 2.45824 12.6663L3.11433 8.85089L0.336516 6.14926C0.209001 6.01116 0.145508 5.88947 0.145508 5.78206C0.145508 5.59422 0.288367 5.47676 0.573027 5.43126L4.40377 4.87411L6.12073 1.4021C6.21756 1.1931 6.3419 1.08887 6.49481 1.08887C6.64772 1.08887 6.77206 1.1931 6.86889 1.4021L8.58584 4.87411L12.4166 5.43126C12.7018 5.47676 12.8441 5.59422 12.8441 5.78206Z" fill="#E7E7E7"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_147_8152">
+                                    <rect width="12.6986" height="12.6986" fill="white" transform="translate(0.145508 0.794922)"/>
+                                    </clipPath>
+                                </defs>
+                                </svg>
+                                <svg class="rating-svg" xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14" fill="none">
+                                <g clip-path="url(#clip0_147_8152)">
+                                    <path d="M12.8441 5.78206C12.8441 5.89423 12.778 6.01645 12.6457 6.14873L9.87528 8.84983L10.5314 12.6658C10.5367 12.7012 10.5393 12.7525 10.5393 12.8187C10.5423 12.915 10.5143 13.0098 10.4594 13.089C10.433 13.1255 10.3978 13.1548 10.3572 13.1742C10.3165 13.1936 10.2716 13.2025 10.2266 13.2002C10.1298 13.2002 10.0282 13.1695 9.92131 13.1081L6.49481 11.3081L3.0683 13.1092C2.95613 13.17 2.85454 13.2007 2.76301 13.2007C2.65613 13.2007 2.57623 13.1636 2.52279 13.0896C2.46768 13.0104 2.43949 12.9156 2.44237 12.8192C2.44237 12.7885 2.44766 12.7377 2.45824 12.6663L3.11433 8.85089L0.336516 6.14926C0.209001 6.01116 0.145508 5.88947 0.145508 5.78206C0.145508 5.59422 0.288367 5.47676 0.573027 5.43126L4.40377 4.87411L6.12073 1.4021C6.21756 1.1931 6.3419 1.08887 6.49481 1.08887C6.64772 1.08887 6.77206 1.1931 6.86889 1.4021L8.58584 4.87411L12.4166 5.43126C12.7018 5.47676 12.8441 5.59422 12.8441 5.78206Z" fill="#E7E7E7"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_147_8152">
+                                    <rect width="12.6986" height="12.6986" fill="white" transform="translate(0.145508 0.794922)"/>
+                                    </clipPath>
+                                </defs>
+                                </svg>
+                            </div>
+                            <span class="review_num">{{ comparison.metafields.custom.compression }}</span> 
+                        </div>
+                    </td>
+                    {% endfor %}
+                </tr>
+                <tr class="row row--attribute">
+                    <th scope="row" class="row-header sticky-column">
+                        <div class="attribute-name" data-scope="product">Softness</div>
+                    </th>
+                    {% for comparison in product.metafields.custom.comparison.value %}
+                    <td class="cell">
+                        <div class="attribute-value">
+                            {{ comparison.metafields.custom.softness }}
+                        </div>
+                    </td>
+                    {% endfor %}
+                </tr>
+                
+                <tr class="row row--attribute row-hidden">
+                    <th scope="row" class="row-header sticky-column">
+                        <div class="attribute-name" data-scope="product">Eco</div>
+                    </th>
+                    {% for comparison in product.metafields.custom.comparison.value %}
+                    <td class="cell">
+                        <div class="attribute-value">
+                            {% if comparison.metafields.custom.eco == true %}
+                            <svg class="icon" width="20" height="20" aria-hidden="true" viewBox="0 0 20 20">
+                                <path
+                                    d="M7 18a.997.997 0 0 1-.707-.293l-6-6a1 1 0 0 1 1.414-1.414l5.236 5.236 11.298-13.18a1 1 0 0 1 1.518 1.3l-12 14a1.001 1.001 0 0 1-.721.35H7"
+                                    fill="currentColor"></path>
+                            </svg>
+                            {% else %}
+                            <svg class="icon" width="20" height="20" aria-hidden="true" viewBox="0 0 20 20">
+                                <path
+                                    d="m11.414 10 6.293-6.293a1 1 0 1 0-1.414-1.414L10 8.586 3.707 2.293a1 1 0 0 0-1.414 1.414L8.586 10l-6.293 6.293a1 1 0 1 0 1.414 1.414L10 11.414l6.293 6.293A.998.998 0 0 0 18 17a.999.999 0 0 0-.293-.707L11.414 10z"
+                                    fill="currentColor"></path>
+                            </svg>
+                            {% endif %}
+                        </div>
+                    </td>
+                    {% endfor %}
+                </tr>
+                <tr class="row row--attribute row-hidden">
+                    <th scope="row" class="row-header sticky-column">
+                        <div class="attribute-name" data-scope="product">Tasche</div>
+                    </th>
+                    {% for comparison in product.metafields.custom.comparison.value %}
+                    <td class="cell">
+                        <div class="attribute-value">
+                            {% if comparison.metafields.custom.bag == true %}
+                            <svg class="icon" width="20" height="20" aria-hidden="true" viewBox="0 0 20 20">
+                                <path
+                                    d="M7 18a.997.997 0 0 1-.707-.293l-6-6a1 1 0 0 1 1.414-1.414l5.236 5.236 11.298-13.18a1 1 0 0 1 1.518 1.3l-12 14a1.001 1.001 0 0 1-.721.35H7"
+                                    fill="currentColor"></path>
+                            </svg>
+                            {% else %}
+                            <svg class="icon" width="20" height="20" aria-hidden="true" viewBox="0 0 20 20">
+                                <path
+                                    d="m11.414 10 6.293-6.293a1 1 0 1 0-1.414-1.414L10 8.586 3.707 2.293a1 1 0 0 0-1.414 1.414L8.586 10l-6.293 6.293a1 1 0 1 0 1.414 1.414L10 11.414l6.293 6.293A.998.998 0 0 0 18 17a.999.999 0 0 0-.293-.707L11.414 10z"
+                                    fill="currentColor"></path>
+                            </svg>
+                            {% endif %}
+                        </div>
+                    </td>
+                    {% endfor %}
+                </tr>
+                <tr class="row row--attribute row-hidden">
+                    <th scope="row" class="row-header sticky-column">
+                        <div class="attribute-name" data-scope="product">Im Set verfügbar</div>
+                    </th>
+                    {% for comparison in product.metafields.custom.comparison.value %}
+                    <td class="cell">
+                        <div class="attribute-value">
+                            {% if comparison.metafields.custom.available_in_set == true %}
+                            <svg class="icon" width="20" height="20" aria-hidden="true" viewBox="0 0 20 20">
+                                <path
+                                    d="M7 18a.997.997 0 0 1-.707-.293l-6-6a1 1 0 0 1 1.414-1.414l5.236 5.236 11.298-13.18a1 1 0 0 1 1.518 1.3l-12 14a1.001 1.001 0 0 1-.721.35H7"
+                                    fill="currentColor"></path>
+                            </svg>
+                            {% else %}
+                            <svg class="icon" width="20" height="20" aria-hidden="true" viewBox="0 0 20 20">
+                                <path
+                                    d="m11.414 10 6.293-6.293a1 1 0 1 0-1.414-1.414L10 8.586 3.707 2.293a1 1 0 0 0-1.414 1.414L8.586 10l-6.293 6.293a1 1 0 1 0 1.414 1.414L10 11.414l6.293 6.293A.998.998 0 0 0 18 17a.999.999 0 0 0-.293-.707L11.414 10z"
+                                    fill="currentColor"></path>
+                            </svg>
+                            {% endif %}
+                        </div>
+                    </td>
+                    {% endfor %}
+                </tr>
+                <tr class="row row--attribute row-hidden">
+                    <th scope="row" class="row-header sticky-column">
+                        <div class="attribute-name" data-scope="product">Passform</div>
+                    </th>
+                    {% for comparison in product.metafields.custom.comparison.value %}
+                    <td class="cell">
+                        <div class="attribute-value">
+                            {{ comparison.metafields.custom.fit }}
+                        </div>
+                    </td>
+                    {% endfor %}
+                </tr>
+                <tr class="row row--attribute row-hidden">
+                    <th scope="row" class="row-header sticky-column">
+                        <div class="attribute-name" data-scope="product">Blickdicht</div>
+                    </th>
+                    {% for comparison in product.metafields.custom.comparison.value %}
+                    <td class="cell">
+                        <div class="attribute-value">
+                            {% if comparison.metafields.custom.opaque == true %}
+                            <svg class="icon" width="20" height="20" aria-hidden="true" viewBox="0 0 20 20">
+                                <path
+                                    d="M7 18a.997.997 0 0 1-.707-.293l-6-6a1 1 0 0 1 1.414-1.414l5.236 5.236 11.298-13.18a1 1 0 0 1 1.518 1.3l-12 14a1.001 1.001 0 0 1-.721.35H7"
+                                    fill="currentColor"></path>
+                            </svg>
+                            {% else %}
+                            <svg class="icon" width="20" height="20" aria-hidden="true" viewBox="0 0 20 20">
+                                <path
+                                    d="m11.414 10 6.293-6.293a1 1 0 1 0-1.414-1.414L10 8.586 3.707 2.293a1 1 0 0 0-1.414 1.414L8.586 10l-6.293 6.293a1 1 0 1 0 1.414 1.414L10 11.414l6.293 6.293A.998.998 0 0 0 18 17a.999.999 0 0 0-.293-.707L11.414 10z"
+                                    fill="currentColor"></path>
+                            </svg>
+                            {% endif %}
+                        </div>
+                    </td>
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+        <div class="see-more-container">
+            <div class="see-more">
+                <div class="see-more-title">Mehr anzeigen</div>
+                <div class="see-more-icon"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                        <path
+                            d="M10.6657 6.88543L6.87238 10.6787M6.87238 10.6787L3.0791 6.88543M6.87238 10.6787V1.57484"
+                            stroke="black" stroke-width="0.758656" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .comparison-table-section {
+        background: linear-gradient(to bottom, {{ section.settings.up_background_color }} 50%, {{ section.settings.down_background_color }} 50%);
+        padding: 52px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .comparison-table-section .see-more {
+        display: flex;
+        justify-content: center;
+        width: 165px;
+        padding: 6px 14px;
+        align-items: center;
+        gap: 5px;
+        border-radius: 110px;
+        cursor: pointer;
+        border: 1px solid var(--Grey-50, #E7E7E7);
+    }
+
+    .comparison-table-section .table-title {
+        color: var(--White, var(--Primary-Base-White, #FFF));
+        text-align: center;
+        font-family: Poppins;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        letter-spacing: 1px;
+        margin: unset;
+        margin-bottom: 30px;
+    }
+
+    .comparison-table-container {
+        display: flex;
+        max-width: 1440px;
+        width: 100%;
+        overflow-x: auto;
+        padding: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+        scrollbar-width: thin;
+        border-radius: 20px 0px 20px 20px;
+        background: var(--Grey-light, #F3F3F3);
+    }
+
+    .comparison-table-section .attribute-value {
+        color: rgba(18, 18, 18, 0.75);
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.5px;
+        display: flex;
+        gap: 4.76px;
+    }
+
+    .comparison-table-section .attribute-name {
+        color: var(--Grey-90, #282828);
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.5px;
+    }
+
+    .comparison-table-section .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        border: none;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 10px;
+        /* border: 1px solid #ddd; */
+    }
+
+    .comparison-table-section .see-more-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 17px;
+    }
+
+    .comparison-table-section .see-more .see-more-title {
+        color: #121212;
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.5px;
+    }
+
+    .comparison-table-section .see-more .see-more-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .comparison-table th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+
+    .comparison-table td {
+        /* text-align: center; */
+    }
+
+    .comparison-table-section .product__image-wrapper img {
+        width: 282px;
+        height: 420px;
+        border-radius: 21px;
+    }
+
+    .comparison-table-section .product {
+        position: relative;
+    }
+
+    .comparison-table-section .product__info {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        padding: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        border-radius: 0px 0px 7px 7px;
+        background: rgba(0, 0, 0, 0.60);
+        backdrop-filter: blur(5.5px);
+        bottom: 0;
+    }
+
+    .comparison-table-section .product__title {
+        color: var(--White, var(--Primary-Base-White, #FFF));
+        font-family: Poppins;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16.9px;
+        /* 130% */
+        letter-spacing: 0.6px;
+        text-decoration: none;
+        margin-bottom: unset !important;
+    }
+
+    .comparison-table-section .product__price {
+        color: var(--White, var(--Primary-Base-White, #FFF));
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        /* 171.429% */
+    }
+
+    .comparison-table-section .rating {
+        /* display: flex; */
+        /* gap: 5px; */
+    }
+
+    .row-hidden {
+        display: none;
+    }
+
+    @media only screen and (max-width: 588px) {
+        .comparison-table-section .table-title {
+            color: var(--Dark-Grey, #121212);
+            font-size: 30px;
+        }
+
+        .comparison-table-section .product__image-wrapper img {
+            width: 190.567px;
+            height: 283.824px;
+        }
+        .comparison-table-section .color-swatch {
+            margin-right: 1px !important;
+            width: 20px !important;
+            height: 20px !important;
+        }
+        
+        .comparison-table-section {
+            background: {{ section.settings.mobile_background_color }};
+        }
+
+        .comparison-table-section .attribute-name {
+            font-size: 13px;
+        }
+
+        .comparison-table-section .attribute-value {
+            font-size: 12px;
+            display: flex !important;
+            gap: 3px;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 7px;
+        }
+
+        .comparison-table-section .product__price {
+            font-size: 10.461px;
+        }
+
+        .comparison-table-section .product__title {
+            font-size: 9.785px;
+        }
+
+        .comparison-table-section .product__info {
+            gap: 0;
+        }
+
+        .comparison-table-section .attribute-value svg {
+            width: 13px;
+            height: 13px;
+        }
+                        
+    }
+</style>
+
+<script>
+    document.querySelector(".see-more").addEventListener('click', function() {
+        const hiddenRows = document.querySelectorAll(".row-hidden");
+        
+        hiddenRows.forEach(row => {
+            row.style.display = "table-row";
+        });
+        
+        this.style.display = "none";
+    });
+
+    setTimeout(() => {
+        document.addEventListener("DOMContentLoaded", function () {
+        var ratingElements = document.querySelectorAll('.review_num');
+
+        ratingElements.forEach(function(reviewNumElement, index) {
+        var ratingString = reviewNumElement.textContent.trim(); // Remove extra spaces just in case
+        var rating = parseInt(ratingString.split('/')[0]);
+        var ratingSvgs = reviewNumElement.closest('.attribute-value').querySelectorAll('.rating-svg');
+        ratingSvgs.forEach(function(svg, i) {
+                if (i < rating) {
+                    svg.querySelector('path').setAttribute('fill', '#FBCD27');
+                } else {
+                    svg.querySelector('path').setAttribute('fill', '#E7E7E7');
+                }
+            });
+        });
+    }, 1000);
+  
+});
+
+</script>
+
+
+{% schema %}
+{
+"name": "Product Comparison Table",
+"settings": [
+    {
+        "type": "text",
+        "id": "table_title",
+        "label": "Comparison Table Title",
+        "default": "Table Title"
+    },
+    {
+        "type": "color",
+        "id": "up_background_color",
+        "label": "Desktop Up Background Color",
+        "default": "#ffffff"
+    },
+    {
+        "type": "color",
+        "id": "down_background_color",
+        "label": "Desktop Down Background Color",
+        "default": "#ffffff"
+    },
+    {
+        "type": "color",
+        "id": "mobile_background_color",
+        "label": "Mobile Background Color",
+        "default": "#ffffff"
+    }
+    ],
+    "presets": [
+        {
+            "name": "Product Comparison Table"
+        }
+    ]
+}
+{% endschema %}

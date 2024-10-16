@@ -19,6 +19,7 @@
 
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 
+
 {%- if card_product and card_product != empty -%}
   {%- liquid
     assign ratio = 1
@@ -152,10 +153,6 @@
           </div>
         </div>
       </div>
-  
-
-
-  
       <div class="ab-card-content card__content">
         <div class="card__information">
           <div class="card-top-info">
@@ -174,133 +171,18 @@
                 {{ card_product.title | escape }}
               </a>
             </h3>
-            {% if card_product.title contains 'Antelao - Oberteil' %}
-              <div style=" z-index: 2;" class="color_swatches">
-                <div style="margin-top: 0px;" class ="farbauswahl">
-                            
-          
-                            <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 9px; margin-right: 8px; border-radius: 40px;" class="rnd-btn" href="https://www.mountainero.com/products/antelao-oberteil-black-%E2%99%BB%EF%B8%8F">
-                            </a>
-                            </div>
-                </div>
-            
-                      {% elsif card_product.title contains 'Civetta - Oberteil' %}
-              <div style=" z-index: 2;" class="color_swatches">
-                <div style="margin-top: 0px;" class ="farbauswahl">
-                            <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 9px; margin-right: 8px; border-radius: 40px;" class="rnd-btn" href="https://www.mountainero.com/products/civetta-oberteil-black?_pos=3&_sid=3b674b37e&_ss=r">
-                            </a>
-                  <a style="font-size: 0px; text-align: center; color: #754D43; background-color: #754D43; padding: 9px; border-radius: 40px; margin-right: 8px;" class="rnd-btn" href="https://www.mountainero.com/products/civetta-oberteil-brown?_pos=4&_sid=3b674b37e&_ss=r">
-                  </a>
-                  
-                </div>
-                </div>
-            {% else %}
-            {% comment %} CHRIS: Farbauswahlbuttons Start {% endcomment %}
-                            <div style=" z-index: 2;" class="color_swatches">
-                            {% if card_product.title contains 'Tofana' %}
-                            {% if card_product.title contains 'Eco' %}
-                              <div style="margin-top: 0px;" class ="farbauswahl">
-                              <a style="font-size: 0px; text-align: center; color: #74815e; background-color: #74815e; padding: 9px; border-radius: 40px; margin-right: 8px;" class="rnd-btn" href="/products/tofana-green-♻%EF%B8%8F">
-                              </a>
-                              <a style="font-size: 0px; text-align: center; color: #5c6f86; background-color: #5c6f86; padding: 9px; border-radius: 40px; margin-right: 8px;" class="rnd-btn" href="/products/tofana-grey-blue-♻%EF%B8%8F">
-                              </a>
-                              <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 9px; border-radius: 40px;" class="rnd-btn" href="/products/tofana-black-♻%EF%B8%8F">
-                              </a>
-                              </div>
-                            {% elsif card_product.title contains 'Tofana Classic' %}
-            
-                              <div style="margin-top: 0px;" class ="farbauswahl">
-                              <a style="font-size: 0px; text-align: center; color: #74815e; background-color: #74815e; padding: 9px; border-radius: 40px; margin-right: 8px;" class="rnd-btn" href="/products/tofana-green">
-                              </a>
-                              <a style="font-size: 0px; text-align: center; color: #5c6f86; background-color: #5c6f86; padding: 9px; border-radius: 40px; margin-right: 8px;" class="rnd-btn" href="/products/tofana-grey-blue-1">
-                              </a>
-                              <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 9px; border-radius: 40px; margin-right: 8px;" class="rnd-btn" href="/products/tofana-black-1">
-                              </a>
-                              <a style="font-size: 0px; text-align: center; color: #754D43; background-color: #754D43; padding: 9px; border-radius: 40px; margin-right: 8px;" class="rnd-btn" href="/products/tofana-brown">
-                              </a>
-                              <a style="font-size: 0px; text-align: center; color: #4D745D; background-color: #4D745D; padding: 9px; border-radius: 40px; margin-right: 8px;" class="rnd-btn" href="/products/tofana-tanne">
-                              </a>
-                              </div>
-                              {% endif %}
-            
-                              {% elsif card_product.title contains 'Antelao' %}
-                              {% if card_product.title contains 'Set' %}
-                              
-            
-                              <div style="margin-top: 0px;" class ="farbauswahl">
-                              <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 9px; margin-right: 8px; border-radius: 40px;" class="rnd-btn" href="/products/antelao-set-eco">
-            
-                              </a>
-              
-                              </div>
-                              {% endif %}
-            
-                              {% unless card_product.title contains 'Set'  %}
-                              
-            
-                              <div style="margin-top: 0px;" class ="farbauswahl">
-                              <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 9px; margin-right: 8px; border-radius: 40px;" class="rnd-btn" href="/products/antelao-leggings-black-♻%EF%B8%8F">
-            
-                              </a>
-            
-                              </div>
-            
-                              {% endunless %}
-                              
-                              {% elsif card_product.title contains 'Civetta' %}
-                              {% if card_product.title contains 'Set' %}
-                              
-            
-                              <div style="margin-top: 0px;" class ="farbauswahl">
-                              <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 9px; margin-right: 8px; border-radius: 40px;" class="rnd-btn" href="/products/civetta-set-bundle">
-            
-                              </a>
-                              <a style="font-size: 0px; text-align: center; color: #754D43; background-color: #754D43; padding: 9px; border-radius: 40px; margin-right: 8px;" class="rnd-btn" href="/products/civetta-set-braun">
-            
-                              </a>
-                              </div>
-                              {% endif %}
-            
-                              {% unless card_product.title contains 'Set' %}
-                              
-            
-                              <div style="margin-top: 0px;" class ="farbauswahl">
-                              <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 9px; margin-right: 8px; border-radius: 40px;" class="rnd-btn" href="/products/civetta-leggings-black">
-            
-                              </a>
-                              <a style="font-size: 0px; text-align: center; color: #754D43; background-color: #754D43; padding: 9px; border-radius: 40px; margin-right: 8px;" class="rnd-btn" href="/products/civetta-leggings-brown">
-            
-                              </a>
-                              </div>
-            
-                              {% endunless %}
-                              {% elsif card_product.title contains 'Faloria'  %}
-                              {% unless card_product.title contains 'short' %}
-                              {% if card_product.title contains 'Eco' %}
-                              
-            
-                              <div style="margin-top: 0px;" class ="farbauswahl">
-                            
-                              <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 9px; border-radius: 40px; margin-right: 8px;" class="rnd-btn" href="/products/faloria-black-♻%EF%B8%8F-1">
-                              </a>
-                                <a style="font-size: 0px; text-align: center; color: #74815e; background-color: #74815e; padding: 9px; border-radius: 40px; " class="rnd-btn" href="/products/faloria-green-♻%EF%B8%8F-1">
-                              </a>
-                              </div>
-                              {% else %}
-                              
-            
-                              <div style="margin-top: 0px;" class ="farbauswahl">
-                              <a style="font-size: 0px; text-align: center; color: #74815e; background-color: #74815e; padding: 9px; border-radius: 40px; margin-right: 8px;" class="rnd-btn" href="/products/faloria-green-♻%EF%B8%8F">
-                              </a>
-                              <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 9px; border-radius: 40px;" class="rnd-btn" href="/products/faloria-black-%E2%99%BB%EF%B8%8F">
-                              </a>
-                              </div>
-                              {% endif %}
-                              {% endunless %}
-                              {% endif %}
-                              </div>
-            {% comment %} CHRIS: Farbauswahlbuttons Ende {% endcomment %}
-            {% endif %}
+         
+{% comment %} CHRIS: Farbauswahlbuttons Start {% endcomment %}
+ <div class="farbauswahl">
+        {% for color in card_product.metafields.custom.custom_color.value %}
+          <a href="{{ color.variant.value.url }}" 
+            {% if color.product.value.url contains product.handle %} class="color-swatch selected" {% else %} class="color-swatch" {% endif %} 
+            style="background-color: #{{ color.color_value | handleize }};">
+          <span class="sr-only">{{ color.color_name }}</span>
+        </a>                 
+        {% endfor %}
+  </div>
+{% comment %} CHRIS: Farbauswahlbuttons Ende {% endcomment %}
           </div>
           <div class="card-information">
             {% comment %} {%- if show_vendor -%}

@@ -198,7 +198,7 @@ sticky-header.header-wrapper.is-scroll-active .mt-header {
 
 .mt-header .mt-mega-menu-item summary::before {
     content: "";
-    width: 100%;
+    width: 600px;
     height: 100px;
     background-color: transparent;
     position: absolute;

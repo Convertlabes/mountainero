@@ -1,6 +1,6 @@
 .drawer {
   position: fixed;
-  z-index: 1000;
+  z-index: 1001;
   left: 0;
   top: 0;
   width: 100vw;
@@ -23,7 +23,7 @@
   border: 0.1rem solid rgba(var(--color-foreground), 0.2);
   border-right: 0;
   background-color: rgb(var(--color-background));
-  overflow: hidden;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   transform: translateX(100%);
@@ -80,14 +80,14 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 }
 
 .drawer__heading {
-  margin: 0 0 1rem;
+  /* margin: 0 0 1rem; */
 }
 
 .drawer__close {
   display: inline-block;
   padding: 0;
-  min-width: 4.4rem;
-  min-height: 4.4rem;
+  /* min-width: 4.4rem; */
+  /* min-height: 4.4rem; */
   box-shadow: 0 0 0 0.2rem rgba(var(--color-button), 0);
   position: absolute;
   top: 10px;
@@ -186,13 +186,13 @@ cart-drawer {
   display: inline-table;
   width: 100%;
   position: sticky;
-  top: 0;
+  top: 60px;
   z-index: 2;
-  background-color: rgb(var(--color-base-background-1));
+  background: var(--Dark-Grey, #121212);
 }
 
 cart-drawer-items {
-  overflow: auto;
+  /* overflow: hidden; */
   flex: 1;
 }
 
@@ -222,7 +222,7 @@ cart-drawer-items {
 }
 
 .cart-drawer .cart-item__image {
-  max-width: 100%;
+  /* max-width: 100%; */
 }
 
 .cart-drawer .cart-items thead {
@@ -238,6 +238,8 @@ cart-drawer-items {
 .cart-drawer .cart-items thead th:nth-child(2) {
   width: 50%;
   padding-left: 0;
+  /* display: flex; */
+  /* align-items: center; */
 }
 
 .cart-drawer .cart-items thead tr {
@@ -246,7 +248,7 @@ cart-drawer-items {
 }
 
 .cart-drawer .cart-items th {
-  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  /* border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08); */
 }
 
 .cart-drawer .cart-item:last-child {
@@ -296,12 +298,12 @@ cart-drawer-items {
   padding-top: 0;
   grid-column: 2 / 5;
 }
-
+/* 
 @media screen and (max-width: 749px) {
   .cart-drawer .cart-item cart-remove-button {
     margin-left: 0;
   }
-}
+} */
 
 .cart-drawer__footer > * + * {
   margin-top: 1rem;
@@ -357,7 +359,7 @@ cart-drawer-items {
   margin-right: 0.5rem !important;
 }
 
-@media screen and (min-width: 750px) {
+/* @media screen and (min-width: 750px) {
   .drawer__footer #dynamic-checkout-cart ul > li {
     flex-basis: calc(100% / 3 - 0.5rem) !important;
     margin: 0 !important;
@@ -369,7 +371,7 @@ cart-drawer-items {
   .drawer__footer #dynamic-checkout-cart ul > li:first-child:nth-last-child(4) ~ li {
 	  flex-basis: calc(50% - 0.5rem) !important;
   }
-}
+} */
 
 cart-drawer-items::-webkit-scrollbar {
   width: 3px;

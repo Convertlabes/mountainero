@@ -3,7 +3,7 @@
 
 <section
   id="MainProduct-{{ section.id }}"
-  class="page-width section-{{ section.id }}-padding"
+  class="page-width section-{{ section.id }}-padding pdp"
   data-section="{{ section.id }}"
 >
 
@@ -16,7 +16,7 @@
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
   {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
-
+  
   {%- style -%}
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -31,9 +31,9 @@
     }
   {%- endstyle -%}
 
-  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
-  {{ 'v2-product.css' | asset_url | stylesheet_tag }}
+{{ 'v2-product.css' | asset_url | stylesheet_tag }}
 
   {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
   {%- if first_3d_model -%}
@@ -56,7 +56,7 @@
 
 
 
-  <div class="v2 product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+  <div id="productContainer" class="v2 product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
       <media-gallery
         id="MediaGallery-{{ section.id }}"
@@ -501,7 +501,8 @@
    
             <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
             {%- when 'variant_picker' -%}
-
+        
+            
 
 {%- unless product.has_only_default_variant -%}
                 {%- if block.settings.picker_type == 'button' -%}
@@ -511,57 +512,96 @@
                     data-url="{{ product.url }}"
                     {{ block.shopify_attributes }}
                   >
-                    {%- for option in product.options_with_values -%}
-                      <fieldset class="js product-form__input">
-                        <legend class="form__label">{{ option.name }}</legend>
-                        <div class="mt-variant-selector">
-                          {%- for value in option.values -%}
-                            <input
-                              type="radio"
-                              id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                              name="{{ option.name }}"
-                              value="{{ value | escape }}"
-                              form="{{ product_form_id }}"
-                              {% if option.selected_value == value %}
-                                checked
-                              {% endif %}
-                            >
-                            <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                              {{ value }}
+                   {% comment %} CHRIS: Farbauswahlbuttons Start {% endcomment %}
+                   <div class="farbauswahl">
+                    <div> Farbe </div>
+                    <div>
+                      {% for color in product.metafields.custom.custom_color.value %}
+                        <a href="{{ color.variant.value.url }}" 
+                           {% if color.variant.value.id == product.selected_or_first_available_variant.id %}
+                              class="color-swatch selected" 
+                           {% else %} 
+                              class="color-swatch" 
+                           {% endif %} 
+                           style="background-color: #{{ color.color_value | handleize }};">
+                           <span class="sr-only">{{ color.color_name }}</span>
+                        </a>                 
+                      {% endfor %}
+                      
+                    </div>
+                  </div>
+                  {% comment %} CHRIS: Farbauswahlbuttons Ende {% endcomment %}
+                  {%- for option in product.options_with_values -%}
+                    <fieldset class="js product-form__input">
+                      {% if option.name == 'Farbe' %}
+                        <legend style="display:none;" class="form__label">{{ option.name }}</legend>
+                      {% else %}
+                        <legend style="display:block;" class="form__label">{{ option.name }}</legend>
+                      {% endif %}
+                      <div class="mt-variant-selector">
+                        {%- for value in option.values -%}
+                          <input
+                            type="radio"
+                            id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                            name="{{ option.name }}"
+                            value="{{ value | escape }}"
+                            form="{{ product_form_id }}"
+                            {% if option.selected_value == value %}
+                              checked
+                            {% endif %}
+                          >
+                          {% if option.name == 'Farbe' %}
+                            <label style="visibility: hidden !important; display:none !important;"
+                              class="color-swatch"
+                              for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                              <img src="{{ value | handle | replace: '-', '_' | append: '.png' | file_url }}" alt="{{ value }}">
+                              <span class="sr-only">{{ value }}</span>
                             </label>
-                          {%- endfor -%}
-
-                          {% assign passform = block.settings.passform %}
-                          {% if passform %}
-                            <!-- Erhöhung der font-size für eine größere Darstellung des Textes -->
-                            <div style="display : flex; gap : 5px;" class="mt-size-description">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="min-width : 16px;">
-                                <path d="M15.1139 4.57736L11.4234 0.886859C11.2279 0.691359 10.9119 0.691359 10.7164 0.886859L0.886859 10.7164C0.691359 10.9119 0.691359 11.2279 0.886859 11.4234L4.57636 15.1139C4.67036 15.2079 4.79686 15.2604 4.92986 15.2604C5.06286 15.2604 5.18986 15.2079 5.28336 15.1139L15.1134 5.28486C15.2074 5.19086 15.2599 5.06386 15.2599 4.93136C15.2599 4.79886 15.2074 4.67136 15.1139 4.57736ZM13.2164 5.76786L11.7244 4.27786C11.5289 4.08286 11.2124 4.08236 11.0169 4.27836C10.8219 4.47386 10.8219 4.79036 11.0174 4.98536L12.5094 6.47536L11.5659 7.41886L10.6909 6.54336C10.4954 6.34736 10.1794 6.34786 9.98386 6.54286C9.78836 6.73786 9.78836 7.05436 9.98386 7.24986L10.8589 8.12586L9.91586 9.06886L8.42436 7.57736C8.22886 7.38186 7.91286 7.38186 7.71736 7.57736C7.52186 7.77286 7.52186 8.08886 7.71736 8.28436L9.20836 9.77586L8.26586 10.7184L7.38886 9.84286C7.19336 9.64786 6.87736 9.64736 6.68186 9.84336C6.48636 10.0389 6.48636 10.3554 6.68186 10.5504L7.55836 11.4259L6.61486 12.3689L5.12436 10.8784C4.92886 10.6829 4.61286 10.6829 4.41736 10.8784C4.22186 11.0739 4.22186 11.3899 4.41736 11.5854L5.90786 13.0759L4.92986 14.0539L1.94736 11.0704L11.0699 1.94786L14.0534 4.93136L13.2164 5.76786Z" fill="#878787"/>
-                              </svg>
-                              <p style="color: {% if passform contains 'erwartet' %} #878787{% else %} #878787{% endif %}; font-size: 12px; margin-top : 0;">{{ passform }}</p>
-                            </div>
+                          {% else %}
+                           
+                            <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                              <span>{{ value }}</span>
+                            </label>
                           {% endif %}
-                          {% assign verfuegbarkeit = product.metafields.custom.verf_gbarkeit_ %}
-                          {% if verfuegbarkeit %}
-                            <!-- Beibehaltung der ursprünglichen font-size für den zweiten <p>-Tag -->
-                            <div style="display : flex; gap : 5px;">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="min-width : 16px;">
-                                <path d="M15.1139 4.57736L11.4234 0.886859C11.2279 0.691359 10.9119 0.691359 10.7164 0.886859L0.886859 10.7164C0.691359 10.9119 0.691359 11.2279 0.886859 11.4234L4.57636 15.1139C4.67036 15.2079 4.79686 15.2604 4.92986 15.2604C5.06286 15.2604 5.18986 15.2079 5.28336 15.1139L15.1134 5.28486C15.2074 5.19086 15.2599 5.06386 15.2599 4.93136C15.2599 4.79886 15.2074 4.67136 15.1139 4.57736ZM13.2164 5.76786L11.7244 4.27786C11.5289 4.08286 11.2124 4.08236 11.0169 4.27836C10.8219 4.47386 10.8219 4.79036 11.0174 4.98536L12.5094 6.47536L11.5659 7.41886L10.6909 6.54336C10.4954 6.34736 10.1794 6.34786 9.98386 6.54286C9.78836 6.73786 9.78836 7.05436 9.98386 7.24986L10.8589 8.12586L9.91586 9.06886L8.42436 7.57736C8.22886 7.38186 7.91286 7.38186 7.71736 7.57736C7.52186 7.77286 7.52186 8.08886 7.71736 8.28436L9.20836 9.77586L8.26586 10.7184L7.38886 9.84286C7.19336 9.64786 6.87736 9.64736 6.68186 9.84336C6.48636 10.0389 6.48636 10.3554 6.68186 10.5504L7.55836 11.4259L6.61486 12.3689L5.12436 10.8784C4.92886 10.6829 4.61286 10.6829 4.41736 10.8784C4.22186 11.0739 4.22186 11.3899 4.41736 11.5854L5.90786 13.0759L4.92986 14.0539L1.94736 11.0704L11.0699 1.94786L14.0534 4.93136L13.2164 5.76786Z" fill="#878787"/>
-                              </svg>
-                              <p style="font-size: 12px;  margin-top : 0;">{{ verfuegbarkeit }}</p>
-                            </div>
-                          {% endif %}
-                        </div> 
-                      </fieldset>
-                    {%- endfor -%}
+                        {%- endfor -%}
+                  
+                        {% assign passform = block.settings.passform %}
+                        {% if passform and option.name != "Farbe" %}
+                          <!-- Font-size for larger text -->
+                          <div style="display : flex; gap : 5px;" class="mt-size-description">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="min-width : 16px;">
+                              <path d="M15.1139 4.57736L11.4234 0.886859C11.2279 0.691359 10.9119 0.691359 10.7164 0.886859L0.886859 10.7164C0.691359 10.9119 0.691359 11.2279 0.886859 11.4234L4.57636 15.1139C4.67036 15.2079 4.79686 15.2604 4.92986 15.2604C5.06286 15.2604 5.18986 15.2079 5.28336 15.1139L15.1134 5.28486C15.2074 5.19086 15.2599 5.06386 15.2599 4.93136C15.2599 4.79886 15.2074 4.67136 15.1139 4.57736ZM13.2164 5.76786L11.7244 4.27786C11.5289 4.08286 11.2124 4.08236 11.0169 4.27836C10.8219 4.47386 10.8219 4.79036 11.0174 4.98536L12.5094 6.47536L11.5659 7.41886L10.6909 6.54336C10.4954 6.34736 10.1794 6.34786 9.98386 6.54286C9.78836 6.73786 9.78836 7.05436 9.98386 7.24986L10.8589 8.12586L9.91586 9.06886L8.42436 7.57736C8.22886 7.38186 7.91286 7.38186 7.71736 7.57736C7.52186 7.77286 7.52186 8.08886 7.71736 8.28436L9.20836 9.77586L8.26586 10.7184L7.38886 9.84286C7.19336 9.64786 6.87736 9.64736 6.68186 9.84336C6.48636 10.0389 6.48636 10.3554 6.68186 10.5504L7.55836 11.4259L6.61486 12.3689L5.12436 10.8784C4.92886 10.6829 4.61286 10.6829 4.41736 10.8784C4.22186 11.0739 4.22186 11.3899 4.41736 11.5854L5.90786 13.0759L4.92986 14.0539L1.94736 11.0704L11.0699 1.94786L14.0534 4.93136L13.2164 5.76786Z" fill="#878787"/>
+                            </svg>
+                            <p style="color: {% if passform contains 'erwartet' %} #878787{% else %} #878787{% endif %}; font-size: 12px; margin-top : 0;">{{ passform }}</p>
+                          </div>
+                          {% else %}
+                          <div style="display : none; gap : 5px;" class="mt-size-description">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="min-width : 16px;">
+                              <path d="M15.1139 4.57736L11.4234 0.886859C11.2279 0.691359 10.9119 0.691359 10.7164 0.886859L0.886859 10.7164C0.691359 10.9119 0.691359 11.2279 0.886859 11.4234L4.57636 15.1139C4.67036 15.2079 4.79686 15.2604 4.92986 15.2604C5.06286 15.2604 5.18986 15.2079 5.28336 15.1139L15.1134 5.28486C15.2074 5.19086 15.2599 5.06386 15.2599 4.93136C15.2599 4.79886 15.2074 4.67136 15.1139 4.57736ZM13.2164 5.76786L11.7244 4.27786C11.5289 4.08286 11.2124 4.08236 11.0169 4.27836C10.8219 4.47386 10.8219 4.79036 11.0174 4.98536L12.5094 6.47536L11.5659 7.41886L10.6909 6.54336C10.4954 6.34736 10.1794 6.34786 9.98386 6.54286C9.78836 6.73786 9.78836 7.05436 9.98386 7.24986L10.8589 8.12586L9.91586 9.06886L8.42436 7.57736C8.22886 7.38186 7.91286 7.38186 7.71736 7.57736C7.52186 7.77286 7.52186 8.08886 7.71736 8.28436L9.20836 9.77586L8.26586 10.7184L7.38886 9.84286C7.19336 9.64786 6.87736 9.64736 6.68186 9.84336C6.48636 10.0389 6.48636 10.3554 6.68186 10.5504L7.55836 11.4259L6.61486 12.3689L5.12436 10.8784C4.92886 10.6829 4.61286 10.6829 4.41736 10.8784C4.22186 11.0739 4.22186 11.3899 4.41736 11.5854L5.90786 13.0759L4.92986 14.0539L1.94736 11.0704L11.0699 1.94786L14.0534 4.93136L13.2164 5.76786Z" fill="#878787"/>
+                            </svg>
+                            <p style="color: {% if passform contains 'erwartet' %} #878787{% else %} #878787{% endif %}; font-size: 12px; margin-top : 0;">{{ passform }}</p>
+                          </div>
+                        {% endif %}
+                        
+                        {% assign verfuegbarkeit = product.metafields.custom.verf_gbarkeit_ %}
+                        {% if verfuegbarkeit %}
+                          <!-- Original font-size for availability text -->
+                          <div style="display : flex; gap : 5px;">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="min-width : 16px;">
+                              <path d="M15.1139 4.57736L11.4234 0.886859C11.2279 0.691359 10.9119 0.691359 10.7164 0.886859L0.886859 10.7164C0.691359 10.9119 0.691359 11.2279 0.886859 11.4234L4.57636 15.1139C4.67036 15.2079 4.79686 15.2604 4.92986 15.2604C5.06286 15.2604 5.18986 15.2079 5.28336 15.1139L15.1134 5.28486C15.2074 5.19086 15.2599 5.06386 15.2599 4.93136C15.2599 4.79886 15.2074 4.67136 15.1139 4.57736ZM13.2164 5.76786L11.7244 4.27786C11.5289 4.08286 11.2124 4.08236 11.0169 4.27836C10.8219 4.47386 10.8219 4.79036 11.0174 4.98536L12.5094 6.47536L11.5659 7.41886L10.6909 6.54336C10.4954 6.34736 10.1794 6.34786 9.98386 6.54286C9.78836 6.73786 9.78836 7.05436 9.98386 7.24986L10.8589 8.12586L9.91586 9.06886L8.42436 7.57736C8.22886 7.38186 7.91286 7.38186 7.71736 7.57736C7.52186 7.77286 7.52186 8.08886 7.71736 8.28436L9.20836 9.77586L8.26586 10.7184L7.38886 9.84286C7.19336 9.64786 6.87736 9.64736 6.68186 9.84336C6.48636 10.0389 6.48636 10.3554 6.68186 10.5504L7.55836 11.4259L6.61486 12.3689L5.12436 10.8784C4.92886 10.6829 4.61286 10.6829 4.41736 10.8784C4.22186 11.0739 4.22186 11.3899 4.41736 11.5854L5.90786 13.0759L4.92986 14.0539L1.94736 11.0704L11.0699 1.94786L14.0534 4.93136L13.2164 5.76786Z" fill="#878787"/>
+                            </svg>
+                            <p style="color: {% if verfuegbarkeit contains 'verfügbar' %} #27ae60 {% elsif verfuegbarkeit contains 'ausverkauft' %} #c0392b {% else %} #878787 {% endif %}; font-size: 12px; margin-top : 0;">{{ verfuegbarkeit }}</p>
+                          </div>
+                        {% endif %}
+                      </div>
+                    </fieldset>
+                  {%- endfor -%}
+                  
+                  
                     <script type="application/json">
                       {{ product.variants | json }}
                     </script>
-
-
                   </variant-radios>
-
-
                 {%- else -%}
                   <variant-selects
                     class="no-js-hidden"
@@ -604,131 +644,8 @@
                 {%- endif -%}
               {%- endunless -%}
 
+      
 
-
-
-              {% comment %} CHRIS: Farbauswahlbuttons Start {% endcomment %}
-              {% if product.title contains 'Antelao - Oberteil' %}
-                <p style="font-size: 13px; margin-bottom: 0px;" class='v2-product-color-heading'>Farbe Oberteile</p>
-                <div style="margin-top: 0px;" class="farbauswahl">
-                  <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; margin-right: 12px; border-radius: 40px;" class="rnd-btn{% if product.handle contains 'antelao-oberteil-black' %} selected{% endif %}" href="https://www.mountainero.com/products/antelao-oberteil-black-%E2%99%BB%EF%B8%8F">
-                </a>
-                </div>
-
-              {% elsif product.title contains 'Civetta - Oberteil' %}
-                <p style="font-size: 13px; margin-bottom: 0px;" class='v2-product-color-heading'>Farbe Oberteile</p>
-                <div style="margin-top: 0px;" class="farbauswahl">
-                  <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; margin-right: 12px; border-radius: 40px;" class="rnd-btn{% if product.handle contains 'civetta-oberteil-black' %} selected{% endif %}" href="https://www.mountainero.com/products/civetta-oberteil-black?_pos=3&_sid=3b674b37e&_ss=r">
-                </a>
-                  <a style="font-size: 0px; text-align: center; color: #754D43; background-color: #754D43; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'civetta-oberteil-brown' %} selected{% endif %}" href="https://www.mountainero.com/products/civetta-oberteil-brown?_pos=4&_sid=3b674b37e&_ss=r">
-                </a>
-                </div>
-
-              {% else %}
-                {% if product.title contains 'Tofana' %}
-                  {% if product.title contains 'Eco' %}
-                    <p style="font-size: 13px; margin-bottom: 0px;" class='v2-product-color-heading'>Farbe Leggings</p>
-                    <div style="margin-top: 0px;" class="farbauswahl">
-                      <a style="font-size: 0px; text-align: center; color: #74815e; background-color: #74815e; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'tofana-green' %} selected{% endif %}" href="/products/tofana-green-♻%EF%B8%8F">
-                    </a>
-                      <a style="font-size: 0px; text-align: center; color: #5c6f86; background-color: #5c6f86; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'tofana-grey-blue' %} selected{% endif %}" href="/products/tofana-grey-blue-♻%EF%B8%8F">
-                    </a>
-                      <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; border-radius: 40px;" class="rnd-btn{% if product.handle contains 'tofana-black' %} selected{% endif %}" href="/products/tofana-black-♻%EF%B8%8F">
-                    </a>
-                    </div>
-                {% elsif product.title contains 'Tofana Classic' %}
-                    <p style="font-size: 13px; margin-bottom: 0px;" class='v2-product-color-heading'>Farbe Leggings</p>
-                    <div style="margin-top: 0px;" class="farbauswahl">
-                      <a style="font-size: 0px; text-align: center; color: #74815e; background-color: #74815e; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'tofana-green' %} selected{% endif %}" href="/products/tofana-green">
-                    </a>
-                      <a style="font-size: 0px; text-align: center; color: #5c6f86; background-color: #5c6f86; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'tofana-grey-blue-1' %} selected{% endif %}" href="/products/tofana-grey-blue-1">
-                    </a>
-                      <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'tofana-black-1' %} selected{% endif %}" href="/products/tofana-black-1">
-                      </a>
-                      <a style="font-size: 0px; text-align: center; color: #754D43; background-color: #754D43; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'tofana-brown' %} selected{% endif %}" href="https://www.mountainero.com/products/tofana-brown">
-                    </a>
-                      <a style="font-size: 0px; text-align: center; color: #4D745D; background-color: #4D745D; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'tofana-tanne' %} selected{% endif %}" href="https://www.mountainero.com/products/tofana-tanne">
-                    </a>
-                    </div>
-                  {% endif %}
-
-                  
-                {% elsif product.title contains 'Antelao' %}
-                  {% if product.tags contains 'eco' %}
-                      {% if product.title contains 'Set' %}
-                          <p style="font-size: 13px; margin-bottom: 0px;" class='v2-product-color-heading'>Farbe Set</p>
-                        <div style="margin-top: 0px;" class="farbauswahl">
-                          <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; margin-right: 12px; border-radius: 40px;" class="rnd-btn selected">
-                        </a>
-                        </div>
-                        {% else %} 
-                        <p style="font-size: 13px; margin-bottom: 0px;" class='v2-product-color-heading'>Farbe Leggings</p>
-                        <div style="margin-top: 0px;" class="farbauswahl">
-                          <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; margin-right: 12px; border-radius: 40px;" class="rnd-btn selected">
-                        </a>
-                        </div>
-                        {% endif %}
-                  {% else %}
-                        {% if product.title contains 'Set' %}
-                        <p style="font-size: 13px; margin-bottom: 0px;" class='v2-product-color-heading'>Farbe Set</p>
-                        <div style="margin-top: 0px;" class="farbauswahl">
-                          <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; margin-right: 12px; border-radius: 40px;" class="rnd-btn{% if product.handle contains 'antelao-set-classic-black' %} selected{% endif %}" href="/products/antelao-set-classic-black">
-                        </a>
-                          <a style="font-size: 0px; text-align: center; color: #c78476; background-color: #c78476; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'antelao-set-classic-orange' %} selected{% endif %}" href="/products/antelao-set-classic-orange">
-                        </a>
-                          <a style="font-size: 0px; text-align: center; color: #5c6f86; background-color: #5c6f86; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'antelao-set-classic-blue' %} selected{% endif %}" href="/products/antelao-set-classic-blue">
-                        </a>
-                        </div>
-                        {% endif %}
-                      {% unless product.title contains 'Set' %}
-                        <p style="font-size: 13px; margin-bottom: 0px;" class='v2-product-color-heading'>Farbe Leggings</p>
-                        <div style="margin-top: 0px;" class="farbauswahl">
-                          <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; margin-right: 12px; border-radius: 40px;" class="rnd-btn{% if product.handle contains 'antelao-leggings-black-1' %} selected{% endif %}" href="/products/antelao-leggings-black-1">
-                        </a>
-                          <a style="font-size: 0px; text-align: center; color: #c78476; background-color: #c78476; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'antelao-leggings-orange' %} selected{% endif %}" href="/products/antelao-leggings-orange">
-                        </a>
-                          <a style="font-size: 0px; text-align: center; color: #5c6f86; background-color: #5c6f86; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'antelao-leggings-blue' %} selected{% endif %}" href="/products/antelao-leggings-blue">
-                        </a>
-                        </div>
-                      {% endunless %}
-                  {% endif %}
-
-                {% elsif product.title contains 'Civetta' %}
-                  {% if product.title contains 'Set' %}
-                    <p style="font-size: 13px; margin-bottom: 0px;" class='v2-product-color-heading'>Farbe Set</p>
-                    <div style="margin-top: 0px;" class="farbauswahl">
-                      <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; margin-right: 12px; border-radius: 40px;" class="rnd-btn{% if product.handle contains 'civetta-set-bundle' %} selected{% endif %}" href="/products/civetta-set-bundle">
-                    </a>
-                      <a style="font-size: 0px; text-align: center; color: #754D43; background-color: #754D43; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'civetta-set-braun' %} selected{% endif %}" href="/products/civetta-set-braun">
-                    </a>
-                    </div>
-                  {% endif %}
-                  {% unless product.title contains 'Set' %}
-                    <p style="font-size: 13px; margin-bottom: 0px;" class='v2-product-color-heading'>Farbe Leggings</p>
-                    <div style="margin-top: 0px;" class="farbauswahl">
-                      <a style="font-size: 0px; text-align: center; color: #000000; background-color: black; padding: 12px; margin-right: 12px; border-radius: 40px;" class="rnd-btn{% if product.handle contains 'civetta-leggings-black' %} selected{% endif %}" href="/products/civetta-leggings-black">
-                    </a>
-                      <a style="font-size: 0px; text-align: center; color: #754D43; background-color: #754D43; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'civetta-leggings-brown' %} selected{% endif %}" href="/products/civetta-leggings-brown">
-                    </a>
-                    </div>
-                  {% endunless %}
-
-                
-
-              {% elsif product.title contains 'Faloria' %}
-                    <p style="font-size: 13px; margin-bottom: 0px;" class='v2-product-color-heading'>Farbe Leggings</p>
-                    <div style="margin-top: 0px;" class="farbauswahl">
-                      <a style="font-size: 0px; text-align: center; color: #000000; background-color: #000000; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'faloria-black' %} selected{% endif %}" href="/products/faloria-black-♻%EF%B8%8F-1">
-                    </a>
-                      <a style="font-size: 0px; text-align: center; color: #74815e; background-color: #74815e; padding: 12px; border-radius: 40px; margin-right: 12px;" class="rnd-btn{% if product.handle contains 'leggings-faloria-green' %} selected{% endif %}" href="/products/leggings-faloria-green-♻%EF%B8%8F-1">
-                    </a>
-                    </div>
-
-                {% endif %}
-              {% endif %}
-              {% comment %} CHRIS: Farbauswahlbuttons Ende {% endcomment %}
-
-              
 
               <noscript class="product-form__noscript-wrapper-{{ section.id }}">
                 <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
@@ -795,15 +712,15 @@
                       {% else %}
                     {% if product.selected_or_first_available_variant.available -%}
                           <script>
-                           document.querySelector('.product-block--price label').innerHTML = "Auf Lager - in ca. 2-4 Werktagen bei dir";
-                                document.querySelector('.product-block--price label').style = "font-size: 13px; color:  #2f4b26; margin-bottom: 8px;";
+                          //  document.querySelector('.product-block--price label').innerHTML = "Auf Lager - in ca. 2-4 Werktagen bei dir";
+                                // document.querySelector('.product-block--price label').style = "font-size: 13px; color:  #2f4b26; margin-bottom: 8px;";
                                 </script>
 
                             {%- else -%}
                           
                       <script>
-                          document.querySelector('.product-block--price label').innerHTML = "Derzeit leider nicht lieferbar";  
-                            document.querySelector('.product-block--price label').style = "font-size: 13px; color: #a10702; margin-bottom: 8px;";
+                          // document.querySelector('.product-block--price label').innerHTML = "Derzeit leider nicht lieferbar";  
+                            // document.querySelector('.product-block--price label').style = "font-size: 13px; color: #a10702; margin-bottom: 8px;";
                                 </script>
                             {%- endif -%}
                     {% endif %}
@@ -823,8 +740,10 @@
                         name="add"
                         id="buy_btn"
                         class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
-                        {% if product.selected_or_first_available_variant.available == false %}
+                        {% if product.selected_or_first_available_variant.available == false or cart.total_price >= settings.cart_value_limitation %}
                           disabled
+                          {% else if cart.total_price < settings.cart_value_limitation  %}
+                          enabled
                         {% endif %}
                       >
 
@@ -909,7 +828,7 @@
                   })
                 });
 
-                document.querySelectorAll('.rnd-btn').forEach(item => {
+                document.querySelectorAll('.variant-color').forEach(item => {
                   item.addEventListener('mouseover', function() {
                     const color = this.dataset.color;
                     // Example: Change product image or apply specific logic based on the color
@@ -920,11 +839,11 @@
                 {% comment %} window.addEventListener('click', function() {
                   setTimeout(() => {
                     if (document.getElementById('buy_btn').disabled) {
-                      document.querySelector('.product-block--price label').innerHTML = "Derzeit leider nicht lieferbar";  
-                      document.querySelector('.product-block--price label').style = "font-size: 13px; color: #a10702; margin-bottom: 8px;";
+                      // document.querySelector('.product-block--price label').innerHTML = "Derzeit leider nicht lieferbar";  
+                      // document.querySelector('.product-block--price label').style = "font-size: 13px; color: #a10702; margin-bottom: 8px;";
                     } else {
-                      document.querySelector('.product-block--price label').innerHTML = "<b>Auf Lager</b> - in ca. 2-4 Werktagen bei dir";
-                      document.querySelector('.product-block--price label').style = "font-size: 13px; color:  #2f4b26; margin-bottom: 8px;";
+                      // document.querySelector('.product-block--price label').innerHTML = "<b>Auf Lager</b> - in ca. 2-4 Werktagen bei dir";
+                      // document.querySelector('.product-block--price label').style = "font-size: 13px; color:  #2f4b26; margin-bottom: 8px;";
                     }
                   }, 0);
                 }); {% endcomment %}
@@ -1390,7 +1309,7 @@ window.addEventListener('click', function(event) {
                               <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-caret' %}</button>
                             </div>
                           {%- endif -%}
-                        </slider-component>
+                        </slideshow-component>                    
                         {%- if block.settings.make_collapsible_row -%}
                           </details>
                         {%- endif -%}
@@ -1406,11 +1325,6 @@ window.addEventListener('click', function(event) {
                 </product-recommendations>
           {%- endcase -%}
         {%- endfor -%}
-
-
-
-
-
 
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
           {{ 'products.product.view_full_details' | t }}

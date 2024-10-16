@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="{{ 'quickview.css' | asset_url }}">
+<div id="quickViewOverlay"></div>
+{% comment %} <cart-drawer> {% endcomment %}
+  <div class="drawer__header">
+    <h2 class="drawer__heading">{{ 'sections.cart.title' | t }}</h2>
+    <button class="drawer__close" type="button" onclick="hideQuickView()" aria-label="{{ 'accessibility.close' | t }}">{% render 'icon-close' %}</button>
+  </div>
+
+  <div id="quick-view">
+  </div>
+{% comment %} </cart-drawer> {% endcomment %}
+{% comment %} <script src="{{ 'quickview.js' | asset_url }}" defer="defer"></script> {% endcomment %}

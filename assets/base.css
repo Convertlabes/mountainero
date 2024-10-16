@@ -876,6 +876,7 @@ summary::-webkit-details-marker {
 /* Dangerous for a11y - Use with care */
 .focus-none {
   box-shadow: none !important;
+  /* padding-top: 100px; */
   outline: 0 !important;
 }
 
@@ -2974,4 +2975,8 @@ details-disclosure > details {
   font-weight: 300;
   line-height: normal;
   letter-spacing: 1px;
+}
+
+.shopify-policy__container {
+  padding-top: 100px !important;
 }

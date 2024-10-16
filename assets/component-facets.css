@@ -25,11 +25,11 @@
 }
 
 @media screen and (max-width: 989px) {
-  .facets-container {
+  /* .facets-container {
     grid-template-columns: auto minmax(0, max-content);
     column-gap: 2rem;
     height: 0;
-  }
+  } */
 }
 
 .facet-filters {
@@ -868,7 +868,7 @@ input.mobile-facets__checkbox {
 }
 
 .mobile-facets__footer {
-  border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  /* border-top: 0.1rem solid rgba(var(--color-foreground), 0.08); */
   padding: 2rem;
   bottom: 0;
   position: sticky;
@@ -898,6 +898,13 @@ input.mobile-facets__checkbox {
 
 .mobile-facets__sort label {
   flex-shrink: 0;
+  color: #000;
+  font-family: Poppins, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: .6px;
 }
 
 .mobile-facets__sort .select {
@@ -922,6 +929,13 @@ input.mobile-facets__checkbox {
   margin-right: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 1.5rem;
+  color: #000;
+  font-family: Poppins, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: .6px;
 }
 
 .product-count {
@@ -1110,4 +1124,46 @@ input.mobile-facets__checkbox {
   .facets-vertical .active-facets__button-remove {
     padding: 0 1rem 1rem;
   }
+}
+
+.mobile-facets__main.has-submenu.gradient details summary div span {
+  color: #000;
+  font-family: Poppins, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: .6px;
+}
+
+.mobile-facets__footer .no-js-hidden {
+  font-family: Poppins, sans-serif !important;
+  font-size: 18px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: normal !important;
+  letter-spacing: .6px !important;
+  background-color: #000 !important;
+  color: #fff !important;
+  border-radius: 40px !important;
+  height: 48px !important;
+  --border-opacity: unset !important;
+}
+
+.mobile-facets__clear-wrapper {
+  border: 1px solid black;
+  color: #000;
+  border-radius: 40px;
+  height: 48px;
+  font-family: Poppins, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: .6px;
+}
+
+.mobile-facets__clear-wrapper .mobile-facets__clear.underlined-link {
+  text-decoration: none !important;
+  
 }
