@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "98483ce0-f156-4cf3-ad6c-61245c5e7fb4": {
@@ -582,6 +582,15 @@
         "padding_bottom": 80,
         "background_color": "#f3f3f3"
       }
+    },
+    "product_comparison_table_GqJVHh": {
+      "type": "product-comparison-table",
+      "settings": {
+        "table_title": "Table Title",
+        "up_background_color": "#ffffff",
+        "down_background_color": "#ffffff",
+        "mobile_background_color": "#ffffff"
+      }
     }
   },
   "order": [
@@ -593,6 +602,7 @@
     "loox-product-reviews-app-section",
     "product-recommendations",
     "1859c10a-a976-414d-8bab-2332db508fb0",
+    "product_comparison_table_GqJVHh",
     "mt_logo_list_fcy3XP",
     "e1ffa94b-cfb0-4417-a0c8-5c9ca1d199b8",
     "7839601a-e1f2-4b62-821e-1a2e1e24c902",
