@@ -371,6 +371,15 @@
         "padding_bottom": 52
       }
     },
+    "product_comparison_table_GqJVHh": {
+      "type": "product-comparison-table",
+      "settings": {
+        "table_title": "Vergleichstabelle",
+        "up_background_color": "#ffffff",
+        "down_background_color": "#ffffff",
+        "mobile_background_color": "#ffffff"
+      }
+    },
     "mt_logo_list_fcy3XP": {
       "type": "mt-logo-list",
       "blocks": {
@@ -581,15 +590,6 @@
         "padding_top": 80,
         "padding_bottom": 80,
         "background_color": "#f3f3f3"
-      }
-    },
-    "product_comparison_table_GqJVHh": {
-      "type": "product-comparison-table",
-      "settings": {
-        "table_title": "Table Title",
-        "up_background_color": "#ffffff",
-        "down_background_color": "#ffffff",
-        "mobile_background_color": "#ffffff"
       }
     }
   },
